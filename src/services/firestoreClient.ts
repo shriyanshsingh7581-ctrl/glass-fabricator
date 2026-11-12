@@ -21,11 +21,33 @@ import {
 } from '../types/cms';
 import { INITIAL_CMS_STATE } from '../data/initialData';
 
+const resolvedFirebaseConfig = {
+  ...firebaseConfig,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || firebaseConfig.apiKey,
+  authDomain:
+    import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || firebaseConfig.authDomain,
+  projectId:
+    import.meta.env.VITE_FIREBASE_PROJECT_ID || firebaseConfig.projectId,
+  storageBucket:
+    import.meta.env.VITE_FIREBASE_STORAGE_BUCKET ||
+    firebaseConfig.storageBucket,
+  messagingSenderId:
+    import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID ||
+    firebaseConfig.messagingSenderId,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || firebaseConfig.appId,
+  firestoreDatabaseId:
+    import.meta.env.VITE_FIREBASE_DATABASE_ID ||
+    firebaseConfig.firestoreDatabaseId,
+};
+
 // Initialize Firebase App
-export const firebaseApp = initializeApp(firebaseConfig);
+export const firebaseApp = initializeApp(resolvedFirebaseConfig);
 
 // Initialize Cloud Firestore using provisioned database ID
-export const db = getFirestore(firebaseApp, firebaseConfig.firestoreDatabaseId);
+export const db = getFirestore(
+  firebaseApp,
+  resolvedFirebaseConfig.firestoreDatabaseId
+);
 
 export enum OperationType {
   CREATE = 'create',

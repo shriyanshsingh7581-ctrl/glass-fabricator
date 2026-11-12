@@ -348,14 +348,13 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
   return (
     <div
-      role="dialog"
-      aria-modal="true"
-      aria-label="Haryana Window Mart Admin Panel"
-      className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 overflow-y-auto"
+      role="main"
+      aria-label="Haryana Window Mart Standalone Admin Portal"
+      className="min-h-screen w-full bg-slate-950 text-slate-100 flex flex-col"
     >
-      <div className="w-full max-w-6xl rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
-        {/* Top Modal Header */}
-        <div className="px-5 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-4 shrink-0">
+      <div className="w-full max-w-[1440px] mx-auto bg-slate-900 border-x border-slate-800 flex-1 flex flex-col min-h-screen">
+        {/* Top Portal Header */}
+        <div className="px-5 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-4 shrink-0 sticky top-0 z-30">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-white p-0.5 shrink-0">
               <ResilientImage
@@ -367,13 +366,13 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             <div>
               <h2 className="font-display text-base sm:text-lg font-bold text-white">
                 {lang === 'hi'
-                  ? 'हरियाणा विंडो मार्ट — फुल कंट्रोल एडमिन पैनल'
-                  : 'Haryana Window Mart — Full-Control Admin CMS'}
+                  ? 'हरियाणा विंडो मार्ट — अलग एडमिन पोर्टल (/admin)'
+                  : 'Haryana Window Mart — Standalone Admin Portal (/admin)'}
               </h2>
               <p className="text-xs text-slate-400">
                 {firebaseConnected
-                  ? 'Firebase Realtime DB + LocalStorage Sync Active'
-                  : 'Realtime LocalStorage Sync Active · Configure Firebase URL in Settings'}
+                  ? 'Firebase Cloud Firestore + LocalStorage Real-Time Sync Active'
+                  : 'Realtime LocalStorage Sync Active'}
               </p>
             </div>
           </div>
@@ -383,18 +382,22 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <button
                 type="button"
                 onClick={onLogout}
-                className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-medium text-slate-300 cursor-pointer"
+                className="px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-medium text-slate-300 cursor-pointer"
               >
-                {lang === 'hi' ? 'लॉग आउट' : 'Lock Panel'}
+                {lang === 'hi' ? 'लॉग आउट' : 'Lock Portal'}
               </button>
             )}
             <button
               type="button"
               onClick={onClose}
-              aria-label="Close Admin Panel"
-              className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center justify-center cursor-pointer"
+              aria-label="Back to Public Website"
+              className="px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 cursor-pointer"
             >
-              <X className="w-5 h-5" />
+              <span>
+                {lang === 'hi'
+                  ? '← मुख्य वेबसाइट पर जाएं'
+                  : '← Back to Website'}
+              </span>
             </button>
           </div>
         </div>
@@ -507,7 +510,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               >
                 <ImageIcon className="w-4 h-4" />
                 <span>
-                  3. Project Gallery ({cmsState.gallery.length})
+                  4. Project Gallery ({cmsState.gallery.length})
                 </span>
               </button>
 
@@ -522,7 +525,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               >
                 <Wrench className="w-4 h-4" />
                 <span>
-                  4. 8 Core Services ({cmsState.services.length})
+                  5. 8 Core Services ({cmsState.services.length})
                 </span>
               </button>
 
@@ -539,7 +542,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 }`}
               >
                 <Settings className="w-4 h-4" />
-                <span>5. Site Settings & Firebase DB</span>
+                <span>6. Site Settings & Firebase DB</span>
               </button>
             </div>
 

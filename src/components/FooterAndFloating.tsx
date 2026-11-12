@@ -1,25 +1,17 @@
 import React from 'react';
-import {
-  Phone,
-  MessageCircle,
-  Instagram,
-  MapPin,
-  SlidersHorizontal,
-  ArrowUp,
-} from 'lucide-react';
+import { Phone, MessageCircle, Instagram, ArrowUp } from 'lucide-react';
 import { Language, SiteSettings } from '../types/cms';
 import { buildWhatsAppUrl } from '../utils/logic';
 
 interface FooterAndFloatingProps {
   lang: Language;
   settings: SiteSettings;
-  onOpenAdmin: () => void;
+  onOpenAdmin?: () => void;
 }
 
 export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
   lang,
   settings,
-  onOpenAdmin,
 }) => {
   const waUrl = buildWhatsAppUrl(
     settings.whatsappNumber,
@@ -30,116 +22,101 @@ export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
 
   return (
     <>
-      <footer className="bg-[#141311] text-[#F6F3EC] border-t border-[#2C2A26] pb-20 md:pb-0">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 py-14">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#2C2A26]">
-            {/* Col 1: Brand Identity */}
-            <div className="lg:col-span-5">
-              <div className="flex items-center gap-3.5">
-                <div className="w-12 h-12 bg-white p-1 border border-[#44403C] shrink-0">
-                  <img
-                    src={settings.logoUrl}
-                    alt={settings.brandNameEn}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div>
-                  <div className="font-architectural font-bold text-lg uppercase text-white">
-                    {lang === 'hi'
-                      ? settings.brandNameHi
-                      : settings.brandNameEn}
-                  </div>
-                  <div className="text-xs font-mono uppercase tracking-widest text-[#FB923C]">
-                    {lang === 'hi' ? settings.subtitleHi : settings.subtitleEn}
-                  </div>
-                </div>
-              </div>
+      {/* Authentic Apple.com Global Directory Footer */}
+      <footer className="bg-[#F5F5F7] text-[#6E6E73] text-[12px] border-t border-black/[0.08] pb-20 md:pb-0">
+        <div className="max-w-[1080px] mx-auto px-4 sm:px-6 py-12">
+          {/* Footnote / Legacy Note */}
+          <div className="pb-6 border-b border-black/[0.08] leading-relaxed text-[#86868B]">
+            {lang === 'hi'
+              ? '1. हरियाणा विंडो मार्ट (हरियाणा ग्लास फैब्रीकेटर) के सभी एल्युमीनियम, uPVC और टफन्ड ग्लास सिस्टम निरंकारी भवन रोड, हिसार स्थित हमारे इन-हाउस CNC प्लांट में कस्टम तैयार किए जाते हैं। पूरे हरियाणा के सभी 22 जिलों में साइट माप और डिलीवरी उपलब्ध है।'
+              : '1. All Haryana Window Mart (Haryana Glass Fabricator) Aluminium, uPVC, Slim Profile, and Toughened Glass systems are custom-fabricated in-house at our Nirankari Bhawan Road plant in Hisar. On-site laser measurement and delivery available across all 22 districts of Haryana.'}
+          </div>
 
-              <p className="mt-4 text-xs sm:text-sm text-[#A8A29E] leading-relaxed max-w-md">
-                {lang === 'hi'
-                  ? '35+ वर्षों का अनुभव और 2 पीढ़ियों की पारिवारिक विरासत। हिसार स्थित हमारे 3-मंजिला शोरूम, हरियाणा ग्लास गोदाम और ऑटोमेटेड CNC वर्कशॉप से पूरे हरियाणा में सेवा।'
-                  : '35+ Years of Business Excellence & 2 Generations of Family Legacy. Complete expertise in Aluminium, uPVC, Toughened Glass, Slim Partitions & LED Mirrors across Haryana.'}
+          {/* Multi-Column Apple Directory */}
+          <div className="py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 border-b border-black/[0.08]">
+            {/* Col 1: Brand & Address */}
+            <div>
+              <div className="font-semibold text-[#1D1D1F] mb-2.5">
+                {lang === 'hi' ? settings.brandNameHi : settings.brandNameEn}
+              </div>
+              <p className="text-[#6E6E73] leading-relaxed">
+                {lang === 'hi' ? settings.subtitleHi : settings.subtitleEn}
+                <br />
+                {lang === 'hi' ? settings.addressHi : settings.addressEn}
               </p>
-
-              <div className="mt-5 flex items-center gap-2 text-xs text-[#D6D3CD]">
-                <MapPin className="w-4 h-4 text-[#FB923C] shrink-0" />
-                <span>
-                  {lang === 'hi' ? settings.addressHi : settings.addressEn}
-                </span>
-              </div>
             </div>
 
-            {/* Col 2: Quick Navigation */}
-            <div className="lg:col-span-3">
-              <div className="text-xs font-mono uppercase tracking-widest text-[#FB923C] font-semibold mb-4">
-                {lang === 'hi' ? 'प्रमुख सेक्शन' : 'ARCHITECTURAL SECTIONS'}
+            {/* Col 2: Core Verticals */}
+            <div>
+              <div className="font-semibold text-[#1D1D1F] mb-2.5">
+                {lang === 'hi' ? 'प्रमुख सेवाएं' : 'Core Systems'}
               </div>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-[#D6D3CD]">
+              <ul className="space-y-2">
                 <li>
-                  <a
-                    href="#workshop"
-                    className="hover:text-[#FB923C] transition-colors font-semibold text-white"
-                  >
-                    {lang === 'hi'
-                      ? '→ हमारी वर्कशॉप और मशीनरी (29 फोटो)'
-                      : '→ Live Hisar Workshop (29 Photos)'}
+                  <a href="#services" className="hover:underline text-[#424245]">
+                    Aluminium Windows & Doors
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#services"
-                    className="hover:text-[#FB923C] transition-colors"
-                  >
-                    {lang === 'hi' ? '→ 8 मुख्य सेवाएं' : '→ 8 Core Services'}
+                  <a href="#services" className="hover:underline text-[#424245]">
+                    uPVC Windows & Doors
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#catalog"
-                    className="hover:text-[#FB923C] transition-colors"
-                  >
-                    {lang === 'hi'
-                      ? '→ सिग्नेचर प्रोडक्ट कैटलॉग'
-                      : '→ Signature Product Catalog'}
+                  <a href="#services" className="hover:underline text-[#424245]">
+                    ISI Toughened Glass & Facades
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#legacy"
-                    className="hover:text-[#FB923C] transition-colors"
-                  >
-                    {lang === 'hi'
-                      ? '→ 35+ वर्षों की विरासत'
-                      : '→ 35+ Years Family Legacy'}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#quotation"
-                    className="hover:text-[#FB923C] transition-colors"
-                  >
-                    {lang === 'hi'
-                      ? '→ कोटेशन और साइट माप फॉर्म'
-                      : '→ Book Site Measurement'}
+                  <a href="#services" className="hover:underline text-[#424245]">
+                    Slim Profile Partitions & LED Mirrors
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Col 3: Direct Contact & Admin Access */}
-            <div className="lg:col-span-4">
-              <div className="text-xs font-mono uppercase tracking-widest text-[#FB923C] font-semibold mb-4">
-                {lang === 'hi'
-                  ? 'सीधा संपर्क और एडमिन'
-                  : 'DIRECT CONTACT & ADMIN'}
+            {/* Col 3: Explore */}
+            <div>
+              <div className="font-semibold text-[#1D1D1F] mb-2.5">
+                {lang === 'hi' ? 'एक्सप्लोर करें' : 'Explore'}
               </div>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#workshop" className="hover:underline text-[#424245]">
+                    {lang === 'hi'
+                      ? 'प्रो CNC वर्कशॉप (29 फोटो)'
+                      : 'Pro CNC Workshop (29 Photos)'}
+                  </a>
+                </li>
+                <li>
+                  <a href="#catalog" className="hover:underline text-[#424245]">
+                    {lang === 'hi' ? 'प्रोडक्ट लाइनअप' : 'Product Lineup'}
+                  </a>
+                </li>
+                <li>
+                  <a href="#legacy" className="hover:underline text-[#424245]">
+                    {lang === 'hi' ? '35+ वर्षों की विरासत' : '35+ Years Legacy'}
+                  </a>
+                </li>
+                <li>
+                  <a href="#gallery" className="hover:underline text-[#424245]">
+                    {lang === 'hi' ? 'प्रोजेक्ट पोर्टफोलियो' : 'Project Portfolio'}
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-              <div className="space-y-3 text-xs sm:text-sm">
+            {/* Col 4: Direct Connect */}
+            <div>
+              <div className="font-semibold text-[#1D1D1F] mb-2.5">
+                {lang === 'hi' ? 'सीधा संपर्क' : 'Connect Directly'}
+              </div>
+              <div className="space-y-2.5">
                 <a
                   href={`tel:${settings.phoneDisplay.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-2.5 text-white hover:text-[#FB923C] font-mono font-bold text-base tabular-nums"
+                  className="flex items-center gap-2 text-[#1D1D1F] font-semibold hover:text-[#0071E3] tabular-nums"
                 >
-                  <Phone className="w-4 h-4 text-[#FB923C]" />
+                  <Phone className="w-3.5 h-3.5 text-[#0071E3]" />
                   <span>{settings.phoneDisplay}</span>
                 </a>
 
@@ -147,84 +124,72 @@ export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
                   href={settings.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-[#D6D3CD] hover:text-white"
+                  className="flex items-center gap-2 text-[#424245] hover:underline"
                 >
-                  <Instagram className="w-4 h-4 text-[#FB923C]" />
-                  <span>
-                    Instagram: {settings.instagramHandle}
-                  </span>
+                  <Instagram className="w-3.5 h-3.5 text-[#E1306C]" />
+                  <span>{settings.instagramHandle}</span>
                 </a>
 
-                <div className="pt-3 flex flex-wrap items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={onOpenAdmin}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#1C1917] hover:bg-[#C2410C] text-[#F6F3EC] border border-[#44403C] text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer"
+                <div className="pt-1 flex items-center gap-2">
+                  <a
+                    href="#quotation"
+                    className="px-3.5 py-1.5 rounded-lg bg-[#0071E3] hover:bg-[#0077ED] text-white font-medium transition-colors"
                   >
-                    <SlidersHorizontal className="w-3.5 h-3.5 text-[#FB923C]" />
-                    <span>
-                      {lang === 'hi'
-                        ? 'एडमिन कंट्रोल पैनल (CMS)'
-                        : 'Full-Control Admin Panel'}
-                    </span>
-                  </button>
-
+                    {lang === 'hi' ? 'कोटेशन बुक करें' : 'Book Consultation'}
+                  </a>
                   <a
                     href="#top"
-                    className="p-2.5 bg-[#1C1917] hover:bg-[#292524] text-[#D6D3CD] border border-[#44403C]"
                     aria-label="Back to Top"
+                    className="p-1.5 rounded-lg bg-white border border-black/10 text-[#1D1D1F] hover:bg-[#E8E8ED]"
                   >
-                    <ArrowUp className="w-4 h-4" />
+                    <ArrowUp className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[#78716C]">
+          {/* Bottom Legal Line */}
+          <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[#86868B]">
             <div>
-              © {new Date().getFullYear()} {settings.brandNameEn} (
-              {settings.subtitleEn}) · Hisar, Haryana.
+              Copyright © {new Date().getFullYear()} {settings.brandNameEn} (
+              {settings.subtitleEn}). All rights reserved.
             </div>
-            <div>
-              {lang === 'hi'
-                ? '35+ वर्षों की उत्कृष्टता · पूरे हरियाणा में सेवा उपलब्ध'
-                : '35+ Years of Craftsmanship · Pan-Haryana Service'}
-            </div>
+            <div>Hisar, Haryana · Pan-Haryana Service</div>
           </div>
         </div>
       </footer>
 
-      {/* Desktop Floating WhatsApp Direct Button */}
+      {/* Desktop Floating WhatsApp Concierge Button */}
       <a
         href={waUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-2.5 px-5 py-3.5 bg-[#15803D] hover:bg-[#166534] text-white font-architectural font-bold text-xs uppercase tracking-wider shadow-xl border border-white/20 transition-transform hover:-translate-y-0.5"
+        className="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-2 px-5 py-3 rounded-2xl bg-[#1D1D1F]/90 hover:bg-[#000000] backdrop-blur-xl text-white font-medium text-xs shadow-xl border border-white/15 transition-transform hover:-translate-y-0.5"
       >
-        <MessageCircle className="w-4 h-4" />
+        <MessageCircle className="w-4 h-4 text-[#25D366]" />
         <span>
-          {lang === 'hi' ? 'व्हाट्सएप डायरेक्ट चैट' : 'WhatsApp Direct'}
+          {lang === 'hi' ? 'व्हाट्सएप डायरेक्ट' : 'WhatsApp Specialist'}
         </span>
       </a>
 
-      {/* Mobile Sticky Bottom Action Bar */}
-      <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#141311] border-t border-[#2C2A26] grid grid-cols-2 divide-x divide-[#2C2A26]">
+      {/* Mobile Sticky Bottom Action Bar (<= 15% viewport height) */}
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-40 apple-glass-nav border-t border-black/[0.08] px-3 py-2 grid grid-cols-2 gap-2">
         <a
           href={`tel:${settings.phoneDisplay.replace(/\s+/g, '')}`}
-          className="flex items-center justify-center gap-2 py-3.5 text-white font-architectural font-bold text-xs uppercase tracking-wider"
+          className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#1D1D1F] text-white font-medium text-xs whitespace-nowrap"
         >
-          <Phone className="w-4 h-4 text-[#FB923C]" />
-          <span>{lang === 'hi' ? 'अभी कॉल करें' : 'Call Now'}</span>
+          <Phone className="w-3.5 h-3.5 text-[#2997FF]" />
+          <span>{lang === 'hi' ? 'कॉल करें' : 'Call Now'}</span>
         </a>
         <a
           href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 py-3.5 bg-[#15803D] text-white font-architectural font-bold text-xs uppercase tracking-wider"
+          className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#0071E3] text-white font-medium text-xs whitespace-nowrap"
         >
-          <MessageCircle className="w-4 h-4" />
-          <span>{lang === 'hi' ? 'व्हाट्सएप डायरेक्ट' : 'WhatsApp Direct'}</span>
+          <MessageCircle className="w-3.5 h-3.5" />
+          <span>WhatsApp Direct</span>
         </a>
       </div>
     </>

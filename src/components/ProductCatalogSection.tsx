@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import {
-  MessageCircle,
-  ArrowUpRight,
-  Package,
-  SlidersHorizontal,
-} from 'lucide-react';
+import { ChevronRight, MessageCircle } from 'lucide-react';
 import {
   Language,
   ProductCategory,
@@ -37,42 +32,43 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
   const visibleProducts = filterProducts(products, selectedCategory, true);
 
   return (
-    <section
-      id="catalog"
-      className="py-16 sm:py-24 bg-[#F6F3EC] text-[#141311] border-b border-[#D6CFC2] atelier-grid-light"
-    >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
-        {/* Section Editorial Header + Interactive Category Filter Bar */}
-        <div className="border border-[#D6CFC2] bg-[#FDFBF7] p-6 sm:p-10 lg:p-12">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div>
-              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.18em] text-[#C2410C] font-semibold">
-                <Package className="w-4 h-4" />
-                <span>
-                  {lang === 'hi'
-                    ? 'प्रोडक्ट कैटलॉग · इन-हाउस फैब्रिकेटेड विंडो, डोर, ग्लास और एलईडी मिरर'
-                    : 'ARCHITECTURAL PRODUCT CATALOG · CUSTOM FABRICATED IN HISAR'}
-                </span>
-              </div>
-              <h2 className="mt-3 font-editorial font-bold text-3xl sm:text-5xl text-[#141311] leading-[1.08]">
-                {lang === 'hi'
-                  ? 'सिग्नेचर प्रोडक्ट्स और लाइव शोरूम रेंज'
-                  : 'Signature Fenestration, Glass & LED Mirror Systems'}
-              </h2>
-            </div>
-
-            <div className="flex items-center gap-2 text-xs font-mono text-[#57534E]">
-              <SlidersHorizontal className="w-4 h-4 text-[#C2410C]" />
-              <span>
-                {lang === 'hi'
-                  ? `कुल ${visibleProducts.length} उत्पाद उपलब्ध`
-                  : `SHOWING ${visibleProducts.length} ARCHITECTURAL SYSTEMS`}
-              </span>
-            </div>
+    <section id="catalog" className="py-20 sm:py-28 bg-white text-[#1D1D1F]">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+        {/* Apple "Explore the lineup" Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div>
+            <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#0071E3]">
+              {lang === 'hi'
+                ? 'प्रोडक्ट लाइनअप · इन-हाउस CNC फैब्रिकेशन'
+                : 'Explore the Lineup · Custom Fabricated in Hisar'}
+            </p>
+            <h2 className="mt-2 text-3xl sm:text-5xl font-bold tracking-[-0.032em] text-[#1D1D1F] leading-[1.08]">
+              {lang === 'hi' ? (
+                <>
+                  सिग्नेचर विंडो और ग्लास सिस्टम।{' '}
+                  <span className="text-[#86868B]">हर स्पेस के लिए खास।</span>
+                </>
+              ) : (
+                <>
+                  Explore the lineup.{' '}
+                  <span className="text-[#86868B]">
+                    Built for modern architecture.
+                  </span>
+                </>
+              )}
+            </h2>
           </div>
 
-          {/* Interactive Category Filter Buttons */}
-          <div className="mt-8 pt-6 border-t border-[#E5DEC9] flex flex-wrap items-center gap-1.5">
+          <div className="text-sm text-[#86868B] tabular-nums">
+            {lang === 'hi'
+              ? `${visibleProducts.length} सिस्टम उपलब्ध`
+              : `Showing ${visibleProducts.length} architectural systems`}
+          </div>
+        </div>
+
+        {/* Apple Segmented Category Tabs */}
+        <div className="mt-8 flex overflow-x-auto pb-2">
+          <div className="inline-flex items-center gap-1 bg-[#F5F5F7] p-1.5 rounded-2xl">
             {PRODUCT_CATEGORIES.map((cat) => {
               const isSelected = selectedCategory === cat.key;
               return (
@@ -80,10 +76,10 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
                   key={cat.key}
                   type="button"
                   onClick={() => setSelectedCategory(cat.key)}
-                  className={`px-4 py-2.5 text-xs font-architectural font-bold uppercase tracking-wider border transition-colors cursor-pointer ${
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                     isSelected
-                      ? 'bg-[#141311] text-[#FDFBF7] border-[#141311]'
-                      : 'bg-white text-[#44403C] border-[#D6CFC2] hover:border-[#141311] hover:text-[#141311]'
+                      ? 'bg-[#1D1D1F] text-white shadow-xs'
+                      : 'text-[#6E6E73] hover:text-[#1D1D1F]'
                   }`}
                 >
                   {lang === 'hi' ? cat.labelHi : cat.labelEn}
@@ -93,18 +89,18 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
           </div>
         </div>
 
-        {/* Product Cards Architectural Grid */}
+        {/* Apple Lineup Product Cards */}
         {visibleProducts.length === 0 ? (
-          <div className="border-x border-b border-[#D6CFC2] bg-[#FDFBF7] p-12 text-center">
-            <p className="text-sm text-[#57534E]">
+          <div className="mt-10 rounded-[28px] bg-[#F5F5F7] p-12 text-center">
+            <p className="text-base text-[#6E6E73]">
               {lang === 'hi'
                 ? 'इस श्रेणी में कोई उत्पाद नहीं मिला।'
                 : 'No products found in this category.'}
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-x border-b border-[#D6CFC2] bg-[#D6CFC2] gap-px">
-            {visibleProducts.map((product, index) => {
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {visibleProducts.map((product) => {
               const title = lang === 'hi' ? product.titleHi : product.titleEn;
               const desc =
                 lang === 'hi' ? product.descriptionHi : product.descriptionEn;
@@ -118,64 +114,64 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
               return (
                 <article
                   key={product.id}
-                  className="bg-[#FDFBF7] hover:bg-white flex flex-col justify-between transition-colors group"
+                  className="rounded-[28px] bg-[#F5F5F7] overflow-hidden flex flex-col justify-between apple-card-hover group"
                 >
                   <div>
-                    {/* Top Metadata Ledger */}
-                    <div className="px-4 py-2.5 bg-[#F6F3EC] border-b border-[#D6CFC2] flex items-center justify-between text-[11px] font-mono">
-                      <span className="text-[#C2410C] font-bold uppercase">
-                        {product.category}
-                      </span>
-                      <span className="text-[#78716C] tabular-nums">
-                        SYS · 0{index + 1}
-                      </span>
-                    </div>
-
-                    {/* Product Photograph */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-[#1C1917] border-b border-[#D6CFC2]">
-                      <img
-                        src={product.imageUrl}
-                        alt={title}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      {specLine && (
-                        <div className="absolute bottom-3 left-3 right-3 text-[11px] font-mono text-[#FDE68A] truncate">
-                          {specLine}
-                        </div>
-                      )}
+                    {/* Product Image Showcase */}
+                    <div className="p-3 pb-0">
+                      <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden bg-white">
+                        <img
+                          src={product.imageUrl}
+                          alt={title}
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
                     </div>
 
                     {/* Product Copy */}
                     <div className="p-6">
-                      <h3 className="font-architectural font-bold text-lg text-[#141311] group-hover:text-[#C2410C] transition-colors leading-snug">
+                      <div className="text-xs font-medium text-[#86868B] flex items-center gap-1.5">
+                        <span className="text-[#BF4800] font-semibold">
+                          {product.category}
+                        </span>
+                        {specLine && (
+                          <>
+                            <span aria-hidden="true">·</span>
+                            <span className="truncate">{specLine}</span>
+                          </>
+                        )}
+                      </div>
+
+                      <h3 className="mt-2 text-lg font-bold tracking-[-0.02em] text-[#1D1D1F] leading-snug">
                         {title}
                       </h3>
-                      <p className="mt-2.5 text-xs sm:text-sm text-[#57534E] leading-relaxed">
+
+                      <p className="mt-2 text-xs sm:text-sm text-[#6E6E73] leading-relaxed">
                         {desc}
                       </p>
                     </div>
                   </div>
 
-                  {/* Product Card Action Footer */}
-                  <div className="px-6 pb-6 pt-3 border-t border-[#ECE7DC] grid grid-cols-2 gap-2">
+                  {/* Apple Lineup CTA Footer */}
+                  <div className="px-6 pb-6 pt-3 border-t border-black/[0.06] flex items-center justify-between gap-3">
                     <button
                       type="button"
                       onClick={() => onBookProductQuote(product)}
-                      className="inline-flex items-center justify-center gap-1 py-2.5 px-3 bg-[#141311] hover:bg-[#C2410C] text-[#FDFBF7] text-xs font-architectural font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                      className="px-4 py-2 rounded-xl bg-[#0071E3] hover:bg-[#0077ED] text-white text-xs font-medium transition-colors cursor-pointer whitespace-nowrap"
                     >
-                      <span>{lang === 'hi' ? 'कोटेशन लें' : 'Get Quote'}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      {lang === 'hi' ? 'कोटेशन लें' : 'Get Quote'}
                     </button>
 
                     <a
                       href={waUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#15803D] hover:bg-[#166534] text-white text-xs font-architectural font-bold uppercase tracking-wider transition-colors"
+                      className="inline-flex items-center gap-1 text-xs font-medium text-[#0066CC] hover:underline whitespace-nowrap"
                     >
-                      <MessageCircle className="w-3.5 h-3.5" />
+                      <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
                       <span>WhatsApp</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </article>

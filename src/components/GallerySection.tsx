@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GalleryItem, Language, SiteSettings } from '../types/cms';
 
 interface GallerySectionProps {
@@ -27,95 +27,109 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   const currentItem = lightboxIdx !== null ? gallery[lightboxIdx] : null;
 
   return (
-    <section
-      id="gallery"
-      className="py-16 sm:py-24 bg-[#FDFBF7] text-[#141311] border-b border-[#D6CFC2]"
-    >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
-        {/* Header */}
-        <div className="border border-[#D6CFC2] bg-[#F6F3EC] p-6 sm:p-10 lg:p-12">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div>
-              <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#C2410C] font-semibold">
-                {lang === 'hi'
-                  ? 'प्रोजेक्ट और शोरूम पोर्टफोलियो · हिसार व संपूर्ण हरियाणा'
-                  : 'ARCHITECTURAL PORTFOLIO · HISAR & PAN-HARYANA INSTALLATIONS'}
-              </div>
-              <h2 className="mt-3 font-editorial font-bold text-3xl sm:text-5xl text-[#141311] leading-[1.08]">
-                {lang === 'hi'
-                  ? 'हमारे प्रमुख प्रोजेक्ट और शोरूम झलकियां'
-                  : 'Completed Architectural Elevations & Showroom Highlights'}
-              </h2>
-            </div>
-            <p className="text-sm sm:text-base text-[#57534E] max-w-xl">
-              {lang === 'hi'
-                ? 'किसी भी फोटो पर क्लिक करके उसे फुल-स्क्रीन में ज़ूम करके देखें।'
-                : 'Click any photograph to inspect full-resolution architectural detailing.'}
-            </p>
-          </div>
+    <section id="gallery" className="py-20 sm:py-28 bg-white text-[#1D1D1F]">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+        {/* Apple Two-Tone Header */}
+        <div className="max-w-3xl">
+          <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#0071E3]">
+            {lang === 'hi'
+              ? 'प्रोजेक्ट और शोरूम पोर्टफोलियो · हिसार व हरियाणा'
+              : 'Shot in Hisar & Across Haryana · Architectural Portfolio'}
+          </p>
+          <h2 className="mt-2 text-3xl sm:text-5xl font-bold tracking-[-0.032em] text-[#1D1D1F] leading-[1.08]">
+            {lang === 'hi' ? (
+              <>
+                हमारे प्रमुख प्रोजेक्ट।{' '}
+                <span className="text-[#86868B]">
+                  हिसार और पूरे हरियाणा में स्थापित।
+                </span>
+              </>
+            ) : (
+              <>
+                Completed elevations.{' '}
+                <span className="text-[#86868B]">
+                  Crafted for homes and showrooms.
+                </span>
+              </>
+            )}
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-[#6E6E73]">
+            {lang === 'hi'
+              ? 'किसी भी फोटो पर क्लिक करके उसे फुल-स्क्रीन में ज़ूम करके देखें।'
+              : 'Select any photograph to inspect full-resolution architectural detailing.'}
+          </p>
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-x border-b border-[#D6CFC2] bg-[#D6CFC2] gap-px">
+        {/* Apple Bento Gallery Grid */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery.map((item, idx) => {
             const title = lang === 'hi' ? item.titleHi : item.titleEn;
             const city = lang === 'hi' ? item.cityHi : item.cityEn;
 
             return (
-              <div
+              <button
                 key={item.id}
+                type="button"
                 onClick={() => setLightboxIdx(idx)}
-                className="bg-[#FDFBF7] hover:bg-white flex flex-col justify-between cursor-pointer group transition-colors"
+                className="text-left rounded-[28px] bg-[#F5F5F7] overflow-hidden flex flex-col justify-between cursor-pointer apple-card-hover group focus:outline-none"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#1C1917] border-b border-[#D6CFC2]">
-                  <img
-                    src={item.imageUrl}
-                    alt={title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#141311]/85 text-white font-mono text-[11px] uppercase tracking-wider">
-                    {item.category}
-                  </div>
-                  <div className="absolute bottom-3 right-3 px-2.5 py-1 bg-[#FDFBF7] text-[#141311] font-mono text-[11px] inline-flex items-center gap-1 border border-[#D6CFC2]">
-                    <ZoomIn className="w-3.5 h-3.5 text-[#C2410C]" />
-                    <span>{lang === 'hi' ? 'ज़ूम' : 'Zoom'}</span>
+                <div className="p-3 pb-0 w-full">
+                  <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden bg-black">
+                    <img
+                      src={item.imageUrl}
+                      alt={title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center">
+                      <ZoomIn className="w-4 h-4" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-5">
-                  <div className="flex items-center gap-1.5 text-xs font-mono text-[#C2410C]">
-                    <MapPin className="w-3.5 h-3.5" />
+                <div className="p-6 w-full">
+                  <div className="text-xs font-medium text-[#86868B] flex items-center gap-1.5">
+                    <span className="text-[#0071E3] font-semibold">
+                      {item.category}
+                    </span>
+                    <span aria-hidden="true">·</span>
                     <span>{city}</span>
                   </div>
-                  <h3 className="mt-1.5 font-architectural font-bold text-base sm:text-lg text-[#141311] group-hover:text-[#C2410C] transition-colors">
+                  <h3 className="mt-1.5 font-bold text-base sm:text-lg tracking-[-0.015em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors">
                     {title}
                   </h3>
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
       </div>
 
-      {/* Lightbox */}
+      {/* Apple-Style Modal Lightbox */}
       {currentItem && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xs flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl flex items-center justify-center p-4"
           onClick={() => setLightboxIdx(null)}
         >
           <div
-            className="max-w-4xl w-full bg-[#1C1917] border border-[#44403C] text-white"
+            className="max-w-4xl w-full rounded-[28px] bg-[#161617] border border-white/10 text-white overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-5 py-3 border-b border-[#2C2A26] flex items-center justify-between">
-              <span className="text-xs font-mono text-[#FB923C]">
-                {currentItem.category} ·{' '}
-                {lang === 'hi' ? currentItem.cityHi : currentItem.cityEn}
-              </span>
+            <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
+              <div className="text-xs font-medium text-[#86868B] flex items-center gap-1.5">
+                <span className="text-[#2997FF] font-semibold">
+                  {currentItem.category}
+                </span>
+                <span aria-hidden="true">·</span>
+                <span>
+                  {lang === 'hi' ? currentItem.cityHi : currentItem.cityEn}
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={() => setLightboxIdx(null)}
-                className="p-1 text-[#A8A29E] hover:text-white cursor-pointer"
+                aria-label="Close Lightbox"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -124,25 +138,28 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               <img
                 src={currentItem.imageUrl}
                 alt={lang === 'hi' ? currentItem.titleHi : currentItem.titleEn}
+                referrerPolicy="no-referrer"
                 className="max-h-[68vh] w-auto object-contain"
               />
               <button
                 type="button"
                 onClick={handlePrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 bg-[#141311]/85 hover:bg-[#C2410C] text-white border border-white/20 cursor-pointer"
+                aria-label="Previous Image"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md text-white flex items-center justify-center cursor-pointer"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 type="button"
                 onClick={handleNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 bg-[#141311]/85 hover:bg-[#C2410C] text-white border border-white/20 cursor-pointer"
+                aria-label="Next Image"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md text-white flex items-center justify-center cursor-pointer"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
-            <div className="p-5">
-              <h3 className="font-architectural font-bold text-lg">
+            <div className="p-6">
+              <h3 className="font-bold text-lg text-white">
                 {lang === 'hi' ? currentItem.titleHi : currentItem.titleEn}
               </h3>
             </div>

@@ -3,7 +3,6 @@ import {
   Send,
   MessageCircle,
   CheckCircle2,
-  Ruler,
   PhoneCall,
 } from 'lucide-react';
 import {
@@ -111,144 +110,121 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
   return (
     <section
       id="quotation"
-      className="py-16 sm:py-24 bg-[#F6F3EC] text-[#141311] border-b border-[#D6CFC2] atelier-grid-light"
+      className="py-20 sm:py-28 bg-[#F5F5F7] text-[#1D1D1F]"
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 border border-[#D6CFC2] bg-[#FDFBF7]">
-          {/* Left Column: Consultation Process & Direct Hisar Contact (5 Cols) */}
-          <div className="lg:col-span-5 p-6 sm:p-10 lg:p-12 bg-[#141311] text-[#F6F3EC] flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#2C2A26]">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+        {/* Apple Specialist Consultation Container */}
+        <div className="rounded-[32px] bg-white apple-card-shadow overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+          {/* Left Column: Apple Pro Concierge Sidebar (5 Cols) */}
+          <div className="lg:col-span-5 p-8 sm:p-11 bg-[#1D1D1F] text-white flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.18em] text-[#FB923C] font-semibold">
-                <Ruler className="w-4 h-4" />
-                <span>
-                  {lang === 'hi'
-                    ? 'निःशुल्क कोटेशन और साइट माप'
-                    : 'SITE MEASUREMENT & QUOTATION DESK'}
-                </span>
-              </div>
-
-              <h2 className="mt-3 font-editorial font-bold text-3xl sm:text-4xl text-white leading-[1.1]">
+              <p className="text-xs font-semibold tracking-wide text-[#2997FF]">
                 {lang === 'hi'
-                  ? 'अपने घर, कोठी या शोरूम के लिए सीधा फैक्ट्री कोटेशन प्राप्त करें'
-                  : 'Request Direct Hisar Factory Quotation & Site Measurement'}
-              </h2>
-
-              <p className="mt-4 text-xs sm:text-sm text-[#D6D3CD] leading-relaxed">
-                {lang === 'hi'
-                  ? 'नीचे अपना विवरण भरें। आपकी पूछताछ तुरंत हमारे एडमिन पैनल (Firebase) में दर्ज हो जाएगी और आप एक क्लिक में व्हाट्सएप पर भी सीधा संदेश भेज सकते हैं।'
-                  : 'Submit your project specifications below. Your inquiry is saved in real time to our Admin Desk and prepared for instant WhatsApp consultation.'}
+                  ? 'निःशुल्क कोटेशन और साइट माप'
+                  : 'Haryana Window Mart Specialist Desk'}
               </p>
 
-              {/* 3-Step Workflow */}
-              <div className="mt-8 space-y-4 border-t border-[#2C2A26] pt-6">
-                <div className="flex items-start gap-3">
-                  <span className="font-mono text-xs font-bold text-[#FB923C] px-2 py-1 bg-[#1C1917] border border-[#2C2A26]">
-                    01
-                  </span>
-                  <div>
-                    <h3 className="font-architectural font-bold text-sm text-white">
-                      {lang === 'hi'
-                        ? 'आवश्यकता और अनुमानित माप बताएं'
-                        : 'Share Window / Glass Requirements'}
-                    </h3>
-                    <p className="text-xs text-[#A8A29E] mt-0.5">
-                      {lang === 'hi'
-                        ? 'uPVC, एल्युमीनियम, टफन्ड ग्लास या एलईडी मिरर चुनें।'
-                        : 'Select uPVC, Aluminium, Toughened Glass, Slim Profile, or LED Mirrors.'}
-                    </p>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-[-0.03em] text-white leading-[1.1]">
+                {lang === 'hi'
+                  ? 'अपने प्रोजेक्ट के लिए सीधा फैक्ट्री कोटेशन बुक करें।'
+                  : 'Request factory-direct quotation & site measurement.'}
+              </h2>
+
+              <p className="mt-4 text-sm text-[#A1A1A6] leading-relaxed">
+                {lang === 'hi'
+                  ? 'अपना विवरण भरें। आपकी पूछताछ तुरंत हमारे क्लाउड डेटाबेस में सेव हो जाएगी और आप एक क्लिक में व्हाट्सएप पर भी सीधा संदेश भेज सकते हैं।'
+                  : 'Submit your project specifications below. Your inquiry syncs instantly to our Hisar specialist desk and prepares a direct WhatsApp brief.'}
+              </p>
+
+              {/* 3-Step Apple Numbered List */}
+              <div className="mt-8 space-y-5 border-t border-white/10 pt-6">
+                <div>
+                  <div className="text-xs font-semibold text-[#2997FF]">
+                    01. {lang === 'hi' ? 'आवश्यकता चुनें' : 'Select Your System'}
                   </div>
+                  <p className="text-xs text-[#A1A1A6] mt-1">
+                    {lang === 'hi'
+                      ? 'uPVC, एल्युमीनियम, टफन्ड ग्लास, स्लिम पार्टीशन या एलईडी मिरर चुनें।'
+                      : 'Choose uPVC, Aluminium, Toughened Glass, Slim Profile, or LED Mirrors.'}
+                  </p>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <span className="font-mono text-xs font-bold text-[#FB923C] px-2 py-1 bg-[#1C1917] border border-[#2C2A26]">
-                    02
-                  </span>
-                  <div>
-                    <h3 className="font-architectural font-bold text-sm text-white">
-                      {lang === 'hi'
-                        ? 'लेजर साइट माप और सैंपल प्रदर्शन'
-                        : 'On-Site Laser Measurement Across Haryana'}
-                    </h3>
-                    <p className="text-xs text-[#A8A29E] mt-0.5">
-                      {lang === 'hi'
-                        ? 'हमारी टीम आपके शहर/साइट पर आकर सटीक माप लेती है।'
-                        : 'Our engineering team visits your site or hosts you at our Hisar showroom.'}
-                    </p>
+                <div>
+                  <div className="text-xs font-semibold text-[#2997FF]">
+                    02. {lang === 'hi' ? 'लेजर साइट माप' : 'On-Site Laser Measurement'}
                   </div>
+                  <p className="text-xs text-[#A1A1A6] mt-1">
+                    {lang === 'hi'
+                      ? 'हमारी टीम आपके शहर/साइट पर आकर सटीक माप लेती है।'
+                      : 'Our engineering team visits your site anywhere in Haryana.'}
+                  </p>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <span className="font-mono text-xs font-bold text-[#FB923C] px-2 py-1 bg-[#1C1917] border border-[#2C2A26]">
-                    03
-                  </span>
-                  <div>
-                    <h3 className="font-architectural font-bold text-sm text-white">
-                      {lang === 'hi'
-                        ? 'हिसार CNC वर्कशॉप में निर्माण और इंस्टॉलेशन'
-                        : 'CNC Fabrication & Precision Installation'}
-                    </h3>
-                    <p className="text-xs text-[#A8A29E] mt-0.5">
-                      {lang === 'hi'
-                        ? 'डबल-हेड CNC और थर्मल वेल्डिंग मशीन पर तैयार होकर समय पर फिटिंग।'
-                        : 'Fabricated in our automated Hisar plant and installed on schedule.'}
-                    </p>
+                <div>
+                  <div className="text-xs font-semibold text-[#2997FF]">
+                    03. {lang === 'hi' ? 'CNC निर्माण और फिटिंग' : 'CNC Fabrication & Fitting'}
                   </div>
+                  <p className="text-xs text-[#A1A1A6] mt-1">
+                    {lang === 'hi'
+                      ? 'हिसार CNC वर्कशॉप में तैयार होकर समय पर इंस्टॉलेशन।'
+                      : 'Precision-built in our Hisar CNC plant and installed on schedule.'}
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#2C2A26]">
-              <div className="text-[11px] font-mono uppercase tracking-widest text-[#A8A29E]">
-                {lang === 'hi' ? 'सीधा फोन / व्हाट्सएप नंबर' : 'DIRECT HOTLINE'}
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <div className="text-xs text-[#86868B]">
+                {lang === 'hi' ? 'सीधा फोन / व्हाट्सएप हॉटलाइन' : 'Direct Specialist Hotline'}
               </div>
               <a
                 href={`tel:${settings.phoneDisplay.replace(/\s+/g, '')}`}
-                className="mt-1 inline-flex items-center gap-2 font-mono font-bold text-xl text-[#FB923C] hover:text-white tabular-nums"
+                className="mt-1 inline-flex items-center gap-2 font-bold text-xl text-white hover:text-[#2997FF] transition-colors tabular-nums"
               >
-                <PhoneCall className="w-5 h-5" />
+                <PhoneCall className="w-5 h-5 text-[#2997FF]" />
                 <span>{settings.phoneDisplay}</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Interactive Quotation Form (7 Cols) */}
-          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12">
+          {/* Right Column: Clean Apple Form (7 Cols) */}
+          <div className="lg:col-span-7 p-8 sm:p-11">
             {submittedLead ? (
-              <div className="border border-[#15803D] bg-[#F0FDF4] p-6 sm:p-8">
-                <div className="flex items-center gap-3 text-[#15803D]">
-                  <CheckCircle2 className="w-7 h-7 shrink-0" />
-                  <h3 className="font-architectural font-bold text-xl">
+              <div className="rounded-2xl bg-[#F5F5F7] p-7 sm:p-9">
+                <div className="flex items-center gap-3 text-[#1D1D1F]">
+                  <CheckCircle2 className="w-7 h-7 text-[#0071E3] shrink-0" />
+                  <h3 className="font-bold text-2xl tracking-[-0.02em]">
                     {lang === 'hi'
-                      ? 'आपका कोटेशन अनुरोध सफलतापूर्वक दर्ज हो गया है!'
-                      : 'Quotation Request Logged Successfully!'}
+                      ? 'आपका कोटेशन अनुरोध दर्ज हो गया है।'
+                      : 'Quotation request received.'}
                   </h3>
                 </div>
 
-                <p className="mt-3 text-sm text-[#166534] leading-relaxed">
+                <p className="mt-3 text-sm sm:text-base text-[#6E6E73] leading-relaxed">
                   {lang === 'hi'
-                    ? `धन्यवाद ${submittedLead.fullName}! आपका विवरण हमारे एडमिन पैनल में सेव हो चुका है। तुरंत बातचीत के लिए नीचे दिए गए बटन से व्हाट्सएप पर भी विवरण भेजें:`
-                    : `Thank you, ${submittedLead.fullName}! Your inquiry for "${submittedLead.service}" in ${submittedLead.city} has been saved to our Admin Panel. Click below to also send this directly on WhatsApp:`}
+                    ? `धन्यवाद ${submittedLead.fullName}! आपका विवरण सुरक्षित सेव हो चुका है। तुरंत बातचीत के लिए नीचे दिए गए बटन से व्हाट्सएप पर भी विवरण भेजें:`
+                    : `Thank you, ${submittedLead.fullName}. Your inquiry for "${submittedLead.service}" in ${submittedLead.city} has been logged. Connect immediately on WhatsApp below:`}
                 </p>
 
-                <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="mt-7 flex flex-wrap items-center gap-3">
                   <a
                     href={submittedWhatsAppUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#15803D] hover:bg-[#166534] text-white font-architectural font-bold text-xs uppercase tracking-wider transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#0071E3] hover:bg-[#0077ED] text-white font-medium text-sm transition-colors"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>
                       {lang === 'hi'
                         ? 'व्हाट्सएप पर तुरंत भेजें'
-                        : 'Send Details on WhatsApp Now'}
+                        : 'Send Details on WhatsApp'}
                     </span>
                   </a>
 
                   <button
                     type="button"
                     onClick={() => setSubmittedLead(null)}
-                    className="px-5 py-3.5 bg-white hover:bg-[#F6F3EC] text-[#141311] border border-[#D6CFC2] font-architectural font-bold text-xs uppercase tracking-wider cursor-pointer"
+                    className="px-5 py-3.5 rounded-xl bg-white hover:bg-[#E8E8ED] text-[#1D1D1F] border border-black/10 font-medium text-sm cursor-pointer transition-colors"
                   >
                     {lang === 'hi'
                       ? 'नया फॉर्म भरें'
@@ -263,7 +239,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                   <div>
                     <label
                       htmlFor="quote-fullname"
-                      className="block text-xs font-mono uppercase tracking-wider text-[#44403C] font-semibold mb-2"
+                      className="block text-xs font-semibold text-[#1D1D1F] mb-2"
                     >
                       {lang === 'hi' ? 'आपका पूरा नाम *' : 'Full Name *'}
                     </label>
@@ -274,13 +250,13 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder={
                         lang === 'hi'
-                          ? 'उदा. राजेश कुमार / आर्किटेक्ट शर्मा'
+                          ? 'उदा. राजेश कुमार'
                           : 'e.g., Rajesh Beniwal'
                       }
-                      className="w-full px-4 py-3 bg-white border border-[#D6CFC2] focus:border-[#141311] text-sm text-[#141311] focus:outline-none"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-black/[0.08] focus:border-[#0071E3] focus:bg-white text-sm text-[#1D1D1F] focus:outline-none transition-colors"
                     />
                     {errors.fullName && (
-                      <p className="mt-1 text-xs text-[#DC2626] font-medium">
+                      <p className="mt-1.5 text-xs text-[#E30000] font-medium">
                         {errors.fullName}
                       </p>
                     )}
@@ -290,7 +266,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                   <div>
                     <label
                       htmlFor="quote-phone"
-                      className="block text-xs font-mono uppercase tracking-wider text-[#44403C] font-semibold mb-2"
+                      className="block text-xs font-semibold text-[#1D1D1F] mb-2"
                     >
                       {lang === 'hi'
                         ? 'मोबाइल / व्हाट्सएप नंबर *'
@@ -302,10 +278,10 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+91 98120 XXXXX"
-                      className="w-full px-4 py-3 bg-white border border-[#D6CFC2] focus:border-[#141311] text-sm text-[#141311] focus:outline-none tabular-nums"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-black/[0.08] focus:border-[#0071E3] focus:bg-white text-sm text-[#1D1D1F] focus:outline-none transition-colors tabular-nums"
                     />
                     {errors.phone && (
-                      <p className="mt-1 text-xs text-[#DC2626] font-medium">
+                      <p className="mt-1.5 text-xs text-[#E30000] font-medium">
                         {errors.phone}
                       </p>
                     )}
@@ -317,7 +293,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                   <div>
                     <label
                       htmlFor="quote-city"
-                      className="block text-xs font-mono uppercase tracking-wider text-[#44403C] font-semibold mb-2"
+                      className="block text-xs font-semibold text-[#1D1D1F] mb-2"
                     >
                       {lang === 'hi'
                         ? 'शहर / स्थान (हरियाणा) *'
@@ -334,7 +310,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                           ? 'हिसार, रोहतक, गुरुग्राम, करनाल...'
                           : 'Hisar, Rohtak, Gurugram, Karnal...'
                       }
-                      className="w-full px-4 py-3 bg-white border border-[#D6CFC2] focus:border-[#141311] text-sm text-[#141311] focus:outline-none"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-black/[0.08] focus:border-[#0071E3] focus:bg-white text-sm text-[#1D1D1F] focus:outline-none transition-colors"
                     />
                     <datalist id="haryana-cities-list">
                       {HARYANA_CITIES_SUGGESTIONS.map((c) => (
@@ -342,7 +318,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                       ))}
                     </datalist>
                     {errors.city && (
-                      <p className="mt-1 text-xs text-[#DC2626] font-medium">
+                      <p className="mt-1.5 text-xs text-[#E30000] font-medium">
                         {errors.city}
                       </p>
                     )}
@@ -352,7 +328,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                   <div>
                     <label
                       htmlFor="quote-service"
-                      className="block text-xs font-mono uppercase tracking-wider text-[#44403C] font-semibold mb-2"
+                      className="block text-xs font-semibold text-[#1D1D1F] mb-2"
                     >
                       {lang === 'hi'
                         ? 'सेवा / प्रोडक्ट चुनें *'
@@ -362,7 +338,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                       id="quote-service"
                       value={service}
                       onChange={(e) => setService(e.target.value)}
-                      className="w-full px-4 py-3 bg-white border border-[#D6CFC2] focus:border-[#141311] text-sm text-[#141311] focus:outline-none"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-black/[0.08] focus:border-[#0071E3] focus:bg-white text-sm text-[#1D1D1F] focus:outline-none transition-colors"
                     >
                       {services.map((s) => (
                         <option key={s.id} value={s.titleEn}>
@@ -373,7 +349,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                       ))}
                     </select>
                     {errors.service && (
-                      <p className="mt-1 text-xs text-[#DC2626] font-medium">
+                      <p className="mt-1.5 text-xs text-[#E30000] font-medium">
                         {errors.service}
                       </p>
                     )}
@@ -384,7 +360,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                 <div>
                   <label
                     htmlFor="quote-message"
-                    className="block text-xs font-mono uppercase tracking-wider text-[#44403C] font-semibold mb-2"
+                    className="block text-xs font-semibold text-[#1D1D1F] mb-2"
                   >
                     {lang === 'hi'
                       ? 'अनुमानित माप या प्रोजेक्ट विवरण (वैकल्पिक)'
@@ -400,14 +376,14 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                         ? 'उदा. नई कोठी के लिए 6 खिड़कियां (uPVC 3-ट्रैक), बालकनी के लिए 12mm टफन्ड ग्लास रेलिंग और 2 आर्च एलईडी मिरर...'
                         : 'e.g., Need 6 sets of 3-track uPVC windows with mesh, 16mm slim partition for drawing room, and 2 Arch LED mirrors...'
                     }
-                    className="w-full px-4 py-3 bg-white border border-[#D6CFC2] focus:border-[#141311] text-sm text-[#141311] focus:outline-none"
+                    className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-black/[0.08] focus:border-[#0071E3] focus:bg-white text-sm text-[#1D1D1F] focus:outline-none transition-colors"
                   />
                 </div>
 
                 <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#141311] hover:bg-[#C2410C] text-[#FDFBF7] font-architectural font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#0071E3] hover:bg-[#0077ED] text-white font-medium text-sm transition-colors cursor-pointer whitespace-nowrap"
                   >
                     <Send className="w-4 h-4" />
                     <span>
@@ -433,9 +409,9 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#15803D] hover:bg-[#166534] text-white font-architectural font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#F5F5F7] hover:bg-[#E8E8ED] text-[#1D1D1F] font-medium text-sm transition-colors whitespace-nowrap"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <MessageCircle className="w-4 h-4 text-[#25D366]" />
                     <span>
                       {lang === 'hi'
                         ? 'सीधा व्हाट्सएप पर भेजें'

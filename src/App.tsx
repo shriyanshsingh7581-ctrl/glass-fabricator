@@ -43,18 +43,69 @@ import { ContactSection } from './components/ContactSection';
 import { FooterAndFloating } from './components/FooterAndFloating';
 import { AdminPanelModal } from './components/AdminPanelModal';
 
+function checkIsAdminRoute(): boolean {
+  if (typeof window === 'undefined') return false;
+  const path = window.location.pathname.toLowerCase();
+  const hash = window.location.hash.toLowerCase();
+  const search = window.location.search.toLowerCase();
+  return (
+    path === '/admin' ||
+    path.startsWith('/admin/') ||
+    hash === '#admin' ||
+    hash === '#/admin' ||
+    search.includes('admin=true') ||
+    search.includes('admin=1')
+  );
+}
+
 export default function App() {
   const [lang, setLang] = useState<Language>('en');
   const [cmsState, setCmsState] = useState<CMSStoreState>(() =>
     loadLocalCMSState()
   );
-  const [adminOpen, setAdminOpen] = useState(false);
+  const [isAdminRoute, setIsAdminRoute] = useState<boolean>(() =>
+    checkIsAdminRoute()
+  );
   const [adminAuthenticated, setAdminAuthenticated] = useState(false);
   const [firebaseOnline, setFirebaseOnline] = useState(true);
   const [preselectedService, setPreselectedService] = useState<string>(
     INITIAL_CMS_STATE.services[0].titleEn
   );
   const [prefilledNote, setPrefilledNote] = useState<string>('');
+
+  // Listen for URL route / hash changes + owner keyboard shortcut (Ctrl+Shift+A)
+  useEffect(() => {
+    const syncRoute = () => setIsAdminRoute(checkIsAdminRoute());
+    window.addEventListener('popstate', syncRoute);
+    window.addEventListener('hashchange', syncRoute);
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') {
+        e.preventDefault();
+        window.history.pushState({}, '', '/admin');
+        setIsAdminRoute(true);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('popstate', syncRoute);
+      window.removeEventListener('hashchange', syncRoute);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  const navigateToAdmin = () => {
+    window.history.pushState({}, '', '/admin');
+    setIsAdminRoute(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const navigateToPublicWebsite = () => {
+    window.history.pushState({}, '', '/');
+    setIsAdminRoute(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Real-Time Firebase Cloud Firestore Subscription (A to Z synchronization)
   useEffect(() => {
@@ -254,82 +305,12 @@ export default function App() {
     (lead) => lead.status === 'New'
   ).length;
 
-  return (
-    <div className="min-h-screen bg-[#F6F3EC] text-[#141311] flex flex-col selection:bg-[#C2410C] selection:text-white">
-      {/* Handcrafted Warm Architectural Atelier Navbar */}
-      <Navbar
-        lang={lang}
-        onToggleLang={setLang}
-        settings={cmsState.settings}
-        onOpenAdmin={() => setAdminOpen(true)}
-        newLeadsCount={newLeadsCount}
-        firebaseOnline={firebaseOnline}
-      />
-
-      {/* Main Structural Framework */}
-      <main className="flex-1">
-        {/* Split-Frame Architectural Hero with Interactive Real Hisar Facility Switcher */}
-        <HeroSection lang={lang} settings={cmsState.settings} />
-
-        {/* Dedicated Hisar Workshop, Glass Godown & CNC Machinery Section (All 29 Real Photos + Descriptions) */}
-        <WorkshopSection
-          lang={lang}
-          workshop={cmsState.workshop}
-          settings={cmsState.settings}
-          onSelectWorkshopForQuote={handleSelectWorkshopForQuote}
-        />
-
-        {/* 8 Core Services Grid */}
-        <ServicesSection
-          lang={lang}
-          services={cmsState.services}
-          settings={cmsState.settings}
-          onSelectServiceForQuote={handleSelectServiceForQuote}
-        />
-
-        {/* Filterable Product Catalog with Direct Inquiries */}
-        <ProductCatalogSection
-          lang={lang}
-          products={cmsState.products}
-          settings={cmsState.settings}
-          onBookProductQuote={handleBookProductQuote}
-        />
-
-        {/* 35+ Years Proven Heritage & Specification Comparison Ledger */}
-        <LegacySection lang={lang} settings={cmsState.settings} />
-
-        {/* Completed Architectural Projects Showcase */}
-        <GallerySection
-          lang={lang}
-          gallery={cmsState.gallery}
-          settings={cmsState.settings}
-        />
-
-        {/* Customer Quotation / Site Measurement Lead Capture Form */}
-        <QuotationFormSection
-          lang={lang}
-          services={cmsState.services}
-          settings={cmsState.settings}
-          preselectedService={preselectedService}
-          prefilledNote={prefilledNote}
-          onSubmitInquiry={handleSubmitInquiry}
-        />
-
-        {/* Workshop Headquarters & Embedded Hisar Geo-location */}
-        <ContactSection lang={lang} settings={cmsState.settings} />
-      </main>
-
-      {/* Footer, Quick Actions & Persistent Floating WhatsApp CTA */}
-      <FooterAndFloating
-        lang={lang}
-        settings={cmsState.settings}
-        onOpenAdmin={() => setAdminOpen(true)}
-      />
-
-      {/* Full-Control Admin Panel Modal with Firebase Cloud Firestore Integration */}
+  // Separate Standalone Admin Portal Page (/admin)
+  if (isAdminRoute) {
+    return (
       <AdminPanelModal
-        isOpen={adminOpen}
-        onClose={() => setAdminOpen(false)}
+        isOpen={true}
+        onClose={navigateToPublicWebsite}
         lang={lang}
         cmsState={cmsState}
         isAuthenticated={adminAuthenticated}
@@ -349,6 +330,70 @@ export default function App() {
         onConnectFirebaseUrl={async () => ({ ok: true })}
         onResetDefaults={handleResetDefaults}
         firebaseConnected={firebaseOnline}
+      />
+    );
+  }
+
+  // Public Customer-Facing Website (/) — Zero Admin UI Exposed
+  return (
+    <div className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F] flex flex-col selection:bg-[#0071E3] selection:text-white">
+      <Navbar
+        lang={lang}
+        onToggleLang={setLang}
+        settings={cmsState.settings}
+        onOpenAdmin={navigateToAdmin}
+        newLeadsCount={newLeadsCount}
+        firebaseOnline={firebaseOnline}
+      />
+
+      <main className="flex-1">
+        <HeroSection lang={lang} settings={cmsState.settings} />
+
+        <WorkshopSection
+          lang={lang}
+          workshop={cmsState.workshop}
+          settings={cmsState.settings}
+          onSelectWorkshopForQuote={handleSelectWorkshopForQuote}
+        />
+
+        <ServicesSection
+          lang={lang}
+          services={cmsState.services}
+          settings={cmsState.settings}
+          onSelectServiceForQuote={handleSelectServiceForQuote}
+        />
+
+        <ProductCatalogSection
+          lang={lang}
+          products={cmsState.products}
+          settings={cmsState.settings}
+          onBookProductQuote={handleBookProductQuote}
+        />
+
+        <LegacySection lang={lang} settings={cmsState.settings} />
+
+        <GallerySection
+          lang={lang}
+          gallery={cmsState.gallery}
+          settings={cmsState.settings}
+        />
+
+        <QuotationFormSection
+          lang={lang}
+          services={cmsState.services}
+          settings={cmsState.settings}
+          preselectedService={preselectedService}
+          prefilledNote={prefilledNote}
+          onSubmitInquiry={handleSubmitInquiry}
+        />
+
+        <ContactSection lang={lang} settings={cmsState.settings} />
+      </main>
+
+      <FooterAndFloating
+        lang={lang}
+        settings={cmsState.settings}
+        onOpenAdmin={navigateToAdmin}
       />
     </div>
   );
