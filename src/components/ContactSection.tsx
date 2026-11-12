@@ -3,7 +3,6 @@ import {
   MapPin,
   Phone,
   MessageCircle,
-  Instagram,
   Clock,
   ChevronRight,
   Compass,
@@ -217,7 +216,20 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-white hover:bg-[#E8E8ED] text-[#1D1D1F] font-medium text-xs sm:text-sm transition-colors whitespace-nowrap"
               >
-                <Instagram className="w-4 h-4 text-[#E1306C]" />
+                <svg
+                  className="w-4 h-4 text-[#E1306C]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
                 <span>{settings.instagramHandle}</span>
               </a>
             </div>
