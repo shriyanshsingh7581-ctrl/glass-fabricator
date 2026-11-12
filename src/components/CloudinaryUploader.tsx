@@ -85,7 +85,7 @@ export const CloudinaryUploader: React.FC<CloudinaryUploaderProps> = ({
               type="button"
               disabled={uploading}
               onClick={() => fileInputRef.current?.click()}
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 disabled:opacity-60 text-slate-950 font-semibold text-xs transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#16A6A1] hover:bg-[#128A86] disabled:opacity-60 text-white font-semibold text-xs transition-colors cursor-pointer shadow-xs"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>

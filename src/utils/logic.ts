@@ -44,9 +44,9 @@ export function buildServiceWhatsAppMessage(
   lang: Language
 ): string {
   if (lang === 'hi') {
-    return `नमस्ते हरियाणा विंडो मार्ट, मुझे "${service.titleHi}" (${service.titleEn}) के लिए कोटेशन और जानकारी चाहिए। कृपया संपर्क करें।`;
+    return `नमस्ते हरियाणा ग्लास फैब्रिकेटर, मुझे "${service.titleHi}" (${service.titleEn}) के लिए कोटेशन और जानकारी चाहिए। कृपया संपर्क करें।`;
   }
-  return `Hello Haryana Window Mart, I would like to request a quotation and consultation for "${service.titleEn}". Please share details.`;
+  return `Hello Haryana Glass Fabricator, I would like to request a quotation and consultation for "${service.titleEn}". Please share details.`;
 }
 
 /**
@@ -57,9 +57,9 @@ export function buildProductWhatsAppMessage(
   lang: Language
 ): string {
   if (lang === 'hi') {
-    return `नमस्ते हरियाणा विंडो मार्ट, मुझे आपके प्रोडक्ट "${product.titleHi}" (श्रेणी: ${product.category}) के लिए कोटेशन चाहिए।`;
+    return `नमस्ते हरियाणा ग्लास फैब्रिकेटर, मुझे आपके प्रोडक्ट "${product.titleHi}" (श्रेणी: ${product.category}) के लिए कोटेशन चाहिए।`;
   }
-  return `Hello Haryana Window Mart, I am interested in "${product.titleEn}" (Category: ${product.category}). Please share quotation details.`;
+  return `Hello Haryana Glass Fabricator, I am interested in "${product.titleEn}" (Category: ${product.category}). Please share quotation details.`;
 }
 
 /**
@@ -77,7 +77,7 @@ export function buildInquiryWhatsAppMessage(
 
   if (lang === 'hi') {
     return [
-      `नमस्ते हरियाणा विंडो मार्ट, नया कोटेशन अनुरोध:`,
+      `नमस्ते हरियाणा ग्लास फैब्रिकेटर, नया कोटेशन अनुरोध:`,
       `• नाम: ${inquiry.fullName}`,
       `• मोबाइल: ${inquiry.phone}`,
       `• शहर/स्थान: ${inquiry.city}`,
@@ -87,7 +87,7 @@ export function buildInquiryWhatsAppMessage(
   }
 
   return [
-    `Hello Haryana Window Mart, New Quotation Request:`,
+    `Hello Haryana Glass Fabricator, New Quotation Request:`,
     `• Name: ${inquiry.fullName}`,
     `• Mobile: ${inquiry.phone}`,
     `• City/Location: ${inquiry.city}`,
@@ -298,8 +298,8 @@ export function buildWorkshopWhatsAppMessage(
   lang: Language
 ): string {
   if (lang === 'hi') {
-    return `नमस्ते हरियाणा विंडो मार्ट, मैंने आपकी वेबसाइट पर वर्कशॉप सेक्शन में "${item.titleHi}" (${item.bayCode}) देखा। मुझे अपने प्रोजेक्ट के लिए फैब्रिकेशन और कोटेशन की जानकारी चाहिए।`;
+    return `नमस्ते हरियाणा ग्लास फैब्रिकेटर, मैंने आपकी वेबसाइट पर वर्कशॉप सेक्शन में "${item.titleHi}" (${item.bayCode}) देखा। मुझे अपने प्रोजेक्ट के लिए फैब्रिकेशन और कोटेशन की जानकारी चाहिए।`;
   }
-  return `Hello Haryana Window Mart, I saw "${item.titleEn}" (${item.bayCode}) in your Hisar Workshop section. I would like to discuss fabrication and quotation details for my project.`;
+  return `Hello Haryana Glass Fabricator, I saw "${item.titleEn}" (${item.bayCode}) in your Hisar Workshop section. I would like to discuss fabrication and quotation details for my project.`;
 }
 

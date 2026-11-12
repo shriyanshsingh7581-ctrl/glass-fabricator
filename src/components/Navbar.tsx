@@ -50,16 +50,16 @@ export const Navbar: React.FC<NavbarProps> = ({
   const whatsappDirectUrl = buildWhatsAppUrl(
     settings.whatsappNumber,
     lang === 'hi'
-      ? 'नमस्ते हरियाणा विंडो मार्ट, मुझे खिड़कियों और ग्लास वर्क के लिए जानकारी चाहिए।'
-      : 'Hello Haryana Window Mart, I would like to inquire about architectural glass and window solutions.'
+      ? 'नमस्ते हरियाणा ग्लास फैब्रिकेटर, मुझे खिड़कियों और ग्लास वर्क के लिए जानकारी चाहिए।'
+      : 'Hello Haryana Glass Fabricator, I would like to inquire about architectural glass and window solutions.'
   );
 
   return (
     <>
-      {/* Apple-Style Top Ribbon with Bilingual Switcher */}
-      <div className="bg-[#1D1D1F] text-[#F5F5F7] text-[12px] py-1.5 px-4">
-        <div className="max-w-[1080px] mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-[#F5F5F7]/85 min-w-0 flex-1">
+      {/* Deep Navy Blue (#102A43) Top Ribbon with Crisp White Text & Bilingual Switcher */}
+      <div className="bg-[#0C2237] text-white text-[12px] py-1.5 px-4 border-b border-white/10">
+        <div className="max-w-[1140px] mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 text-white/90 min-w-0 flex-1">
             <span className="truncate">
               {lang === 'hi'
                 ? '35+ वर्षों की उत्कृष्टता · 4PVM+FMV, निरंकारी भवन रोड, बैंक कॉलोनी, हिसार 125001 · पूरे हरियाणा में सेवा'
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </span>
             <a
               href={`tel:${settings.phoneDisplay.replace(/\s+/g, '')}`}
-              className="hidden sm:inline-flex items-center gap-0.5 text-[#2997FF] hover:underline font-medium tabular-nums shrink-0"
+              className="hidden sm:inline-flex items-center gap-0.5 text-[#16A6A1] hover:text-[#52D1CC] font-semibold tabular-nums shrink-0 transition-colors"
             >
               <span>{settings.phoneDisplay}</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -77,15 +77,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div
             role="group"
             aria-label="Language Switcher"
-            className="inline-flex items-center bg-white/10 p-0.5 rounded-md shrink-0"
+            className="inline-flex items-center bg-white/15 p-0.5 rounded-md shrink-0 border border-white/20"
           >
             <button
               type="button"
               onClick={() => onToggleLang('en')}
-              className={`px-2 py-0.5 text-[11px] font-medium rounded-xs transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+              className={`px-2 py-0.5 text-[11px] font-semibold rounded-xs transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                 lang === 'en'
-                  ? 'bg-white text-[#1D1D1F]'
-                  : 'text-[#F5F5F7]/75 hover:text-white'
+                  ? 'bg-[#16A6A1] text-white shadow-xs'
+                  : 'text-white/80 hover:text-white'
               }`}
             >
               EN
@@ -93,10 +93,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={() => onToggleLang('hi')}
-              className={`px-2 py-0.5 text-[11px] font-medium rounded-xs transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+              className={`px-2 py-0.5 text-[11px] font-semibold rounded-xs transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                 lang === 'hi'
-                  ? 'bg-white text-[#1D1D1F]'
-                  : 'text-[#F5F5F7]/75 hover:text-white'
+                  ? 'bg-[#16A6A1] text-white shadow-xs'
+                  : 'text-white/80 hover:text-white'
               }`}
             >
               हिन्दी
@@ -105,15 +105,15 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
 
-      {/* Apple.com 3-Zone Frosted Glass Global Navigation Bar */}
-      <header className="sticky top-0 z-40 apple-glass-nav border-b border-black/[0.08] transition-all">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6 h-12 flex items-center justify-between gap-8">
-          {/* Zone 1: Single-line Brand Wordmark */}
+      {/* Deep Navy Blue (#102A43) Header with Crisp White Text and Glass Teal CTAs */}
+      <header className="sticky top-0 z-40 bg-[#102A43]/95 backdrop-blur-md border-b border-[#DCE4EA]/20 transition-all text-white shadow-md">
+        <div className="max-w-[1140px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-8">
+          {/* Zone 1: Single-line Brand Wordmark with Logo */}
           <a
             href="#top"
             className="flex items-center gap-2.5 group focus:outline-none whitespace-nowrap shrink-0"
           >
-            <div className="w-7 h-7 rounded-md bg-white border border-black/[0.08] p-0.5 flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-white border border-white/20 p-0.5 flex items-center justify-center shrink-0 shadow-xs">
               {!logoError && settings.logoUrl ? (
                 <img
                   src={settings.logoUrl}
@@ -123,32 +123,32 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className="w-full h-full object-contain"
                 />
               ) : (
-                <span className="text-[10px] font-bold text-[#1D1D1F]">HWM</span>
+                <span className="text-[10px] font-bold text-[#102A43]">HGF</span>
               )}
             </div>
-            <span className="font-semibold text-[14px] tracking-[-0.015em] text-[#1D1D1F] whitespace-nowrap shrink-0">
+            <span className="font-bold text-[15px] tracking-[-0.015em] text-white whitespace-nowrap shrink-0">
               {lang === 'hi' ? settings.brandNameHi : settings.brandNameEn}
             </span>
           </a>
 
-          {/* Zone 2: Minimal Apple Global Nav Links */}
+          {/* Zone 2: Global Nav Links with crisp white text */}
           <nav className="hidden md:flex items-center gap-7">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-[12px] font-normal text-[#1D1D1F]/80 hover:text-[#1D1D1F] transition-colors whitespace-nowrap shrink-0"
+                className="text-[13px] font-medium text-white/85 hover:text-[#16A6A1] transition-colors whitespace-nowrap shrink-0"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* Zone 3: 1 Primary Action */}
+          {/* Zone 3: Glass Teal (#16A6A1) Primary Action Button */}
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="#quotation"
-              className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg bg-[#0071E3] hover:bg-[#0077ED] text-white text-[12px] font-medium transition-colors whitespace-nowrap shrink-0"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#16A6A1] hover:bg-[#128A86] text-white text-[13px] font-semibold transition-colors shadow-xs whitespace-nowrap shrink-0"
             >
               {lang === 'hi' ? 'कोटेशन लें' : 'Get Quote'}
             </a>
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Menu"
-              className="md:hidden p-1.5 text-[#1D1D1F]/80 hover:text-[#1D1D1F]"
+              className="md:hidden p-1.5 text-white/90 hover:text-white cursor-pointer"
             >
               {mobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -168,19 +168,19 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Apple-Style Smooth Mobile Flyout Menu */}
+        {/* Deep Navy Blue Mobile Flyout Menu with Crisp White text & Teal accents */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-2xl border-b border-black/[0.08] px-6 py-6 space-y-4">
+          <div className="md:hidden bg-[#102A43] border-b border-white/15 px-6 py-6 space-y-4 shadow-xl">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-semibold text-[#1D1D1F] hover:text-[#0071E3] py-1 border-b border-black/[0.05] flex items-center justify-between"
+                  className="text-base font-semibold text-white hover:text-[#16A6A1] py-1.5 border-b border-white/10 flex items-center justify-between transition-colors"
                 >
                   <span>{item.label}</span>
-                  <ChevronRight className="w-4 h-4 text-[#86868B]" />
+                  <ChevronRight className="w-4 h-4 text-[#16A6A1]" />
                 </a>
               ))}
             </div>
@@ -188,16 +188,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="grid grid-cols-2 gap-3 pt-2">
               <a
                 href={`tel:${settings.phoneDisplay.replace(/\s+/g, '')}`}
-                className="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#F5F5F7] text-[#1D1D1F] font-semibold text-xs whitespace-nowrap"
+                className="flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs whitespace-nowrap transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#0071E3]" />
+                <Phone className="w-4 h-4 text-[#16A6A1]" />
                 <span>{lang === 'hi' ? 'कॉल करें' : 'Call Now'}</span>
               </a>
               <a
                 href={whatsappDirectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#0071E3] text-white font-semibold text-xs whitespace-nowrap"
+                className="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#16A6A1] hover:bg-[#128A86] text-white font-semibold text-xs whitespace-nowrap transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp</span>

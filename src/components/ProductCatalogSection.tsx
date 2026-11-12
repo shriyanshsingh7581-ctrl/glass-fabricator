@@ -32,26 +32,26 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
   const visibleProducts = filterProducts(products, selectedCategory, true);
 
   return (
-    <section id="catalog" className="py-20 sm:py-28 bg-white text-[#1D1D1F]">
+    <section id="catalog" className="py-20 sm:py-28 bg-white text-[#263746]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
-        {/* Apple "Explore the lineup" Header */}
+        {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div>
-            <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#0071E3]">
+            <p className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#16A6A1]/10 text-xs sm:text-sm font-bold tracking-wide text-[#16A6A1]">
               {lang === 'hi'
                 ? 'प्रोडक्ट लाइनअप · इन-हाउस CNC फैब्रिकेशन'
                 : 'Explore the Lineup · Custom Fabricated in Hisar'}
             </p>
-            <h2 className="mt-2 text-3xl sm:text-5xl font-bold tracking-[-0.032em] text-[#1D1D1F] leading-[1.08]">
+            <h2 className="mt-3 text-3xl sm:text-5xl font-bold tracking-[-0.032em] text-[#102A43] leading-[1.08]">
               {lang === 'hi' ? (
                 <>
                   सिग्नेचर विंडो और ग्लास सिस्टम।{' '}
-                  <span className="text-[#86868B]">हर स्पेस के लिए खास।</span>
+                  <span className="text-[#16A6A1]">हर स्पेस के लिए खास।</span>
                 </>
               ) : (
                 <>
                   Explore the lineup.{' '}
-                  <span className="text-[#86868B]">
+                  <span className="text-[#16A6A1]">
                     Built for modern architecture.
                   </span>
                 </>
@@ -59,16 +59,16 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
             </h2>
           </div>
 
-          <div className="text-sm text-[#86868B] tabular-nums">
+          <div className="text-sm font-semibold text-[#16A6A1] tabular-nums">
             {lang === 'hi'
               ? `${visibleProducts.length} सिस्टम उपलब्ध`
               : `Showing ${visibleProducts.length} architectural systems`}
           </div>
         </div>
 
-        {/* Apple Segmented Category Tabs */}
+        {/* Segmented Category Tabs */}
         <div className="mt-8 flex overflow-x-auto pb-2">
-          <div className="inline-flex items-center gap-1 bg-[#F5F5F7] p-1.5 rounded-2xl">
+          <div className="inline-flex items-center gap-1 bg-[#F3F6F8] border border-[#DCE4EA] p-1.5 rounded-2xl">
             {PRODUCT_CATEGORIES.map((cat) => {
               const isSelected = selectedCategory === cat.key;
               return (
@@ -76,10 +76,10 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
                   key={cat.key}
                   type="button"
                   onClick={() => setSelectedCategory(cat.key)}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                     isSelected
-                      ? 'bg-[#1D1D1F] text-white shadow-xs'
-                      : 'text-[#6E6E73] hover:text-[#1D1D1F]'
+                      ? 'bg-[#102A43] text-white shadow-xs'
+                      : 'text-[#263746]/70 hover:text-[#102A43]'
                   }`}
                 >
                   {lang === 'hi' ? cat.labelHi : cat.labelEn}
@@ -89,10 +89,10 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
           </div>
         </div>
 
-        {/* Apple Lineup Product Cards */}
+        {/* Lineup Product Cards */}
         {visibleProducts.length === 0 ? (
-          <div className="mt-10 rounded-[28px] bg-[#F5F5F7] p-12 text-center">
-            <p className="text-base text-[#6E6E73]">
+          <div className="mt-10 rounded-[28px] bg-[#F3F6F8] border border-[#DCE4EA] p-12 text-center">
+            <p className="text-base text-[#263746]/70">
               {lang === 'hi'
                 ? 'इस श्रेणी में कोई उत्पाद नहीं मिला।'
                 : 'No products found in this category.'}
@@ -114,12 +114,12 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
               return (
                 <article
                   key={product.id}
-                  className="rounded-[28px] bg-[#F5F5F7] overflow-hidden flex flex-col justify-between apple-card-hover group"
+                  className="rounded-[28px] bg-[#F3F6F8] border border-[#DCE4EA] overflow-hidden flex flex-col justify-between architectural-card-hover group"
                 >
                   <div>
                     {/* Product Image Showcase */}
                     <div className="p-3 pb-0">
-                      <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden bg-white">
+                      <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden bg-white border border-[#DCE4EA]">
                         <img
                           src={product.imageUrl}
                           alt={title}
@@ -131,8 +131,8 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
 
                     {/* Product Copy */}
                     <div className="p-6">
-                      <div className="text-xs font-medium text-[#86868B] flex items-center gap-1.5">
-                        <span className="text-[#BF4800] font-semibold">
+                      <div className="text-xs font-semibold text-[#16A6A1] flex items-center gap-1.5">
+                        <span className="font-bold">
                           {product.category}
                         </span>
                         {specLine && (
@@ -143,22 +143,22 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
                         )}
                       </div>
 
-                      <h3 className="mt-2 text-lg font-bold tracking-[-0.02em] text-[#1D1D1F] leading-snug">
+                      <h3 className="mt-2 text-lg font-bold tracking-[-0.02em] text-[#102A43] leading-snug">
                         {title}
                       </h3>
 
-                      <p className="mt-2 text-xs sm:text-sm text-[#6E6E73] leading-relaxed">
+                      <p className="mt-2 text-xs sm:text-sm text-[#263746]/80 leading-relaxed">
                         {desc}
                       </p>
                     </div>
                   </div>
 
-                  {/* Apple Lineup CTA Footer */}
-                  <div className="px-6 pb-6 pt-3 border-t border-black/[0.06] flex items-center justify-between gap-3">
+                  {/* CTA Footer with Glass Teal Button */}
+                  <div className="px-6 pb-6 pt-3 border-t border-[#DCE4EA] flex items-center justify-between gap-3">
                     <button
                       type="button"
                       onClick={() => onBookProductQuote(product)}
-                      className="px-4 py-2 rounded-xl bg-[#0071E3] hover:bg-[#0077ED] text-white text-xs font-medium transition-colors cursor-pointer whitespace-nowrap"
+                      className="px-4 py-2 rounded-xl bg-[#16A6A1] hover:bg-[#128A86] text-white text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap shadow-xs"
                     >
                       {lang === 'hi' ? 'कोटेशन लें' : 'Get Quote'}
                     </button>
@@ -167,9 +167,9 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
                       href={waUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-medium text-[#0066CC] hover:underline whitespace-nowrap"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#102A43] hover:text-[#16A6A1] transition-colors whitespace-nowrap"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                      <MessageCircle className="w-3.5 h-3.5 text-[#16A6A1]" />
                       <span>WhatsApp</span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </a>

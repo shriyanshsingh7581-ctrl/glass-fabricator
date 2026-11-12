@@ -349,14 +349,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   return (
     <div
       role="main"
-      aria-label="Haryana Window Mart Standalone Admin Portal"
-      className="min-h-screen w-full bg-slate-950 text-slate-100 flex flex-col"
+      aria-label="Haryana Glass Fabricator Standalone Admin Portal"
+      className="min-h-screen w-full bg-[#0C2237] text-white flex flex-col"
     >
-      <div className="w-full max-w-[1440px] mx-auto bg-slate-900 border-x border-slate-800 flex-1 flex flex-col min-h-screen">
+      <div className="w-full max-w-[1440px] mx-auto bg-[#102A43] border-x border-[#DCE4EA]/20 flex-1 flex flex-col min-h-screen">
         {/* Top Portal Header */}
-        <div className="px-5 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-4 shrink-0 sticky top-0 z-30">
+        <div className="px-5 py-4 bg-[#0C2237] border-b border-[#DCE4EA]/20 flex items-center justify-between gap-4 shrink-0 sticky top-0 z-30">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-white p-0.5 shrink-0">
+            <div className="w-9 h-9 rounded-lg bg-white p-0.5 shrink-0 border border-white/20">
               <ResilientImage
                 src={cmsState.settings.logoUrl}
                 alt="Admin Logo"
@@ -366,10 +366,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             <div>
               <h2 className="font-display text-base sm:text-lg font-bold text-white">
                 {lang === 'hi'
-                  ? 'हरियाणा विंडो मार्ट — अलग एडमिन पोर्टल (/admin)'
-                  : 'Haryana Window Mart — Standalone Admin Portal (/admin)'}
+                  ? 'हरियाणा ग्लास फैब्रिकेटर — अलग एडमिन पोर्टल (/admin)'
+                  : 'Haryana Glass Fabricator — Standalone Admin Portal (/admin)'}
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-white/70">
                 {firebaseConnected
                   ? 'Firebase Cloud Firestore + LocalStorage Real-Time Sync Active'
                   : 'Realtime LocalStorage Sync Active'}
@@ -382,7 +382,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <button
                 type="button"
                 onClick={onLogout}
-                className="px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-medium text-slate-300 cursor-pointer"
+                className="px-3 py-2 rounded-lg bg-[#102A43] hover:bg-[#153452] border border-[#DCE4EA]/30 text-xs font-semibold text-white/90 cursor-pointer transition-colors"
               >
                 {lang === 'hi' ? 'लॉग आउट' : 'Lock Portal'}
               </button>
@@ -391,7 +391,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               type="button"
               onClick={onClose}
               aria-label="Back to Public Website"
-              className="px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 cursor-pointer"
+              className="px-3.5 py-2 rounded-lg bg-[#16A6A1] hover:bg-[#128A86] text-white font-bold text-xs flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors"
             >
               <span>
                 {lang === 'hi'
@@ -453,14 +453,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           /* Authenticated Full Dashboard */
           <div className="flex-1 flex flex-col overflow-hidden">
             {/* Navigation Tabs */}
-            <div className="px-5 pt-3 bg-slate-950 border-b border-slate-800 flex items-center gap-2 overflow-x-auto no-scrollbar shrink-0">
+            <div className="px-5 pt-3 bg-[#0C2237] border-b border-[#DCE4EA]/20 flex items-center gap-2 overflow-x-auto no-scrollbar shrink-0">
               <button
                 type="button"
                 onClick={() => setActiveTab('leads')}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === 'leads'
-                    ? 'border-amber-400 text-amber-400'
-                    : 'border-transparent text-slate-400 hover:text-white'
+                    ? 'border-[#16A6A1] text-[#16A6A1]'
+                    : 'border-transparent text-white/70 hover:text-white'
                 }`}
               >
                 <Users className="w-4 h-4" />
@@ -474,8 +474,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 onClick={() => setActiveTab('workshop')}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === 'workshop'
-                    ? 'border-amber-400 text-amber-400'
-                    : 'border-transparent text-slate-400 hover:text-white'
+                    ? 'border-[#16A6A1] text-[#16A6A1]'
+                    : 'border-transparent text-white/70 hover:text-white'
                 }`}
               >
                 <Wrench className="w-4 h-4" />
@@ -489,8 +489,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 onClick={() => setActiveTab('products')}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === 'products'
-                    ? 'border-amber-400 text-amber-400'
-                    : 'border-transparent text-slate-400 hover:text-white'
+                    ? 'border-[#16A6A1] text-[#16A6A1]'
+                    : 'border-transparent text-white/70 hover:text-white'
                 }`}
               >
                 <Package className="w-4 h-4" />
@@ -504,8 +504,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 onClick={() => setActiveTab('gallery')}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === 'gallery'
-                    ? 'border-amber-400 text-amber-400'
-                    : 'border-transparent text-slate-400 hover:text-white'
+                    ? 'border-[#16A6A1] text-[#16A6A1]'
+                    : 'border-transparent text-white/70 hover:text-white'
                 }`}
               >
                 <ImageIcon className="w-4 h-4" />
@@ -519,8 +519,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 onClick={() => setActiveTab('services')}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === 'services'
-                    ? 'border-amber-400 text-amber-400'
-                    : 'border-transparent text-slate-400 hover:text-white'
+                    ? 'border-[#16A6A1] text-[#16A6A1]'
+                    : 'border-transparent text-white/70 hover:text-white'
                 }`}
               >
                 <Wrench className="w-4 h-4" />
@@ -537,8 +537,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 }}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === 'settings'
-                    ? 'border-amber-400 text-amber-400'
-                    : 'border-transparent text-slate-400 hover:text-white'
+                    ? 'border-[#16A6A1] text-[#16A6A1]'
+                    : 'border-transparent text-white/70 hover:text-white'
                 }`}
               >
                 <Settings className="w-4 h-4" />
@@ -607,7 +607,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       {filteredLeads.map((lead: CustomerInquiry) => {
                         const waReplyUrl = buildWhatsAppUrl(
                           lead.phone,
-                          `Hello ${lead.fullName}, this is Haryana Window Mart (Hisar) regarding your inquiry for ${lead.service} in ${lead.city}.`
+                          `Hello ${lead.fullName}, this is Haryana Glass Fabricator (Hisar) regarding your inquiry for ${lead.service} in ${lead.city}.`
                         );
 
                         return (
@@ -1810,7 +1810,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <div className="flex items-center gap-3">
                       <button
                         type="submit"
-                        className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm cursor-pointer"
+                        className="px-6 py-2.5 rounded-xl bg-[#16A6A1] hover:bg-[#128A86] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-md transition-colors"
                       >
                         Save All Site Settings
                       </button>

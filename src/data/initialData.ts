@@ -11,10 +11,10 @@ import {
 } from '../types/cms';
 
 export const DEFAULT_SITE_SETTINGS: SiteSettings = {
-  brandNameEn: 'Haryana Window Mart',
-  brandNameHi: 'हरियाणा विंडो मार्ट',
-  subtitleEn: 'Haryana Glass Fabricator',
-  subtitleHi: 'हरियाणा ग्लास फैब्रिकेटर',
+  brandNameEn: 'Haryana Glass Fabricator',
+  brandNameHi: 'हरियाणा ग्लास फैब्रिकेटर',
+  subtitleEn: 'Complete Expertise in Craftsmanship',
+  subtitleHi: 'कारीगरी और फिनिशिंग में पूर्ण विशेषज्ञता',
   logoUrl: '/assets/aistudio/IMG-20261112-WA0001_8a30db36.jpg',
   legacyYearsStat: '35+ Years',
   generationsStat: '2 Generations',
@@ -507,9 +507,9 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: 'Integrated Cutting, Milling, Welding & Glazing under One Roof in Hisar',
     machineSpecHi: 'हिसार में एक ही छत के नीचे कटिंग, मिलिंग, वेल्डिंग और ग्लेजिंग की संपूर्ण सुविधा',
     descriptionEn:
-      'Another wide perspective of the Haryana Window Mart factory floor demonstrating how raw 20-foot aluminium and uPVC profiles enter from the storage racks, pass through CNC cutting, routing, and thermal welding, and arrive at the central glazing station with zero outsourcing.',
+      'Another wide perspective of the Haryana Glass Fabricator factory floor demonstrating how raw 20-foot aluminium and uPVC profiles enter from the storage racks, pass through CNC cutting, routing, and thermal welding, and arrive at the central glazing station with zero outsourcing.',
     descriptionHi:
-      'हरियाणा विंडो मार्ट की फैक्ट्री का एक और विहंगम दृश्य, जो दर्शाता है कि कैसे एक ही छत के नीचे कच्चे प्रोफाइल से लेकर CNC कटिंग, राउटिंग, वेल्डिंग और ग्लास ग्लेजिंग तक का सारा काम बिना किसी बाहरी निर्भरता के इन-हाउस किया जाता है।',
+      'हरियाणा ग्लास फैब्रिकेटर की फैक्ट्री का एक और विहंगम दृश्य, जो दर्शाता है कि कैसे एक ही छत के नीचे कच्चे प्रोफाइल से लेकर CNC कटिंग, राउटिंग, वेल्डिंग और ग्लास ग्लेजिंग तक का सारा काम बिना किसी बाहरी निर्भरता के इन-हाउस किया जाता है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0070_08db398f.jpg',
     createdAt: 1730100022000,
   },

@@ -21,10 +21,22 @@ export function loadLocalCMSState(): CMSStoreState {
     const hasUpdatedGoogleLocation = String(
       savedSettings.addressEn || ''
     ).includes('4PVM+FMV');
+    const isOldBrandName =
+      savedSettings.brandNameEn === 'Haryana Window Mart' ||
+      !savedSettings.brandNameEn;
+
     return {
       settings: {
         ...INITIAL_CMS_STATE.settings,
         ...savedSettings,
+        ...(isOldBrandName
+          ? {
+              brandNameEn: INITIAL_CMS_STATE.settings.brandNameEn,
+              brandNameHi: INITIAL_CMS_STATE.settings.brandNameHi,
+              subtitleEn: INITIAL_CMS_STATE.settings.subtitleEn,
+              subtitleHi: INITIAL_CMS_STATE.settings.subtitleHi,
+            }
+          : {}),
         ...(hasUpdatedGoogleLocation
           ? {}
           : {

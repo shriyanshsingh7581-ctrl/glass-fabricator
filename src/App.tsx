@@ -45,16 +45,22 @@ import { AdminPanelModal } from './components/AdminPanelModal';
 
 function checkIsAdminRoute(): boolean {
   if (typeof window === 'undefined') return false;
-  const path = window.location.pathname.toLowerCase();
+  const path = window.location.pathname.toLowerCase().replace(/\/+$/, '');
   const hash = window.location.hash.toLowerCase();
   const search = window.location.search.toLowerCase();
   return (
     path === '/admin' ||
     path.startsWith('/admin/') ||
+    path === '/admin-panel' ||
+    path === '/adminpanel' ||
+    path === '/dashboard' ||
+    path === '/login' ||
     hash === '#admin' ||
     hash === '#/admin' ||
+    hash === '#admin-panel' ||
     search.includes('admin=true') ||
-    search.includes('admin=1')
+    search.includes('admin=1') ||
+    search === '?admin'
   );
 }
 

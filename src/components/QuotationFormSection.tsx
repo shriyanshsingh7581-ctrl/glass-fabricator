@@ -110,18 +110,18 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
   return (
     <section
       id="quotation"
-      className="py-20 sm:py-28 bg-[#F5F5F7] text-[#1D1D1F]"
+      className="py-20 sm:py-28 bg-[#F3F6F8] text-[#263746] border-y border-[#DCE4EA]"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
-        {/* Apple Specialist Consultation Container */}
-        <div className="rounded-[32px] bg-white apple-card-shadow overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-          {/* Left Column: Apple Pro Concierge Sidebar (5 Cols) */}
-          <div className="lg:col-span-5 p-8 sm:p-11 bg-[#1D1D1F] text-white flex flex-col justify-between">
+        {/* Specialist Consultation Container */}
+        <div className="rounded-[32px] bg-white border border-[#DCE4EA] architectural-card-shadow overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+          {/* Left Column: Deep Navy Blue Sidebar (5 Cols) */}
+          <div className="lg:col-span-5 p-8 sm:p-11 bg-[#102A43] text-white flex flex-col justify-between">
             <div>
-              <p className="text-xs font-semibold tracking-wide text-[#2997FF]">
+              <p className="text-xs font-bold tracking-wide uppercase text-[#16A6A1]">
                 {lang === 'hi'
                   ? 'निःशुल्क कोटेशन और साइट माप'
-                  : 'Haryana Window Mart Specialist Desk'}
+                  : 'Haryana Glass Fabricator Specialist Desk'}
               </p>
 
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-[-0.03em] text-white leading-[1.1]">
@@ -130,19 +130,19 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                   : 'Request factory-direct quotation & site measurement.'}
               </h2>
 
-              <p className="mt-4 text-sm text-[#A1A1A6] leading-relaxed">
+              <p className="mt-4 text-sm text-white/80 leading-relaxed">
                 {lang === 'hi'
                   ? 'अपना विवरण भरें। आपकी पूछताछ तुरंत हमारे क्लाउड डेटाबेस में सेव हो जाएगी और आप एक क्लिक में व्हाट्सएप पर भी सीधा संदेश भेज सकते हैं।'
                   : 'Submit your project specifications below. Your inquiry syncs instantly to our Hisar specialist desk and prepares a direct WhatsApp brief.'}
               </p>
 
-              {/* 3-Step Apple Numbered List */}
-              <div className="mt-8 space-y-5 border-t border-white/10 pt-6">
+              {/* 3-Step Numbered List */}
+              <div className="mt-8 space-y-5 border-t border-white/15 pt-6">
                 <div>
-                  <div className="text-xs font-semibold text-[#2997FF]">
+                  <div className="text-xs font-bold text-[#16A6A1]">
                     01. {lang === 'hi' ? 'आवश्यकता चुनें' : 'Select Your System'}
                   </div>
-                  <p className="text-xs text-[#A1A1A6] mt-1">
+                  <p className="text-xs text-white/75 mt-1">
                     {lang === 'hi'
                       ? 'uPVC, एल्युमीनियम, टफन्ड ग्लास, स्लिम पार्टीशन या एलईडी मिरर चुनें।'
                       : 'Choose uPVC, Aluminium, Toughened Glass, Slim Profile, or LED Mirrors.'}
@@ -150,10 +150,10 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                 </div>
 
                 <div>
-                  <div className="text-xs font-semibold text-[#2997FF]">
+                  <div className="text-xs font-bold text-[#16A6A1]">
                     02. {lang === 'hi' ? 'लेजर साइट माप' : 'On-Site Laser Measurement'}
                   </div>
-                  <p className="text-xs text-[#A1A1A6] mt-1">
+                  <p className="text-xs text-white/75 mt-1">
                     {lang === 'hi'
                       ? 'हमारी टीम आपके शहर/साइट पर आकर सटीक माप लेती है।'
                       : 'Our engineering team visits your site anywhere in Haryana.'}
@@ -360,7 +360,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                 <div>
                   <label
                     htmlFor="quote-message"
-                    className="block text-xs font-semibold text-[#1D1D1F] mb-2"
+                    className="block text-xs font-semibold text-[#102A43] mb-2"
                   >
                     {lang === 'hi'
                       ? 'अनुमानित माप या प्रोजेक्ट विवरण (वैकल्पिक)'
@@ -376,14 +376,14 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                         ? 'उदा. नई कोठी के लिए 6 खिड़कियां (uPVC 3-ट्रैक), बालकनी के लिए 12mm टफन्ड ग्लास रेलिंग और 2 आर्च एलईडी मिरर...'
                         : 'e.g., Need 6 sets of 3-track uPVC windows with mesh, 16mm slim partition for drawing room, and 2 Arch LED mirrors...'
                     }
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-black/[0.08] focus:border-[#0071E3] focus:bg-white text-sm text-[#1D1D1F] focus:outline-none transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white border border-[#DCE4EA] focus:border-[#16A6A1] focus:ring-1 focus:ring-[#16A6A1] text-sm text-[#263746] focus:outline-none transition-colors"
                   />
                 </div>
 
                 <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#0071E3] hover:bg-[#0077ED] text-white font-medium text-sm transition-colors cursor-pointer whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#16A6A1] hover:bg-[#128A86] text-white font-semibold text-sm transition-colors cursor-pointer whitespace-nowrap shadow-md hover:shadow-lg"
                   >
                     <Send className="w-4 h-4" />
                     <span>
@@ -409,13 +409,13 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#F5F5F7] hover:bg-[#E8E8ED] text-[#1D1D1F] font-medium text-sm transition-colors whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#F3F6F8] hover:bg-[#DCE4EA] border border-[#DCE4EA] text-[#102A43] font-semibold text-sm transition-colors whitespace-nowrap"
                   >
-                    <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                    <MessageCircle className="w-4 h-4 text-[#16A6A1]" />
                     <span>
                       {lang === 'hi'
                         ? 'सीधा व्हाट्सएप पर भेजें'
-                        : 'Direct WhatsApp Quote'}
+                        : 'Get Quotation on WhatsApp'}
                     </span>
                   </a>
                 </div>

@@ -59,46 +59,46 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
     lightboxIndex !== null ? filteredItems[lightboxIndex] : null;
 
   return (
-    <section id="workshop" className="py-20 sm:py-28 bg-[#000000] text-[#F5F5F7]">
+    <section id="workshop" className="py-20 sm:py-28 bg-[#0C2237] text-white border-t border-[#102A43]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
-        {/* Apple Pro Dark Mode Section Header */}
+        {/* Pro Manufacturing Header */}
         <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase text-[#2997FF]">
+          <p className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#16A6A1]/20 text-xs sm:text-sm font-bold tracking-[0.12em] uppercase text-[#16A6A1]">
             {lang === 'hi'
               ? 'वर्कशॉप और मशीनरी · हिसार मैन्युफैक्चरिंग प्लांट'
               : 'PRO MANUFACTURING PLANT · NIRANKARI BHAWAN ROAD, HISAR'}
           </p>
 
-          <h2 className="mt-3 text-3xl sm:text-5xl lg:text-[56px] font-bold tracking-[-0.032em] leading-[1.06]">
+          <h2 className="mt-4 text-3xl sm:text-5xl lg:text-[56px] font-bold tracking-[-0.032em] leading-[1.06] text-white">
             {lang === 'hi' ? (
               <>
-                <span className="text-white">हमारी वर्कशॉप और ग्लास गोदाम।</span>{' '}
-                <span className="text-[#86868B]">
+                <span>हमारी वर्कशॉप और ग्लास गोदाम।</span>{' '}
+                <span className="text-[#16A6A1]">
                   29 असली फोटोज़ और पूरी जानकारी।
                 </span>
               </>
             ) : (
               <>
-                <span className="text-white">Inside our Hisar Workshop.</span>{' '}
-                <span className="text-[#86868B]">
+                <span>Inside our Hisar Workshop.</span>{' '}
+                <span className="text-[#16A6A1]">
                   Powerhouse CNC machinery.
                 </span>
               </>
             )}
           </h2>
 
-          <p className="mt-5 text-sm sm:text-lg text-[#A1A1A6] leading-relaxed">
+          <p className="mt-5 text-sm sm:text-lg text-white/80 leading-relaxed">
             {lang === 'hi'
               ? 'हमारी 3-मंजिला मुख्य बिल्डिंग, हरियाणा ग्लास गोदाम, डबल-हेड CNC प्रोफाइल कटिंग मशीन, ट्विन-हेड uPVC थर्मल वेल्डिंग लाइन, कॉपी राउटर, ग्रीन-फेल्ट ग्लेजिंग टेबल और एलईडी मिरर शोरूम के हर फोटो के नीचे उसका पूरा विवरण पढ़ें।'
               : 'Every photograph below is captured inside our Hisar headquarters, bulk float-glass godown, automated CNC cutting and thermal welding bays, and LED mirror studio — with detailed process descriptions underneath each photo.'}
           </p>
 
           {/* Official Google Business Profile Owner Workshop Note */}
-          <div className="mt-6 inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-5 py-3 rounded-2xl bg-[#161617] border border-white/10 text-xs sm:text-sm text-[#F5F5F7]">
-            <span className="text-[#2997FF] font-semibold shrink-0">
+          <div className="mt-6 inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-5 py-3 rounded-2xl bg-[#102A43] border border-white/15 text-xs sm:text-sm text-white">
+            <span className="text-[#16A6A1] font-bold shrink-0">
               {lang === 'hi' ? 'ओनर का संदेश (Google):' : 'From the Owner (Google):'}
             </span>
-            <span className="italic text-[#A1A1A6]">
+            <span className="italic text-white/85">
               "
               {lang === 'hi'
                 ? settings.ownerNoteHi ||
@@ -110,8 +110,8 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
           </div>
         </div>
 
-        {/* Apple Pro Segmented Filter Bar + Search */}
-        <div className="mt-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 bg-[#161617] p-3 rounded-[24px] border border-white/10">
+        {/* Segmented Filter Bar + Search */}
+        <div className="mt-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 bg-[#102A43] p-3 rounded-[24px] border border-white/15">
           <div className="flex flex-wrap items-center gap-1.5">
             {WORKSHOP_CATEGORIES.map((cat) => {
               const isSelected = activeCategory === cat.key;
@@ -125,14 +125,14 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
                   key={cat.key}
                   type="button"
                   onClick={() => setActiveCategory(cat.key)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                  className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-white text-[#1D1D1F] shadow-xs font-semibold'
-                      : 'text-[#A1A1A6] hover:text-white hover:bg-white/[0.06]'
+                      ? 'bg-[#16A6A1] text-white shadow-xs'
+                      : 'text-white/70 hover:text-white hover:bg-white/[0.08]'
                   }`}
                 >
                   <span>{lang === 'hi' ? cat.labelHi : cat.labelEn}</span>
-                  <span className="ml-1.5 opacity-70 tabular-nums">
+                  <span className="ml-1.5 opacity-80 tabular-nums">
                     ({count})
                   </span>
                 </button>
@@ -141,7 +141,7 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
           </div>
 
           <div className="relative min-w-[250px]">
-            <Search className="w-4 h-4 text-[#86868B] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-white/50 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
@@ -151,15 +151,15 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
                   ? 'मशीन, गोदाम, uPVC, मिरर खोजें...'
                   : 'Search CNC, Godown, uPVC, Mirror...'
               }
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#242426] border border-white/10 focus:border-[#2997FF] text-xs text-white placeholder-[#86868B] focus:outline-none"
+              className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#0C2237] border border-white/20 focus:border-[#16A6A1] text-xs text-white placeholder-white/50 focus:outline-none"
             />
           </div>
         </div>
 
-        {/* Apple Pro Bento Grid of All 29 Workshop Photos + Detailed Descriptions Below Each Photo */}
+        {/* Bento Grid of All 29 Workshop Photos + Detailed Descriptions Below Each Photo */}
         {filteredItems.length === 0 ? (
-          <div className="mt-8 rounded-[28px] bg-[#161617] p-12 text-center border border-white/10">
-            <p className="text-sm text-[#86868B]">
+          <div className="mt-8 rounded-[28px] bg-[#102A43] p-12 text-center border border-white/15">
+            <p className="text-sm text-white/70">
               {lang === 'hi'
                 ? 'इस श्रेणी में कोई वर्कशॉप फोटो नहीं मिला।'
                 : 'No workshop photos matched your filter.'}
@@ -181,23 +181,23 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
               return (
                 <article
                   key={item.id}
-                  className="rounded-[28px] bg-[#161617] border border-white/[0.08] overflow-hidden flex flex-col justify-between apple-card-hover group"
+                  className="rounded-[28px] bg-[#102A43] border border-white/15 overflow-hidden flex flex-col justify-between group hover:border-[#16A6A1] transition-colors shadow-lg"
                 >
                   <div>
                     {/* High-Resolution Workshop Photograph */}
                     <div
                       onClick={() => setLightboxIndex(idx)}
-                      className="relative aspect-[4/3] bg-[#0A0A0C] overflow-hidden cursor-pointer"
+                      className="relative aspect-[4/3] bg-[#0C2237] overflow-hidden cursor-pointer"
                     >
                       <img
                         src={item.imageUrl}
                         alt={title}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#161617] via-transparent to-black/30 opacity-80" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#102A43] via-transparent to-black/30 opacity-70" />
 
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-[11px] font-medium">
-                        <span className="text-white/90 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10">
+                        <span className="text-white bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-white/20 font-semibold text-[#16A6A1]">
                           {item.bayCode} · {item.category}
                         </span>
                         <button
@@ -206,7 +206,7 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
                             e.stopPropagation();
                             setLightboxIndex(idx);
                           }}
-                          className="p-2 rounded-lg bg-black/60 hover:bg-[#0071E3] text-white backdrop-blur-md border border-white/10 transition-colors cursor-pointer"
+                          className="p-2 rounded-lg bg-black/70 hover:bg-[#16A6A1] text-white backdrop-blur-md border border-white/20 transition-colors cursor-pointer"
                           aria-label="Zoom Workshop Photo"
                         >
                           <ZoomIn className="w-3.5 h-3.5" />
@@ -216,7 +216,7 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
 
                     {/* Detailed Information Box Directly Underneath the Photo */}
                     <div className="p-6 sm:p-7">
-                      <p className="text-xs font-semibold text-[#2997FF] leading-snug">
+                      <p className="text-xs font-bold text-[#16A6A1] leading-snug uppercase tracking-wide">
                         {spec}
                       </p>
 
@@ -224,41 +224,40 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
                         {title}
                       </h3>
 
-                      <div className="mt-3.5 pt-3.5 border-t border-white/10">
-                        <div className="text-[11px] font-semibold uppercase tracking-wider text-[#86868B] mb-1.5">
+                      <div className="mt-3.5 pt-3.5 border-t border-white/15">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-white/60 mb-1.5">
                           {lang === 'hi'
                             ? 'फोटो का विस्तृत विवरण:'
                             : 'Workshop Process & Equipment Details:'}
                         </div>
-                        <p className="text-xs sm:text-sm text-[#A1A1A6] leading-relaxed">
+                        <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
                           {desc}
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Apple Card Footer Actions */}
-                  <div className="px-6 sm:px-7 pb-6 pt-3 border-t border-white/[0.06] flex items-center justify-between gap-3">
+                  {/* Card Footer Actions with Glass Teal CTA */}
+                  <div className="px-6 sm:px-7 pb-6 pt-3 border-t border-white/10 flex items-center justify-between gap-3">
                     <a
                       href={waUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#2997FF] hover:underline"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#16A6A1] hover:bg-[#128A86] text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs"
                     >
-                      <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                      <MessageCircle className="w-4 h-4" />
                       <span>
                         {lang === 'hi' ? 'व्हाट्सएप पर पूछें' : 'Ask on WhatsApp'}
                       </span>
-                      <ChevronRight className="w-3.5 h-3.5" />
                     </a>
 
                     {onSelectWorkshopForQuote && (
                       <button
                         type="button"
                         onClick={() => onSelectWorkshopForQuote(item.titleEn)}
-                        className="px-3.5 py-1.5 rounded-lg bg-white/[0.08] hover:bg-[#0071E3] text-white text-xs font-medium transition-colors cursor-pointer"
+                        className="text-xs text-white/70 hover:text-white font-medium cursor-pointer"
                       >
-                        {lang === 'hi' ? 'कोटेशन लें' : 'Get Quote'}
+                        {lang === 'hi' ? '+ कोटेशन में जोड़ें' : '+ Add to Quote'}
                       </button>
                     )}
                   </div>

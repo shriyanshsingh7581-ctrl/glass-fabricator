@@ -27,33 +27,33 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   const currentItem = lightboxIdx !== null ? gallery[lightboxIdx] : null;
 
   return (
-    <section id="gallery" className="py-20 sm:py-28 bg-white text-[#1D1D1F]">
+    <section id="gallery" className="py-20 sm:py-28 bg-white text-[#263746]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
-        {/* Apple Two-Tone Header */}
+        {/* Section Header */}
         <div className="max-w-3xl">
-          <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#0071E3]">
+          <p className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#16A6A1]/10 text-xs sm:text-sm font-bold tracking-wide text-[#16A6A1]">
             {lang === 'hi'
               ? 'प्रोजेक्ट और शोरूम पोर्टफोलियो · हिसार व हरियाणा'
               : 'Shot in Hisar & Across Haryana · Architectural Portfolio'}
           </p>
-          <h2 className="mt-2 text-3xl sm:text-5xl font-bold tracking-[-0.032em] text-[#1D1D1F] leading-[1.08]">
+          <h2 className="mt-3 text-3xl sm:text-5xl font-bold tracking-[-0.032em] text-[#102A43] leading-[1.08]">
             {lang === 'hi' ? (
               <>
                 हमारे प्रमुख प्रोजेक्ट।{' '}
-                <span className="text-[#86868B]">
+                <span className="text-[#16A6A1]">
                   हिसार और पूरे हरियाणा में स्थापित।
                 </span>
               </>
             ) : (
               <>
                 Completed elevations.{' '}
-                <span className="text-[#86868B]">
+                <span className="text-[#16A6A1]">
                   Crafted for homes and showrooms.
                 </span>
               </>
             )}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#6E6E73]">
+          <p className="mt-4 text-base sm:text-lg text-[#263746]/80">
             {lang === 'hi'
               ? 'किसी भी फोटो पर क्लिक करके उसे फुल-स्क्रीन में ज़ूम करके देखें।'
               : 'Select any photograph to inspect full-resolution architectural detailing.'}
