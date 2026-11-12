@@ -17,10 +17,32 @@ export function loadLocalCMSState(): CMSStoreState {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return INITIAL_CMS_STATE;
     const parsed = JSON.parse(raw) as Partial<CMSStoreState>;
+    const savedSettings: Partial<SiteSettings> = parsed.settings || {};
+    const hasUpdatedGoogleLocation = String(
+      savedSettings.addressEn || ''
+    ).includes('4PVM+FMV');
     return {
       settings: {
         ...INITIAL_CMS_STATE.settings,
-        ...(parsed.settings || {}),
+        ...savedSettings,
+        ...(hasUpdatedGoogleLocation
+          ? {}
+          : {
+              addressEn: INITIAL_CMS_STATE.settings.addressEn,
+              addressHi: INITIAL_CMS_STATE.settings.addressHi,
+              coverageEn: INITIAL_CMS_STATE.settings.coverageEn,
+              coverageHi: INITIAL_CMS_STATE.settings.coverageHi,
+              googleMapsEmbedUrl: INITIAL_CMS_STATE.settings.googleMapsEmbedUrl,
+              googleBusinessShareUrl:
+                INITIAL_CMS_STATE.settings.googleBusinessShareUrl,
+              googleMapsPlaceUrl: INITIAL_CMS_STATE.settings.googleMapsPlaceUrl,
+              googlePlusCode: INITIAL_CMS_STATE.settings.googlePlusCode,
+              googleCoordinates: INITIAL_CMS_STATE.settings.googleCoordinates,
+              openingHoursEn: INITIAL_CMS_STATE.settings.openingHoursEn,
+              openingHoursHi: INITIAL_CMS_STATE.settings.openingHoursHi,
+              ownerNoteEn: INITIAL_CMS_STATE.settings.ownerNoteEn,
+              ownerNoteHi: INITIAL_CMS_STATE.settings.ownerNoteHi,
+            }),
       },
       services:
         Array.isArray(parsed.services) && parsed.services.length > 0

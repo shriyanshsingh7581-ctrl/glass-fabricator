@@ -30,14 +30,27 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     'निरंकारी भवन रोड, हिसार स्थित हमारे 3-मंजिला शोरूम, विशाल ग्लास गोदाम और अत्याधुनिक CNC फैब्रिकेशन वर्कशॉप से पूरे हरियाणा के आलीशान घरों, कोठियों और शोरूम के लिए 35+ वर्षों का पारिवारिक भरोसा।',
   phoneDisplay: '+91 94676 87662',
   whatsappNumber: '919467687662',
-  addressEn: 'Nirankari Bhawan Road, Opp. Bank Colony T-Point, Hisar, Haryana',
-  addressHi: 'निरंकारी भवन रोड, बैंक कॉलोनी टी-पॉइंट के सामने, हिसार, हरियाणा',
-  coverageEn: 'Based in Hisar · Providing Pan-Haryana Site Visit & Installation',
-  coverageHi: 'हिसार में आधारित · पूरे हरियाणा में साइट विजिट और इंस्टॉलेशन सेवा उपलब्ध',
+  addressEn:
+    '4PVM+FMV, Nirankari Bhawan Rd, Bank Colony, Urban Estate II (Opp. Bank Colony T-Point), Hisar, Haryana 125001, India',
+  addressHi:
+    '4PVM+FMV, निरंकारी भवन रोड, बैंक कॉलोनी, अर्बन एस्टेट II (बैंक कॉलोनी टी-पॉइंट के सामने), हिसार, हरियाणा 125001, भारत',
+  coverageEn: 'Based in Hisar (125001) · Providing Pan-Haryana Site Visit & Installation',
+  coverageHi: 'हिसार (125001) में आधारित · पूरे हरियाणा में साइट विजिट और इंस्टॉलेशन सेवा उपलब्ध',
   instagramUrl: 'https://www.instagram.com/haryanawindow',
   instagramHandle: '@haryanawindow',
   googleMapsEmbedUrl:
-    'https://maps.google.com/maps?q=Nirankari%20Bhawan%20Road%20Bank%20Colony%20Hisar%20Haryana&t=&z=15&ie=UTF8&iwloc=&output=embed',
+    'https://maps.google.com/maps?q=29.1436379,75.7343497+(Haryana+Glass+Fabricator)&ll=29.1436379,75.7343497&z=17&output=embed',
+  googleBusinessShareUrl: 'https://share.google/l7dnUDTVvbTdwgCST',
+  googleMapsPlaceUrl:
+    'https://www.google.com/maps/place/Haryana+Glass+Fabricator/@29.1436379,75.7343497,17z/data=!3m1!4b1!4m6!3m5!1s0x3912333c5559a69f:0xe48bc9649e717952!8m2!3d29.1436379!4d75.7343497!16s%2Fg%2F11ycgk8t81',
+  googlePlusCode: '4PVM+FMV, Bank Colony, Urban Estate II, Hisar, Haryana 125001',
+  googleCoordinates: '29.1436379° N, 75.7343497° E',
+  openingHoursEn: 'Open Daily: 9:00 AM – 7:00 PM',
+  openingHoursHi: 'प्रतिदिन खुला: सुबह 9:00 बजे से शाम 7:00 बजे तक',
+  ownerNoteEn:
+    'A glimpse of our workshop! This is where ideas take shape through skilled workmanship, quality materials and attention to detail.',
+  ownerNoteHi:
+    'हमारी वर्कशॉप की एक झलक! यहाँ कुशल कारीगरी, उच्च गुणवत्ता की सामग्री और बारीकियों पर विशेष ध्यान देकर आपके विचारों को आकार दिया जाता है।',
   adminPin: 'admin123',
   firebaseDbUrl: '',
 };

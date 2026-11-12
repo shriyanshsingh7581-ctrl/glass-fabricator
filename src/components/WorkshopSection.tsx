@@ -92,6 +92,22 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
               ? 'हमारी 3-मंजिला मुख्य बिल्डिंग, हरियाणा ग्लास गोदाम, डबल-हेड CNC प्रोफाइल कटिंग मशीन, ट्विन-हेड uPVC थर्मल वेल्डिंग लाइन, कॉपी राउटर, ग्रीन-फेल्ट ग्लेजिंग टेबल और एलईडी मिरर शोरूम के हर फोटो के नीचे उसका पूरा विवरण पढ़ें।'
               : 'Every photograph below is captured inside our Hisar headquarters, bulk float-glass godown, automated CNC cutting and thermal welding bays, and LED mirror studio — with detailed process descriptions underneath each photo.'}
           </p>
+
+          {/* Official Google Business Profile Owner Workshop Note */}
+          <div className="mt-6 inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-5 py-3 rounded-2xl bg-[#161617] border border-white/10 text-xs sm:text-sm text-[#F5F5F7]">
+            <span className="text-[#2997FF] font-semibold shrink-0">
+              {lang === 'hi' ? 'ओनर का संदेश (Google):' : 'From the Owner (Google):'}
+            </span>
+            <span className="italic text-[#A1A1A6]">
+              "
+              {lang === 'hi'
+                ? settings.ownerNoteHi ||
+                  'हमारी वर्कशॉप की एक झलक! यहाँ कुशल कारीगरी, उच्च गुणवत्ता की सामग्री और बारीकियों पर विशेष ध्यान देकर आपके विचारों को आकार दिया जाता है।'
+                : settings.ownerNoteEn ||
+                  'A glimpse of our workshop! This is where ideas take shape through skilled workmanship, quality materials and attention to detail.'}
+              "
+            </span>
+          </div>
         </div>
 
         {/* Apple Pro Segmented Filter Bar + Search */}

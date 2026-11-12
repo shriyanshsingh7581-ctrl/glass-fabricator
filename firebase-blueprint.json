@@ -2,7 +2,7 @@
   "entities": {
     "SiteSettings": {
       "title": "SiteSettings",
-      "description": "Global website configuration, contact numbers, addresses, legacy stats, brand info, and admin control PIN.",
+      "description": "Global website configuration, Google Business Profile location details, contact numbers, addresses, legacy stats, brand info, and admin control PIN.",
       "type": "object",
       "properties": {
         "brandNameEn": { "type": "string" },
@@ -27,6 +27,14 @@
         "instagramUrl": { "type": "string" },
         "instagramHandle": { "type": "string" },
         "googleMapsEmbedUrl": { "type": "string" },
+        "googleBusinessShareUrl": { "type": "string" },
+        "googleMapsPlaceUrl": { "type": "string" },
+        "googlePlusCode": { "type": "string" },
+        "googleCoordinates": { "type": "string" },
+        "openingHoursEn": { "type": "string" },
+        "openingHoursHi": { "type": "string" },
+        "ownerNoteEn": { "type": "string" },
+        "ownerNoteHi": { "type": "string" },
         "adminPin": { "type": "string" },
         "updatedAt": { "type": "string" }
       }
@@ -49,6 +57,25 @@
         "createdAt": { "type": "number" }
       },
       "required": ["id", "titleEn", "category", "imageUrl", "active"]
+    },
+    "WorkshopItem": {
+      "title": "WorkshopItem",
+      "description": "Real workshop, CNC machinery, glass godown, and showroom photograph with detailed bilingual process description.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "bayCode": { "type": "string" },
+        "category": { "type": "string" },
+        "titleEn": { "type": "string" },
+        "titleHi": { "type": "string" },
+        "machineSpecEn": { "type": "string" },
+        "machineSpecHi": { "type": "string" },
+        "descriptionEn": { "type": "string" },
+        "descriptionHi": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "bayCode", "category", "titleEn", "imageUrl"]
     },
     "Service": {
       "title": "Service",
@@ -111,6 +138,10 @@
     "/products/{productId}": {
       "schema": { "$ref": "#/entities/Product" },
       "description": "Collection of catalog products managed via Admin CMS"
+    },
+    "/workshop/{workshopId}": {
+      "schema": { "$ref": "#/entities/WorkshopItem" },
+      "description": "Collection of 29 real Hisar workshop, godown, and CNC machinery photos"
     },
     "/services/{serviceId}": {
       "schema": { "$ref": "#/entities/Service" },

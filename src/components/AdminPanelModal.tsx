@@ -1700,6 +1700,95 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     </div>
                   </div>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                        Google Business Share URL
+                      </label>
+                      <input
+                        type="url"
+                        value={settingsDraft.googleBusinessShareUrl || ''}
+                        onChange={(e) =>
+                          setSettingsDraft({
+                            ...settingsDraft,
+                            googleBusinessShareUrl: e.target.value,
+                          })
+                        }
+                        placeholder="https://share.google/l7dnUDTVvbTdwgCST"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs font-mono text-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                        Google Plus Code
+                      </label>
+                      <input
+                        type="text"
+                        value={settingsDraft.googlePlusCode || ''}
+                        onChange={(e) =>
+                          setSettingsDraft({
+                            ...settingsDraft,
+                            googlePlusCode: e.target.value,
+                          })
+                        }
+                        placeholder="4PVM+FMV, Bank Colony, Urban Estate II, Hisar 125001"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs font-mono text-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                        GPS Coordinates
+                      </label>
+                      <input
+                        type="text"
+                        value={settingsDraft.googleCoordinates || ''}
+                        onChange={(e) =>
+                          setSettingsDraft({
+                            ...settingsDraft,
+                            googleCoordinates: e.target.value,
+                          })
+                        }
+                        placeholder="29.1436379° N, 75.7343497° E"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs font-mono text-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                        Store & Workshop Hours (English)
+                      </label>
+                      <input
+                        type="text"
+                        value={settingsDraft.openingHoursEn || ''}
+                        onChange={(e) =>
+                          setSettingsDraft({
+                            ...settingsDraft,
+                            openingHoursEn: e.target.value,
+                          })
+                        }
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                        Google Owner Workshop Note (English)
+                      </label>
+                      <input
+                        type="text"
+                        value={settingsDraft.ownerNoteEn || ''}
+                        onChange={(e) =>
+                          setSettingsDraft({
+                            ...settingsDraft,
+                            ownerNoteEn: e.target.value,
+                          })
+                        }
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white"
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-xs font-semibold text-slate-300 mb-1">
                       Google Maps Embed URL

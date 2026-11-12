@@ -40,10 +40,37 @@ export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
                 {lang === 'hi' ? settings.brandNameHi : settings.brandNameEn}
               </div>
               <p className="text-[#6E6E73] leading-relaxed">
-                {lang === 'hi' ? settings.subtitleHi : settings.subtitleEn}
+                {lang === 'hi' ? settings.subtitleHi : settings.subtitleEn} (हरियाणा ग्लास)
                 <br />
                 {lang === 'hi' ? settings.addressHi : settings.addressEn}
               </p>
+              <div className="mt-2 text-[11px] text-[#86868B] space-y-0.5 tabular-nums">
+                <div>
+                  Plus Code: {settings.googlePlusCode || '4PVM+FMV, Hisar 125001'}
+                </div>
+                <div>
+                  GPS: {settings.googleCoordinates || '29.1436379° N, 75.7343497° E'}
+                </div>
+                <div>
+                  {lang === 'hi'
+                    ? settings.openingHoursHi ||
+                      'प्रतिदिन खुला: सुबह 9:00 बजे – शाम 7:00 बजे तक'
+                    : settings.openingHoursEn || 'Open Daily: 9:00 AM – 7:00 PM'}
+                </div>
+              </div>
+              <a
+                href={
+                  settings.googleBusinessShareUrl ||
+                  'https://share.google/l7dnUDTVvbTdwgCST'
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block text-[#0066CC] hover:underline font-medium"
+              >
+                {lang === 'hi'
+                  ? 'Google Business Profile (share.google) ›'
+                  : 'Official Google Business Profile ›'}
+              </a>
             </div>
 
             {/* Col 2: Core Verticals */}

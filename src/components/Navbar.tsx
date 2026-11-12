@@ -62,8 +62,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-2 text-[#F5F5F7]/85 min-w-0 flex-1">
             <span className="truncate">
               {lang === 'hi'
-                ? '35+ वर्षों की उत्कृष्टता · निरंकारी भवन रोड, हिसार · पूरे हरियाणा में सेवा'
-                : '35+ Years of Architectural Craftsmanship · Nirankari Bhawan Road, Hisar · Pan-Haryana'}
+                ? '35+ वर्षों की उत्कृष्टता · 4PVM+FMV, निरंकारी भवन रोड, बैंक कॉलोनी, हिसार 125001 · पूरे हरियाणा में सेवा'
+                : '35+ Years of Craftsmanship · 4PVM+FMV, Nirankari Bhawan Rd, Bank Colony, Urban Estate II, Hisar 125001'}
             </span>
             <a
               href={`tel:${settings.phoneDisplay.replace(/\s+/g, '')}`}

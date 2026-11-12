@@ -14,7 +14,10 @@ import {
   filterWorkshopItems,
   buildWorkshopWhatsAppMessage,
 } from './logic';
-import { INITIAL_WORKSHOP_ITEMS } from '../data/initialData';
+import {
+  DEFAULT_SITE_SETTINGS,
+  INITIAL_WORKSHOP_ITEMS,
+} from '../data/initialData';
 import { CustomerInquiry, ProductItem } from '../types/cms';
 
 test('sanitizeWhatsAppNumber normalizes Indian phone numbers to 919467687662 format', () => {
@@ -194,4 +197,22 @@ test('INITIAL_WORKSHOP_ITEMS contains all 29 analyzed workshop photos with bilin
   const waMsgHi = buildWorkshopWhatsAppMessage(INITIAL_WORKSHOP_ITEMS[0], 'hi');
   assert.ok(waMsgHi.includes(INITIAL_WORKSHOP_ITEMS[0].titleHi));
 });
+
+test('DEFAULT_SITE_SETTINGS contains all Google Business Profile location details from share.google/l7dnUDTVvbTdwgCST', () => {
+  assert.equal(
+    DEFAULT_SITE_SETTINGS.googleBusinessShareUrl,
+    'https://share.google/l7dnUDTVvbTdwgCST'
+  );
+  assert.ok(DEFAULT_SITE_SETTINGS.addressEn.includes('4PVM+FMV'));
+  assert.ok(DEFAULT_SITE_SETTINGS.addressEn.includes('Urban Estate II'));
+  assert.ok(DEFAULT_SITE_SETTINGS.addressEn.includes('125001'));
+  assert.ok(DEFAULT_SITE_SETTINGS.googleCoordinates?.includes('29.1436379'));
+  assert.ok(DEFAULT_SITE_SETTINGS.googleCoordinates?.includes('75.7343497'));
+  assert.ok(DEFAULT_SITE_SETTINGS.openingHoursEn?.includes('9:00 AM'));
+  assert.ok(DEFAULT_SITE_SETTINGS.openingHoursEn?.includes('7:00 PM'));
+  assert.ok(
+    DEFAULT_SITE_SETTINGS.ownerNoteEn?.includes('A glimpse of our workshop!')
+  );
+});
+
 

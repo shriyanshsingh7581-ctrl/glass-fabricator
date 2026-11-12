@@ -93,11 +93,36 @@ export async function testFirestoreConnection(): Promise<boolean> {
  */
 export async function seedFirestoreIfEmpty(): Promise<void> {
   try {
-    // 1. Settings
+    // 1. Settings (seed or upgrade with Google Business Profile 4PVM+FMV location data)
     const settingsRef = doc(db, 'settings', 'site');
     const settingsSnap = await getDocs(collection(db, 'settings'));
-    if (settingsSnap.empty) {
-      await setDoc(settingsRef, INITIAL_CMS_STATE.settings);
+    const existingSettings = settingsSnap.docs[0]?.data() as
+      | Partial<SiteSettings>
+      | undefined;
+    const hasGoogleProfileData =
+      existingSettings &&
+      String(existingSettings.addressEn || '').includes('4PVM+FMV') &&
+      Boolean(existingSettings.googleBusinessShareUrl);
+
+    if (settingsSnap.empty || !hasGoogleProfileData) {
+      await setDoc(settingsRef, {
+        ...INITIAL_CMS_STATE.settings,
+        ...(existingSettings || {}),
+        addressEn: INITIAL_CMS_STATE.settings.addressEn,
+        addressHi: INITIAL_CMS_STATE.settings.addressHi,
+        coverageEn: INITIAL_CMS_STATE.settings.coverageEn,
+        coverageHi: INITIAL_CMS_STATE.settings.coverageHi,
+        googleMapsEmbedUrl: INITIAL_CMS_STATE.settings.googleMapsEmbedUrl,
+        googleBusinessShareUrl:
+          INITIAL_CMS_STATE.settings.googleBusinessShareUrl,
+        googleMapsPlaceUrl: INITIAL_CMS_STATE.settings.googleMapsPlaceUrl,
+        googlePlusCode: INITIAL_CMS_STATE.settings.googlePlusCode,
+        googleCoordinates: INITIAL_CMS_STATE.settings.googleCoordinates,
+        openingHoursEn: INITIAL_CMS_STATE.settings.openingHoursEn,
+        openingHoursHi: INITIAL_CMS_STATE.settings.openingHoursHi,
+        ownerNoteEn: INITIAL_CMS_STATE.settings.ownerNoteEn,
+        ownerNoteHi: INITIAL_CMS_STATE.settings.ownerNoteHi,
+      });
     }
 
     // 2. Services (upgrade if empty or still referencing legacy .svg placeholders)

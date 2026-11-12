@@ -108,6 +108,14 @@ export interface SiteSettings {
   instagramUrl: string;
   instagramHandle: string;
   googleMapsEmbedUrl: string;
+  googleBusinessShareUrl?: string;
+  googleMapsPlaceUrl?: string;
+  googlePlusCode?: string;
+  googleCoordinates?: string;
+  openingHoursEn?: string;
+  openingHoursHi?: string;
+  ownerNoteEn?: string;
+  ownerNoteHi?: string;
   adminPin: string;
   firebaseDbUrl: string;
 }
