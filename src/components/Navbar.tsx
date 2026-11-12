@@ -117,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {!logoError && settings.logoUrl ? (
                 <img
                   src={settings.logoUrl}
-                  alt={settings.brandNameEn}
+                  alt={lang === 'hi' ? 'हरियाणा ग्लास फैब्रिकेटर' : 'Haryana Glass Fabricator'}
                   onError={() => setLogoError(true)}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-contain"
@@ -127,7 +127,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
             </div>
             <span className="font-bold text-[15px] tracking-[-0.015em] text-white whitespace-nowrap shrink-0">
-              {lang === 'hi' ? settings.brandNameHi : settings.brandNameEn}
+              {lang === 'hi'
+                ? (!settings.brandNameHi || settings.brandNameHi.includes('विंडो')
+                    ? 'हरियाणा ग्लास फैब्रिकेटर'
+                    : settings.brandNameHi)
+                : (!settings.brandNameEn || settings.brandNameEn.includes('Window')
+                    ? 'Haryana Glass Fabricator'
+                    : settings.brandNameEn)}
             </span>
           </a>
 

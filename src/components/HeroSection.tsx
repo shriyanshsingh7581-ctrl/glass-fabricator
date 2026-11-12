@@ -49,12 +49,12 @@ const FACILITY_SLIDES: FacilityPreviewSlide[] = [
     labelHi: 'प्रो CNC प्लांट',
     eyebrowEn: 'AUTOMATED MANUFACTURING FLOOR · HISAR',
     eyebrowHi: 'ऑटोमेटेड मैन्युफैक्चरिंग फ्लोर · हिसार',
-    titleEn: 'Double-Head CNC Cutting, uPVC Thermal Welding & Glazing.',
-    titleHi: 'डबल-हेड CNC कटिंग, uPVC थर्मल वेल्डिंग और ग्लेजिंग प्लांट।',
+    titleEn: 'Double-Head CNC Cutting, UPVC Thermal Welding & Glazing.',
+    titleHi: 'डबल-हेड CNC कटिंग, UPVC थर्मल वेल्डिंग और ग्लेजिंग प्लांट।',
     captionEn:
-      '100% in-house precision manufacturing with Double-Head 45°/90° Mitre Saws, Twin-Head uPVC Thermal Welders, Vertical Copy Routers, and scratch-free Green-Felt Glazing Tables.',
+      '100% in-house precision manufacturing with Double-Head 45°/90° Mitre Saws, Twin-Head UPVC Thermal Welders, Vertical Copy Routers, and scratch-free Green-Felt Glazing Tables.',
     captionHi:
-      'डबल-हेड 45°/90° CNC कटिंग मशीन, ट्विन-हेड uPVC थर्मल वेल्डर, कॉपी राउटर और ग्रीन-फेल्ट ग्लेजिंग टेबल से लैस हमारी अपनी अत्याधुनिक वर्कशॉप।',
+      'डबल-हेड 45°/90° CNC कटिंग मशीन, ट्विन-हेड UPVC थर्मल वेल्डर, कॉपी राउटर और ग्रीन-फेल्ट ग्लेजिंग टेबल से लैस हमारी अपनी अत्याधुनिक वर्कशॉप।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0067_74b8e69d.jpg',
   },
   {
@@ -94,7 +94,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ lang, settings }) => {
   const whatsappHeroUrl = buildWhatsAppUrl(
     settings.whatsappNumber,
     lang === 'hi'
-      ? 'नमस्ते हरियाणा ग्लास फैब्रिकेटर, मुझे अपने प्रोजेक्ट के लिए एल्युमीनियम, uPVC या ग्लास फैब्रिकेशन का कोटेशन चाहिए।'
+      ? 'नमस्ते हरियाणा ग्लास फैब्रिकेटर, मुझे अपने प्रोजेक्ट के लिए एल्युमीनियम, UPVC या ग्लास फैब्रिकेशन का कोटेशन चाहिए।'
       : 'Hello Haryana Glass Fabricator, I would like to book a consultation and quotation for my project.'
   );
 
@@ -111,12 +111,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ lang, settings }) => {
         <h1 className="mt-4 text-4xl sm:text-6xl lg:text-[68px] font-bold tracking-[-0.035em] text-[#102A43] leading-[1.04]">
           {lang === 'hi' ? (
             <>
-              एल्युमीनियम, uPVC और ग्लास।{' '}
+              एल्युमीनियम, UPVC और ग्लास।{' '}
               <span className="text-[#16A6A1]">बेजोड़ प्रो-ग्रेड कारीगरी।</span>
             </>
           ) : (
             <>
-              uPVC, Aluminium & Glass.{' '}
+              UPVC, Aluminium & Glass.{' '}
               <span className="text-[#16A6A1]">Engineered to perfection.</span>
             </>
           )}
@@ -135,8 +135,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ lang, settings }) => {
             className="px-7 py-3.5 rounded-xl bg-[#16A6A1] hover:bg-[#128A86] text-white font-semibold text-sm sm:text-base transition-all shadow-md hover:shadow-lg cursor-pointer"
           >
             {lang === 'hi'
-              ? 'निःशुल्क कोटेशन और साइट माप बुक करें'
-              : 'Book Free Site Measurement'}
+              ? 'साइट मेज़रमेंट बुक करें'
+              : 'Book Site Measurement'}
           </a>
 
           <a
@@ -285,8 +285,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ lang, settings }) => {
             </div>
             <p className="mt-1.5 text-sm font-semibold text-[#102A43]">
               {lang === 'hi'
-                ? 'डबल-हेड कटिंग, uPVC थर्मल वेल्डिंग और अपना ग्लास गोदाम।'
-                : 'In-house Double-Head CNC Saws, uPVC Welders & Glass Godown.'}
+                ? 'डबल-हेड कटिंग, UPVC थर्मल वेल्डिंग और अपना ग्लास गोदाम।'
+                : 'In-house Double-Head CNC Saws, UPVC Welders & Glass Godown.'}
             </p>
             <p className="mt-2 text-xs text-[#263746]/80 leading-relaxed">
               {lang === 'hi'

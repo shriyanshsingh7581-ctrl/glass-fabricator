@@ -21,9 +21,9 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   heroBadgeEn: '35+ Years of Legacy · 2 Generations · Pan-Haryana Service',
   heroBadgeHi: '35+ वर्षों का विश्वास · 2 पीढ़ियों की विरासत · पूरे हरियाणा में सेवा',
   heroHeadingEn:
-    'Complete Expertise in Craftsmanship for Aluminium, uPVC & Architectural Glass',
+    'Complete Expertise in Craftsmanship for Aluminium, UPVC & Architectural Glass',
   heroHeadingHi:
-    'एल्युमीनियम, uPVC और आर्किटेक्चरल ग्लास फैब्रिकेशन में बेजोड़ कारीगरी और पूर्ण विशेषज्ञता',
+    'एल्युमीनियम, UPVC और आर्किटेक्चरल ग्लास फैब्रिकेशन में बेजोड़ कारीगरी और पूर्ण विशेषज्ञता',
   heroSubheadingEn:
     'From our 3-storey showroom, bulk float-glass godown, and automated CNC fabrication plant at Nirankari Bhawan Road, Hisar — serving luxury residences and commercial landmarks across all 22 districts of Haryana.',
   heroSubheadingHi:
@@ -74,13 +74,13 @@ export const INITIAL_SERVICES: ServiceItem[] = [
   {
     id: 'srv-2',
     number: '02',
-    categoryKey: 'uPVC',
-    titleEn: 'uPVC Windows and Doors',
-    titleHi: 'uPVC खिड़कियां और दरवाजे',
+    categoryKey: 'UPVC',
+    titleEn: 'UPVC Windows and Doors',
+    titleHi: 'UPVC खिड़कियां और दरवाजे',
     descriptionEn:
-      'Multi-chamber acoustic and thermal-insulated ENcraft uPVC 2-track & 3-track sliding windows, casement doors, and stainless-steel mosquito mesh sashes welded on our automated thermal line.',
+      'Multi-chamber acoustic and thermal-insulated ENcraft UPVC 2-track & 3-track sliding windows, casement doors, and stainless-steel mosquito mesh sashes welded on our automated thermal line.',
     descriptionHi:
-      'ध्वनि-रोधी (साउंडप्रूफ), धूल और गर्मी से बचाव करने वाली ENcraft 2-ट्रैक व 3-ट्रैक uPVC स्लाइडिंग खिड़कियां और थर्मल वेल्डिंग मशीन से निर्मित मच्छर जाली वाले दरवाजे।',
+      'ध्वनि-रोधी (साउंडप्रूफ), धूल और गर्मी से बचाव करने वाली ENcraft 2-ट्रैक व 3-ट्रैक UPVC स्लाइडिंग खिड़कियां और थर्मल वेल्डिंग मशीन से निर्मित मच्छर जाली वाले दरवाजे।',
     specsEn: 'ENcraft Profiles · 40dB Acoustic · Thermal Welded Corners',
     specsHi: 'ENcraft प्रोफाइल · साउंडप्रूफ · जाली ट्रैक सहित',
     iconName: 'Columns3',
@@ -267,9 +267,9 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: 'Dual Red Pneumatic Safety Hoods · Horizontal Pneumatic Clamps · Front Control Console',
     machineSpecHi: 'ड्यूल रेड सेफ्टी शील्ड · न्यूमैटिक प्रोफाइल क्लैंप · डिजिटल कंट्रोल पैनल',
     descriptionEn:
-      'Close-up inspection of our heavy-duty Double-Head CNC Mitre Cutting Saw Machine. Equipped with dual red-trimmed protective blade guards, horizontal pneumatic clamping cylinders to lock profiles with zero vibration, a central hanging digital operator console, and a precision linear guide rail for simultaneous 45° or 90° cuts on both ends of aluminium and uPVC profiles.',
+      'Close-up inspection of our heavy-duty Double-Head CNC Mitre Cutting Saw Machine. Equipped with dual red-trimmed protective blade guards, horizontal pneumatic clamping cylinders to lock profiles with zero vibration, a central hanging digital operator console, and a precision linear guide rail for simultaneous 45° or 90° cuts on both ends of aluminium and UPVC profiles.',
     descriptionHi:
-      'हमारी हैवी-ड्यूटी डबल-हेड (Double-Head) प्रोफाइल कटिंग मशीन का क्लोज-अप फोटो। इसमें लाल बॉर्डर वाले दो सेफ्टी कवर, प्रोफाइल को बिना हिले पकड़ने के लिए न्यूमैटिक क्लैंप और सामने डिजिटल कंट्रोल कंसोल लगा है, जिससे एल्युमीनियम और uPVC प्रोफाइल के दोनों सिरे एक साथ बिल्कुल सटीक 45° या 90° एंगल पर कटते हैं।',
+      'हमारी हैवी-ड्यूटी डबल-हेड (Double-Head) प्रोफाइल कटिंग मशीन का क्लोज-अप फोटो। इसमें लाल बॉर्डर वाले दो सेफ्टी कवर, प्रोफाइल को बिना हिले पकड़ने के लिए न्यूमैटिक क्लैंप और सामने डिजिटल कंट्रोल कंसोल लगा है, जिससे एल्युमीनियम और UPVC प्रोफाइल के दोनों सिरे एक साथ बिल्कुल सटीक 45° या 90° एंगल पर कटते हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0062_f31341d7.jpg',
     createdAt: 1730100006000,
   },
@@ -277,8 +277,8 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     id: 'ws-07',
     bayCode: 'CNC BAY · 07',
     category: 'CNC Cutting & Milling',
-    titleEn: 'Twin-Head CNC Aluminium & uPVC Profile Cutting Line with Calibration Rail',
-    titleHi: 'ट्विन-हेड CNC एल्युमीनियम व uPVC प्रोफाइल कटिंग लाइन और मेजरमेंट रेल',
+    titleEn: 'Twin-Head CNC Aluminium & UPVC Profile Cutting Line with Calibration Rail',
+    titleHi: 'ट्विन-हेड CNC एल्युमीनियम व UPVC प्रोफाइल कटिंग लाइन और मेजरमेंट रेल',
     machineSpecEn: 'Motorized Right Cutting Head · Pressure Regulators · Matte Black Aluminium Stock',
     machineSpecHi: 'मोटराइज्ड कटिंग हेड · प्रेशर गेज रेगुलेटर · मैट ब्लैक एल्युमीनियम सेक्शन',
     descriptionEn:
@@ -327,9 +327,9 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: '6-Meter Extrusion Capacity · Vertical Profile Storage · Assembled Black Sashes',
     machineSpecHi: '6-मीटर प्रोफाइल क्षमता · वर्टिकल स्टोरेज रैक · तैयार ब्लैक विंडो पल्ले',
     descriptionEn:
-      'View along the 6-meter bed of the cutting machine looking toward the rear vertical storage racks loaded with upright black aluminium extrusions, white uPVC sections, and completed multi-panel window frames queued for glazing.',
+      'View along the 6-meter bed of the cutting machine looking toward the rear vertical storage racks loaded with upright black aluminium extrusions, white UPVC sections, and completed multi-panel window frames queued for glazing.',
     descriptionHi:
-      'कटिंग मशीन के 6-मीटर लंबे ट्रैक के साथ पीछे की ओर खड़े वर्टिकल रैक का दृश्य, जिनमें काले एल्युमीनियम सेक्शन, सफेद uPVC प्रोफाइल और ग्लेजिंग के लिए तैयार खिड़कियों के फ्रेम व्यवस्थित रूप से रखे हैं।',
+      'कटिंग मशीन के 6-मीटर लंबे ट्रैक के साथ पीछे की ओर खड़े वर्टिकल रैक का दृश्य, जिनमें काले एल्युमीनियम सेक्शन, सफेद UPVC प्रोफाइल और ग्लेजिंग के लिए तैयार खिड़कियों के फ्रेम व्यवस्थित रूप से रखे हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0072_b265889c.jpg',
     createdAt: 1730100010000,
   },
@@ -342,9 +342,9 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: 'Digital HMI Touchscreen · High-RPM Milling Spindle · Espagnolette Lock & Water Slot Routing',
     machineSpecHi: 'डिजिटल टचस्क्रीन पैनल · हाई-स्पीड स्पिंडल · मल्टी-पॉइंट लॉक व ड्रेनेज स्लॉट मिलिंग',
     descriptionEn:
-      'Our specialized Vertical Copy Router & Lock-Hole Drilling Machine featuring precision X and Z axis slides, pneumatic vertical clamps, and a top-mounted digital HMI control screen. This machine mills exact slots for multi-point espagnolette locks, concealed handles, hinges, and rainwater drainage channels in both uPVC and system aluminium profiles.',
+      'Our specialized Vertical Copy Router & Lock-Hole Drilling Machine featuring precision X and Z axis slides, pneumatic vertical clamps, and a top-mounted digital HMI control screen. This machine mills exact slots for multi-point espagnolette locks, concealed handles, hinges, and rainwater drainage channels in both UPVC and system aluminium profiles.',
     descriptionHi:
-      'हमारी विशेष वर्टिकल CNC कॉपी राउटर और लॉक-होल ड्रिलिंग मशीन, जिसमें X और Z एक्सिस हेड व ऊपर डिजिटल कंट्रोल स्क्रीन लगी है। यह मशीन uPVC और सिस्टम एल्युमीनियम खिड़कियों में मल्टी-पॉइंट लॉक, हैंडल और बारिश के पानी की निकासी (ड्रेनेज स्लॉट) के लिए बिल्कुल सटीक जगह बनाती है।',
+      'हमारी विशेष वर्टिकल CNC कॉपी राउटर और लॉक-होल ड्रिलिंग मशीन, जिसमें X और Z एक्सिस हेड व ऊपर डिजिटल कंट्रोल स्क्रीन लगी है। यह मशीन UPVC और सिस्टम एल्युमीनियम खिड़कियों में मल्टी-पॉइंट लॉक, हैंडल और बारिश के पानी की निकासी (ड्रेनेज स्लॉट) के लिए बिल्कुल सटीक जगह बनाती है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0060_5c715483.jpg',
     createdAt: 1730100011000,
   },
@@ -354,12 +354,12 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     category: 'CNC Cutting & Milling',
     titleEn: 'Mullion End-Milling Machine & CNC Routing Station',
     titleHi: 'मुलियन एंड-मिलिंग (End-Milling) मशीन और CNC राउटिंग स्टेशन',
-    machineSpecEn: 'T-Joint Mullion Profiling · Rotary Cutter Block · Surrounded by uPVC & Aluminium Stock',
-    machineSpecHi: 'T-जॉइंट मुलियन प्रोफाइलिंग · रोटरी कटर · uPVC व एल्युमीनियम स्टॉक',
+    machineSpecEn: 'T-Joint Mullion Profiling · Rotary Cutter Block · Surrounded by UPVC & Aluminium Stock',
+    machineSpecHi: 'T-जॉइंट मुलियन प्रोफाइलिंग · रोटरी कटर · UPVC व एल्युमीनियम स्टॉक',
     descriptionEn:
       'Foreground view of the Mullion End-Milling Machine (with red/green pushbutton switch box and pneumatic clamping block) used to step-mill transom and mullion ends for watertight T-joints, with the vertical CNC copy router and tall racks of white and black window profiles in the background.',
     descriptionHi:
-      'सामने दिखाई दे रही एंड-मिलिंग (End-Milling) मशीन खिड़कियों के बीच के डिवाइडर (Mullion/T-joint) को सटीक आकार देने के काम आती है, और इसके ठीक पीछे वर्टिकल कॉपी राउटर मशीन तथा सफेद uPVC व ब्लैक एल्युमीनियम प्रोफाइल का स्टॉक रखा है।',
+      'सामने दिखाई दे रही एंड-मिलिंग (End-Milling) मशीन खिड़कियों के बीच के डिवाइडर (Mullion/T-joint) को सटीक आकार देने के काम आती है, और इसके ठीक पीछे वर्टिकल कॉपी राउटर मशीन तथा सफेद UPVC व ब्लैक एल्युमीनियम प्रोफाइल का स्टॉक रखा है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0069_f744c36a.jpg',
     createdAt: 1730100012000,
   },
@@ -367,74 +367,74 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     id: 'ws-13',
     bayCode: 'CNC BAY · 13',
     category: 'CNC Cutting & Milling',
-    titleEn: 'V-Notch Corner Cutting & uPVC Profile Preparation Zone',
-    titleHi: 'V-नॉच कॉर्नर कटिंग मशीन और uPVC प्रोफाइल तैयारी ज़ोन',
-    machineSpecEn: 'Protective-Taped White uPVC Extrusions · V-Cleaning Saw · CNC Router Bay',
-    machineSpecHi: 'प्रोटेक्टिव टेप लगे सफेद uPVC प्रोफाइल · V-नॉच कटर · CNC राउटर बे',
+    titleEn: 'V-Notch Corner Cutting & UPVC Profile Preparation Zone',
+    titleHi: 'V-नॉच कॉर्नर कटिंग मशीन और UPVC प्रोफाइल तैयारी ज़ोन',
+    machineSpecEn: 'Protective-Taped White UPVC Extrusions · V-Cleaning Saw · CNC Router Bay',
+    machineSpecHi: 'प्रोटेक्टिव टेप लगे सफेद UPVC प्रोफाइल · V-नॉच कटर · CNC राउटर बे',
     descriptionEn:
-      'Profile preparation bay packed with factory-wrapped white uPVC window extrusions in the foreground, the V-notch mullion cutting machine on the left, and the vertical lock-hole copy router at the rear — ensuring rapid workflow from raw extrusion to milled frame.',
+      'Profile preparation bay packed with factory-wrapped white UPVC window extrusions in the foreground, the V-notch mullion cutting machine on the left, and the vertical lock-hole copy router at the rear — ensuring rapid workflow from raw extrusion to milled frame.',
     descriptionHi:
-      'प्रोफाइल तैयारी ज़ोन जहां सामने प्रोटेक्टिव टेप में लिपटे सफेद uPVC प्रोफाइल के बंडल रखे हैं, बाईं ओर V-नॉच कटिंग मशीन है और पीछे लॉक-होल राउटर मशीन लगी हुई है।',
+      'प्रोफाइल तैयारी ज़ोन जहां सामने प्रोटेक्टिव टेप में लिपटे सफेद UPVC प्रोफाइल के बंडल रखे हैं, बाईं ओर V-नॉच कटिंग मशीन है और पीछे लॉक-होल राउटर मशीन लगी हुई है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0054_00f5556f.jpg',
     createdAt: 1730100013000,
   },
   {
     id: 'ws-14',
     bayCode: 'WELDING BAY · 14',
-    category: 'uPVC Thermal Welding',
-    titleEn: 'Double-Head Seamless uPVC Thermal Corner Welding Machine (Close-Up)',
-    titleHi: 'डबल-हेड सीमलेस uPVC थर्मल कॉर्नर वेल्डिंग मशीन (क्लोज-अप)',
+    category: 'UPVC Thermal Welding',
+    titleEn: 'Double-Head Seamless UPVC Thermal Corner Welding Machine (Close-Up)',
+    titleHi: 'डबल-हेड सीमलेस UPVC थर्मल कॉर्नर वेल्डिंग मशीन (क्लोज-अप)',
     machineSpecEn: 'Dual Temperature PID Controllers · Analog Pressure Gauges · 90° Thermal Fusion Plates',
     machineSpecHi: 'डिजिटल तापमान कंट्रोलर · ड्यूल प्रेशर गेज · 90° थर्मल फ्यूजन प्लेट',
     descriptionEn:
-      'Detailed close-up of our Double-Head uPVC Thermal Welding Machine showing the heated Teflon fusion plates, dual analog pneumatic pressure gauges, digital PID temperature controllers, and folding aluminum support arms. This machine thermally fuses uPVC window corners at ~250°C for permanently leak-proof, high-strength joints.',
+      'Detailed close-up of our Double-Head UPVC Thermal Welding Machine showing the heated Teflon fusion plates, dual analog pneumatic pressure gauges, digital PID temperature controllers, and folding aluminum support arms. This machine thermally fuses UPVC window corners at ~250°C for permanently leak-proof, high-strength joints.',
     descriptionHi:
-      'हमारी डबल-हेड uPVC थर्मल वेल्डिंग मशीन का नजदीकी फोटो, जिसमें डिजिटल तापमान कंट्रोलर, दो प्रेशर गेज, हीटेड टेफ्लॉन प्लेट और प्रोफाइल सपोर्ट आर्म साफ दिख रहे हैं। यह मशीन ~250°C तापमान पर uPVC खिड़कियों के कोनों को पिघलाकर हमेशा के लिए लीक-प्रूफ और मजबूत जोड़ बनाती है।',
+      'हमारी डबल-हेड UPVC थर्मल वेल्डिंग मशीन का नजदीकी फोटो, जिसमें डिजिटल तापमान कंट्रोलर, दो प्रेशर गेज, हीटेड टेफ्लॉन प्लेट और प्रोफाइल सपोर्ट आर्म साफ दिख रहे हैं। यह मशीन ~250°C तापमान पर UPVC खिड़कियों के कोनों को पिघलाकर हमेशा के लिए लीक-प्रूफ और मजबूत जोड़ बनाती है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0058_ff86d780.jpg',
     createdAt: 1730100014000,
   },
   {
     id: 'ws-15',
     bayCode: 'WELDING BAY · 15',
-    category: 'uPVC Thermal Welding',
-    titleEn: 'Long-Bed uPVC Welding Line, Twin-Cylinder Air Compressor & ENcraft Profiles',
-    titleHi: 'लॉन्ग-बेड uPVC वेल्डिंग लाइन, हैवी एयर कंप्रेसर और ENcraft प्रोफाइल स्टॉक',
-    machineSpecEn: 'ENcraft "Art of Precision" uPVC Profiles · Industrial Air Compressor · Twin Welding Heads',
-    machineSpecHi: 'ENcraft ओरिजिनल uPVC प्रोफाइल · इंडस्ट्रियल एयर कंप्रेसर · ट्विन वेल्डिंग हेड',
+    category: 'UPVC Thermal Welding',
+    titleEn: 'Long-Bed UPVC Welding Line, Twin-Cylinder Air Compressor & ENcraft Profiles',
+    titleHi: 'लॉन्ग-बेड UPVC वेल्डिंग लाइन, हैवी एयर कंप्रेसर और ENcraft प्रोफाइल स्टॉक',
+    machineSpecEn: 'ENcraft "Art of Precision" UPVC Profiles · Industrial Air Compressor · Twin Welding Heads',
+    machineSpecHi: 'ENcraft ओरिजिनल UPVC प्रोफाइल · इंडस्ट्रियल एयर कंप्रेसर · ट्विन वेल्डिंग हेड',
     descriptionEn:
-      'Full view of the uPVC Thermal Welding station flanked by genuine factory-taped ENcraft uPVC Door & Window Profiles ("Art of Precision") on the left and a heavy-duty green twin-cylinder industrial air compressor in the center background that powers all pneumatic clamps across the plant.',
+      'Full view of the UPVC Thermal Welding station flanked by genuine factory-taped ENcraft UPVC Door & Window Profiles ("Art of Precision") on the left and a heavy-duty green twin-cylinder industrial air compressor in the center background that powers all pneumatic clamps across the plant.',
     descriptionHi:
-      'uPVC थर्मल वेल्डिंग स्टेशन का पूरा दृश्य, जहां बाईं ओर ओरिजिनल "ENcraft - Art of Precision" ब्रांड के टेप लगे uPVC प्रोफाइल रखे हैं और पीछे हरे रंग का हैवी-ड्यूटी ट्विन-सिलेंडर एयर कंप्रेसर लगा है जो पूरी वर्कशॉप की न्यूमैटिक मशीनों को प्रेशर सप्लाई करता है।',
+      'UPVC थर्मल वेल्डिंग स्टेशन का पूरा दृश्य, जहां बाईं ओर ओरिजिनल "ENcraft - Art of Precision" ब्रांड के टेप लगे UPVC प्रोफाइल रखे हैं और पीछे हरे रंग का हैवी-ड्यूटी ट्विन-सिलेंडर एयर कंप्रेसर लगा है जो पूरी वर्कशॉप की न्यूमैटिक मशीनों को प्रेशर सप्लाई करता है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0063_d86bc0b7.jpg',
     createdAt: 1730100015000,
   },
   {
     id: 'ws-16',
     bayCode: 'WELDING BAY · 16',
-    category: 'uPVC Thermal Welding',
-    titleEn: 'Twin-Head uPVC Welding Machine & Pneumatic Power Supply Unit',
-    titleHi: 'ट्विन-हेड uPVC वेल्डिंग मशीन और न्यूमैटिक पावर सप्लाई यूनिट',
-    machineSpecEn: 'Linear Rail Right Welding Head · Foot Pedal Actuation · Wrapped uPVC Bundles',
-    machineSpecHi: 'लीनियर रेल वेल्डिंग हेड · फुट पेडल कंट्रोल · पैक्ड uPVC प्रोफाइल बंडल',
+    category: 'UPVC Thermal Welding',
+    titleEn: 'Twin-Head UPVC Welding Machine & Pneumatic Power Supply Unit',
+    titleHi: 'ट्विन-हेड UPVC वेल्डिंग मशीन और न्यूमैटिक पावर सप्लाई यूनिट',
+    machineSpecEn: 'Linear Rail Right Welding Head · Foot Pedal Actuation · Wrapped UPVC Bundles',
+    machineSpecHi: 'लीनियर रेल वेल्डिंग हेड · फुट पेडल कंट्रोल · पैक्ड UPVC प्रोफाइल बंडल',
     descriptionEn:
-      'Wide angle of the Twin-Head uPVC Welding Line illustrating the movable right welding head on its guide rails, operator foot pedal at the base, wrapped white uPVC profile bundles stacked in front, and electrical distribution switchboards on the workshop wall.',
+      'Wide angle of the Twin-Head UPVC Welding Line illustrating the movable right welding head on its guide rails, operator foot pedal at the base, wrapped white UPVC profile bundles stacked in front, and electrical distribution switchboards on the workshop wall.',
     descriptionHi:
-      'ट्विन-हेड uPVC वेल्डिंग लाइन का चौड़ा दृश्य, जिसमें गाइड रेल पर चलने वाला दायां वेल्डिंग हेड, नीचे ऑपरेटर फुट-पेडल, सामने रखे सफेद uPVC प्रोफाइल के बंडल और दीवार पर लगे मेन इलेक्ट्रिक कंट्रोल पैनल दिख रहे हैं।',
+      'ट्विन-हेड UPVC वेल्डिंग लाइन का चौड़ा दृश्य, जिसमें गाइड रेल पर चलने वाला दायां वेल्डिंग हेड, नीचे ऑपरेटर फुट-पेडल, सामने रखे सफेद UPVC प्रोफाइल के बंडल और दीवार पर लगे मेन इलेक्ट्रिक कंट्रोल पैनल दिख रहे हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0071_1accc4db.jpg',
     createdAt: 1730100016000,
   },
   {
     id: 'ws-17',
     bayCode: 'WELDING BAY · 17',
-    category: 'uPVC Thermal Welding',
-    titleEn: 'uPVC Corner Welding Station with Completed Mosquito-Mesh Window Sashes',
-    titleHi: 'uPVC कॉर्नर वेल्डिंग स्टेशन और तैयार मच्छर-जाली (Mosquito Mesh) विंडो पल्ले',
-    machineSpecEn: 'Black Anodized Mesh Sashes · Stainless Steel Pleated/Wire Mesh · uPVC Welding Line',
-    machineSpecHi: 'ब्लैक मच्छर-जाली पल्ले · स्टेनलेस स्टील वायर मेश · uPVC वेल्डिंग लाइन',
+    category: 'UPVC Thermal Welding',
+    titleEn: 'UPVC Corner Welding Station with Completed Mosquito-Mesh Window Sashes',
+    titleHi: 'UPVC कॉर्नर वेल्डिंग स्टेशन और तैयार मच्छर-जाली (Mosquito Mesh) विंडो पल्ले',
+    machineSpecEn: 'Black Anodized Mesh Sashes · Stainless Steel Pleated/Wire Mesh · UPVC Welding Line',
+    machineSpecHi: 'ब्लैक मच्छर-जाली पल्ले · स्टेनलेस स्टील वायर मेश · UPVC वेल्डिंग लाइन',
     descriptionEn:
-      'View of the uPVC welding bay with completed black powder-coated window sashes fitted with stainless-steel mosquito mesh resting on the green floor mat in the foreground, alongside stacked white uPVC extrusions ready for thermal fusion.',
+      'View of the UPVC welding bay with completed black powder-coated window sashes fitted with stainless-steel mosquito mesh resting on the green floor mat in the foreground, alongside stacked white UPVC extrusions ready for thermal fusion.',
     descriptionHi:
-      'uPVC वेल्डिंग बे के सामने हरे मैट पर रखे हुए तैयार ब्लैक विंडो पल्ले जिनमें स्टेनलेस स्टील मच्छर जाली (Mosquito Mesh) फिट की जा चुकी है, और पास ही वेल्डिंग के लिए तैयार सफेद uPVC प्रोफाइल रखे हैं।',
+      'UPVC वेल्डिंग बे के सामने हरे मैट पर रखे हुए तैयार ब्लैक विंडो पल्ले जिनमें स्टेनलेस स्टील मच्छर जाली (Mosquito Mesh) फिट की जा चुकी है, और पास ही वेल्डिंग के लिए तैयार सफेद UPVC प्रोफाइल रखे हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0079_1f7d65fa.jpg',
     createdAt: 1730100017000,
   },
@@ -474,12 +474,12 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     category: 'Active Fabrication',
     titleEn: 'Wide-Angle Panorama of the Complete Automated Hisar Fabrication Floor',
     titleHi: 'हिसार ऑटोमेटेड फैब्रिकेशन वर्कशॉप फ्लोर का पूर्ण पैनोरमा दृश्य',
-    machineSpecEn: 'Left: Double-Head CNC Cutting Line · Center: Glazing Table & Mesh Sashes · Right: uPVC Welding Line',
-    machineSpecHi: 'बाएं: डबल-हेड CNC कटिंग लाइन · मध्य: ग्लेजिंग टेबल व तैयार पल्ले · दाएं: uPVC वेल्डिंग लाइन',
+    machineSpecEn: 'Left: Double-Head CNC Cutting Line · Center: Glazing Table & Mesh Sashes · Right: UPVC Welding Line',
+    machineSpecHi: 'बाएं: डबल-हेड CNC कटिंग लाइन · मध्य: ग्लेजिंग टेबल व तैयार पल्ले · दाएं: UPVC वेल्डिंग लाइन',
     descriptionEn:
-      'Comprehensive floor-to-ceiling panorama of our Hisar manufacturing plant showing the parallel industrial workflow: the Double-Head CNC Profile Cutting Line on the left, the central green-felt glazing bench and finished mosquito-mesh sashes in the middle, and the Twin-Head uPVC Thermal Welding Line on the right.',
+      'Comprehensive floor-to-ceiling panorama of our Hisar manufacturing plant showing the parallel industrial workflow: the Double-Head CNC Profile Cutting Line on the left, the central green-felt glazing bench and finished mosquito-mesh sashes in the middle, and the Twin-Head UPVC Thermal Welding Line on the right.',
     descriptionHi:
-      'हमारी हिसार वर्कशॉप के पूरे फ्लोर का चौड़ा (Panorama) दृश्य, जिसमें एक साथ पूरी प्रोडक्शन लाइन दिखती है — बाईं तरफ डबल-हेड CNC कटिंग मशीन, बीच में ग्रीन ग्लेजिंग टेबल व तैयार जाली वाले पल्ले, और दाईं तरफ ट्विन-हेड uPVC थर्मल वेल्डिंग मशीन।',
+      'हमारी हिसार वर्कशॉप के पूरे फ्लोर का चौड़ा (Panorama) दृश्य, जिसमें एक साथ पूरी प्रोडक्शन लाइन दिखती है — बाईं तरफ डबल-हेड CNC कटिंग मशीन, बीच में ग्रीन ग्लेजिंग टेबल व तैयार जाली वाले पल्ले, और दाईं तरफ ट्विन-हेड UPVC थर्मल वेल्डिंग मशीन।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0067_74b8e69d.jpg',
     createdAt: 1730100020000,
   },
@@ -492,9 +492,9 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: 'High-Volume Kothi & Project Orders · Green Carpet Staging · Multi-Machine Layout',
     machineSpecHi: 'कोठी व प्रोजेक्ट ऑर्डर · ग्रीन कार्पेट स्टेजिंग · मल्टी-मशीन लेआउट',
     descriptionEn:
-      'Production staging view across the green-carpeted workshop floor where multiple black aluminium and white uPVC window sashes are queued after cutting and welding, awaiting toughened glass insertion and multi-point lock testing.',
+      'Production staging view across the green-carpeted workshop floor where multiple black aluminium and white UPVC window sashes are queued after cutting and welding, awaiting toughened glass insertion and multi-point lock testing.',
     descriptionHi:
-      'वर्कशॉप के हरे मैट वाले फ्लोर का दृश्य जहां कटिंग और वेल्डिंग के बाद कई ब्लैक एल्युमीनियम और सफेद uPVC विंडो पल्ले ग्लास फिटिंग और लॉक टेस्टिंग के लिए कतार में रखे गए हैं।',
+      'वर्कशॉप के हरे मैट वाले फ्लोर का दृश्य जहां कटिंग और वेल्डिंग के बाद कई ब्लैक एल्युमीनियम और सफेद UPVC विंडो पल्ले ग्लास फिटिंग और लॉक टेस्टिंग के लिए कतार में रखे गए हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0064_ad6f5108.jpg',
     createdAt: 1730100021000,
   },
@@ -507,7 +507,7 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: 'Integrated Cutting, Milling, Welding & Glazing under One Roof in Hisar',
     machineSpecHi: 'हिसार में एक ही छत के नीचे कटिंग, मिलिंग, वेल्डिंग और ग्लेजिंग की संपूर्ण सुविधा',
     descriptionEn:
-      'Another wide perspective of the Haryana Glass Fabricator factory floor demonstrating how raw 20-foot aluminium and uPVC profiles enter from the storage racks, pass through CNC cutting, routing, and thermal welding, and arrive at the central glazing station with zero outsourcing.',
+      'Another wide perspective of the Haryana Glass Fabricator factory floor demonstrating how raw 20-foot aluminium and UPVC profiles enter from the storage racks, pass through CNC cutting, routing, and thermal welding, and arrive at the central glazing station with zero outsourcing.',
     descriptionHi:
       'हरियाणा ग्लास फैब्रिकेटर की फैक्ट्री का एक और विहंगम दृश्य, जो दर्शाता है कि कैसे एक ही छत के नीचे कच्चे प्रोफाइल से लेकर CNC कटिंग, राउटिंग, वेल्डिंग और ग्लास ग्लेजिंग तक का सारा काम बिना किसी बाहरी निर्भरता के इन-हाउस किया जाता है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0070_08db398f.jpg',
@@ -549,12 +549,12 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     category: 'Showroom & LED Mirrors',
     titleEn: 'Triple-Border Warm-White Arch LED Mirror & Hardware Inventory Reflection',
     titleHi: 'ट्रिपल-बॉर्डर वार्म-व्हाइट आर्च एलईडी मिरर और हार्डवेयर स्टॉक रैक',
-    machineSpecEn: '3-Line Sandblasted Arch Mirror · Touch Switch · Showroom Hardware Shelves & uPVC Sample',
-    machineSpecHi: '3-लाइन आर्च LED ड्रेसिंग मिरर · टच स्विच · शोरूम हार्डवेयर रैक व uPVC सैंपल',
+    machineSpecEn: '3-Line Sandblasted Arch Mirror · Touch Switch · Showroom Hardware Shelves & UPVC Sample',
+    machineSpecHi: '3-लाइन आर्च LED ड्रेसिंग मिरर · टच स्विच · शोरूम हार्डवेयर रैक व UPVC सैंपल',
     descriptionEn:
-      'Showroom display of our signature Triple-Border Warm-White Arch LED Dressing Mirror. In the mirror’s HD reflection, you can see our floor-to-ceiling showroom inventory shelves stocked with architectural door locks, hinges, rollers, and sealants, while a white uPVC sliding window sample and ACP shade chart stand right beside it.',
+      'Showroom display of our signature Triple-Border Warm-White Arch LED Dressing Mirror. In the mirror’s HD reflection, you can see our floor-to-ceiling showroom inventory shelves stocked with architectural door locks, hinges, rollers, and sealants, while a white UPVC sliding window sample and ACP shade chart stand right beside it.',
     descriptionHi:
-      'हमारे सिग्नेचर ट्रिपल-बॉर्डर वार्म-व्हाइट आर्च (Arch) एलईडी ड्रेसिंग मिरर का फोटो। इस HD मिरर के प्रतिबिंब में हमारे शोरूम के रैक दिख रहे हैं जो ओरिजिनल लॉक, हिंज, रोलर और हार्डवेयर बॉक्स से भरे हैं, और पास ही सफेद uPVC विंडो सैंपल व ACP कलर चार्ट रखा है।',
+      'हमारे सिग्नेचर ट्रिपल-बॉर्डर वार्म-व्हाइट आर्च (Arch) एलईडी ड्रेसिंग मिरर का फोटो। इस HD मिरर के प्रतिबिंब में हमारे शोरूम के रैक दिख रहे हैं जो ओरिजिनल लॉक, हिंज, रोलर और हार्डवेयर बॉक्स से भरे हैं, और पास ही सफेद UPVC विंडो सैंपल व ACP कलर चार्ट रखा है।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0053_7f4c65f2.jpg',
     createdAt: 1730100025000,
   },
@@ -567,9 +567,9 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     machineSpecEn: 'Faceted Diamond-Grid Bevelled Mirror · Arch LED Mirrors · Sample Window Frames',
     machineSpecHi: 'डायमंड-ग्रिड बेवल्ड डेकोरेटिव मिरर · आर्च LED मिरर · सैंपल विंडो फ्रेम',
     descriptionEn:
-      'Daylight view of our showroom corner displaying a custom Venetian/diamond-grid bevelled decorative wall mirror on the left brick wall, flanked by twin Arch LED mirrors, a round backlit mirror, and sample uPVC & black aluminium window frames resting at the base.',
+      'Daylight view of our showroom corner displaying a custom Venetian/diamond-grid bevelled decorative wall mirror on the left brick wall, flanked by twin Arch LED mirrors, a round backlit mirror, and sample UPVC & black aluminium window frames resting at the base.',
     descriptionHi:
-      'दिन की रोशनी में हमारे शोरूम के डिस्प्ले कॉर्नर का दृश्य, जहां बाईं दीवार पर कस्टम डायमंड-कट बेवल्ड डेकोरेटिव मिरर लगा है, साथ में दो आर्च LED मिरर, राउंड मिरर और नीचे सैंपल uPVC व ब्लैक एल्युमीनियम विंडो फ्रेम रखे हैं।',
+      'दिन की रोशनी में हमारे शोरूम के डिस्प्ले कॉर्नर का दृश्य, जहां बाईं दीवार पर कस्टम डायमंड-कट बेवल्ड डेकोरेटिव मिरर लगा है, साथ में दो आर्च LED मिरर, राउंड मिरर और नीचे सैंपल UPVC व ब्लैक एल्युमीनियम विंडो फ्रेम रखे हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0073_6d869338.jpg',
     createdAt: 1730100026000,
   },
@@ -594,12 +594,12 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
     category: 'Showroom & LED Mirrors',
     titleEn: 'Full-Height Triple-Line Arch Dressing Mirror & Composite Panel Chart',
     titleHi: 'फुल-हाइट ट्रिपल-लाइन आर्च ड्रेसिंग मिरर और ACP पैनल शेड चार्ट',
-    machineSpecEn: 'Custom Height Dressing Mirror · Dual-Tone LED · ACP Cladding & uPVC Corner Samples',
-    machineSpecHi: 'फुल-हाइट ड्रेसिंग मिरर · ड्यूल-टोन LED · ACP क्लैडिंग व uPVC सैंपल',
+    machineSpecEn: 'Custom Height Dressing Mirror · Dual-Tone LED · ACP Cladding & UPVC Corner Samples',
+    machineSpecHi: 'फुल-हाइट ड्रेसिंग मिरर · ड्यूल-टोन LED · ACP क्लैडिंग व UPVC सैंपल',
     descriptionEn:
-      'Full vertical view of the triple-strip Arch LED Dressing Mirror switched on in warm-white mode, positioned next to our Aluminum Composite Panel (ACP) specification board and white uPVC window sash samples.',
+      'Full vertical view of the triple-strip Arch LED Dressing Mirror switched on in warm-white mode, positioned next to our Aluminum Composite Panel (ACP) specification board and white UPVC window sash samples.',
     descriptionHi:
-      'वार्म-व्हाइट मोड में ऑन किए गए फुल-हाइट ट्रिपल-लाइन आर्च ड्रेसिंग मिरर का पूरा वर्टिकल फोटो, जिसके पास ACP क्लैडिंग पैनल का बोर्ड और सफेद uPVC विंडो के सैंपल रखे हैं।',
+      'वार्म-व्हाइट मोड में ऑन किए गए फुल-हाइट ट्रिपल-लाइन आर्च ड्रेसिंग मिरर का पूरा वर्टिकल फोटो, जिसके पास ACP क्लैडिंग पैनल का बोर्ड और सफेद UPVC विंडो के सैंपल रखे हैं।',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0066_c1f5f4bb.jpg',
     createdAt: 1730100028000,
   },
@@ -623,13 +623,13 @@ export const INITIAL_WORKSHOP_ITEMS: WorkshopItem[] = [
 export const INITIAL_PRODUCTS: ProductItem[] = [
   {
     id: 'prod-1',
-    titleEn: '3-Track Soundproof ENcraft uPVC Sliding Window with SS Mesh',
-    titleHi: '3-ट्रैक साउंडप्रूफ ENcraft uPVC स्लाइडिंग विंडो (SS जाली सहित)',
+    titleEn: '3-Track Soundproof ENcraft UPVC Sliding Window with SS Mesh',
+    titleHi: '3-ट्रैक साउंडप्रूफ ENcraft UPVC स्लाइडिंग विंडो (SS जाली सहित)',
     descriptionEn:
-      'Fabricated on our Hisar Twin-Head Thermal Welding Line using genuine ENcraft multi-chamber UV-resistant uPVC profiles, galvanized steel reinforcement, DGU toughened glass, and stainless-steel mosquito mesh.',
+      'Fabricated on our Hisar Twin-Head Thermal Welding Line using genuine ENcraft multi-chamber UV-resistant UPVC profiles, galvanized steel reinforcement, DGU toughened glass, and stainless-steel mosquito mesh.',
     descriptionHi:
-      'हमारी हिसार वर्कशॉप की थर्मल वेल्डिंग मशीन पर ओरिजिनल ENcraft मल्टी-चैम्बर uPVC प्रोफाइल, स्टील रिइंफोर्समेंट, डबल-ग्लेज्ड टफन्ड ग्लास और स्टेनलेस स्टील मच्छर जाली के साथ निर्मित प्रीमियम विंडो।',
-    category: 'uPVC',
+      'हमारी हिसार वर्कशॉप की थर्मल वेल्डिंग मशीन पर ओरिजिनल ENcraft मल्टी-चैम्बर UPVC प्रोफाइल, स्टील रिइंफोर्समेंट, डबल-ग्लेज्ड टफन्ड ग्लास और स्टेनलेस स्टील मच्छर जाली के साथ निर्मित प्रीमियम विंडो।',
+    category: 'UPVC',
     badgeEn: 'ENcraft Profile · Acoustic 40dB',
     badgeHi: 'ENcraft प्रोफाइल · 40dB साउंडप्रूफ',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0079_1f7d65fa.jpg',
@@ -776,11 +776,11 @@ export const INITIAL_GALLERY: GalleryItem[] = [
   },
   {
     id: 'gal-4',
-    titleEn: 'ENcraft Soundproof uPVC Villa Windows & Doors Fabrication',
-    titleHi: 'ENcraft साउंडप्रूफ uPVC विला विंडो और डोर प्रोजेक्ट',
+    titleEn: 'ENcraft Soundproof UPVC Villa Windows & Doors Fabrication',
+    titleHi: 'ENcraft साउंडप्रूफ UPVC विला विंडो और डोर प्रोजेक्ट',
     cityEn: 'Model Town, Rohtak & Hisar',
     cityHi: 'मॉडल टाउन, रोहतक व हिसार',
-    category: 'uPVC Windows & Doors',
+    category: 'UPVC Windows & Doors',
     imageUrl: '/assets/aistudio/IMG-20261112-WA0063_d86bc0b7.jpg',
     createdAt: 1730004000000,
   },
@@ -812,9 +812,9 @@ export const INITIAL_INQUIRIES: CustomerInquiry[] = [
     fullName: 'Vikramjeet Sangwan',
     phone: '+91 98124 55320',
     city: 'Sector 14, Hisar',
-    service: 'uPVC Windows and Doors',
+    service: 'UPVC Windows and Doors',
     message:
-      'Need 8 sets of 3-track ENcraft uPVC sliding windows with SS mesh for new kothi construction (approx 6x5 ft each).',
+      'Need 8 sets of 3-track ENcraft UPVC sliding windows with SS mesh for new kothi construction (approx 6x5 ft each).',
     status: 'New',
     createdAt: '11 Nov 2026, 10:15 AM',
     timestamp: 1762884900000,
@@ -860,7 +860,7 @@ export const PRODUCT_CATEGORIES: {
   labelHi: string;
 }[] = [
   { key: 'All', labelEn: 'All Products', labelHi: 'सभी उत्पाद' },
-  { key: 'uPVC', labelEn: 'uPVC Windows/Doors', labelHi: 'uPVC खिड़की/दरवाजे' },
+  { key: 'UPVC', labelEn: 'UPVC Windows/Doors', labelHi: 'UPVC खिड़की/दरवाजे' },
   { key: 'Aluminium', labelEn: 'Aluminium Systems', labelHi: 'एल्युमीनियम सिस्टम' },
   { key: 'Slim Profile', labelEn: 'Slim Profile', labelHi: 'स्लिम प्रोफाइल' },
   { key: 'Toughened Glass', labelEn: 'Toughened Glass', labelHi: 'टफन्ड ग्लास' },
@@ -886,9 +886,9 @@ export const WORKSHOP_CATEGORIES: {
     labelHi: 'CNC कटिंग और राउटर मशीनें',
   },
   {
-    key: 'uPVC Thermal Welding',
-    labelEn: 'uPVC Thermal Welding Line',
-    labelHi: 'uPVC थर्मल वेल्डिंग लाइन',
+    key: 'UPVC Thermal Welding',
+    labelEn: 'UPVC Thermal Welding Line',
+    labelHi: 'UPVC थर्मल वेल्डिंग लाइन',
   },
   {
     key: 'Active Fabrication',

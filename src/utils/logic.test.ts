@@ -47,13 +47,13 @@ test('buildServiceWhatsAppMessage and buildProductWhatsAppMessage support Englis
 
   const prodMsgHi = buildProductWhatsAppMessage(
     {
-      titleEn: '3-Track uPVC Window',
-      titleHi: '3-ट्रैक uPVC स्लाइडिंग विंडो',
-      category: 'uPVC',
+      titleEn: '3-Track UPVC Window',
+      titleHi: '3-ट्रैक UPVC स्लाइडिंग विंडो',
+      category: 'UPVC',
     },
     'hi'
   );
-  assert.ok(prodMsgHi.includes('3-ट्रैक uPVC स्लाइडिंग विंडो'));
+  assert.ok(prodMsgHi.includes('3-ट्रैक UPVC स्लाइडिंग विंडो'));
 });
 
 test('validateInquiryForm rejects invalid inputs and accepts valid Haryana customer inquiry', () => {
@@ -72,7 +72,7 @@ test('validateInquiryForm rejects invalid inputs and accepts valid Haryana custo
       fullName: 'Rajesh Bishnoi',
       phone: '9812345678',
       city: 'Hisar',
-      service: 'uPVC Windows and Doors',
+      service: 'UPVC Windows and Doors',
       message: '3 windows 6x5 ft',
     },
     'hi'
@@ -85,11 +85,11 @@ test('filterProducts filters by category and active status', () => {
   const sampleProducts: ProductItem[] = [
     {
       id: '1',
-      titleEn: 'uPVC Slider',
-      titleHi: 'uPVC स्लाइडर',
+      titleEn: 'UPVC Slider',
+      titleHi: 'UPVC स्लाइडर',
       descriptionEn: 'Desc',
       descriptionHi: 'विवरण',
-      category: 'uPVC',
+      category: 'UPVC',
       badgeEn: 'Best Seller',
       badgeHi: 'बेस्ट सेलर',
       imageUrl: '/assets/products/upvc-sliding-window.svg',
@@ -113,7 +113,7 @@ test('filterProducts filters by category and active status', () => {
 
   assert.equal(filterProducts(sampleProducts, 'All', true).length, 1);
   assert.equal(filterProducts(sampleProducts, 'All', false).length, 2);
-  assert.equal(filterProducts(sampleProducts, 'uPVC', true).length, 1);
+  assert.equal(filterProducts(sampleProducts, 'UPVC', true).length, 1);
   assert.equal(filterProducts(sampleProducts, 'Slim Profile', true).length, 0);
 });
 

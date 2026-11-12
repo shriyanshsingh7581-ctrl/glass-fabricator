@@ -72,7 +72,7 @@ type AdminTab =
   | 'settings';
 
 const SERVICE_CATEGORIES: Exclude<ProductCategory, 'All'>[] = [
-  'uPVC',
+  'UPVC',
   'Aluminium',
   'Slim Profile',
   'Toughened Glass',
@@ -137,7 +137,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [prodDescEn, setProdDescEn] = useState('');
   const [prodDescHi, setProdDescHi] = useState('');
   const [prodCategory, setProdCategory] =
-    useState<Exclude<ProductCategory, 'All'>>('uPVC');
+    useState<Exclude<ProductCategory, 'All'>>('UPVC');
   const [prodBadgeEn, setProdBadgeEn] = useState('Best Seller');
   const [prodBadgeHi, setProdBadgeHi] = useState('बेस्ट सेलर');
   const [prodImage, setProdImage] = useState(
@@ -227,7 +227,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setProdTitleHi('');
     setProdDescEn('');
     setProdDescHi('');
-    setProdCategory('uPVC');
+    setProdCategory('UPVC');
     setProdBadgeEn('Best Seller');
     setProdBadgeHi('बेस्ट सेलर');
     setProdImage('/assets/products/upvc-sliding-window.svg');
@@ -736,7 +736,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                           required
                           value={prodTitleEn}
                           onChange={(e) => setProdTitleEn(e.target.value)}
-                          placeholder="e.g., 3-Track Acoustic uPVC Sliding Window"
+                          placeholder="e.g., 3-Track Acoustic UPVC Sliding Window"
                           className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs sm:text-sm text-white"
                         />
                       </div>
@@ -748,7 +748,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                           type="text"
                           value={prodTitleHi}
                           onChange={(e) => setProdTitleHi(e.target.value)}
-                          placeholder="जैसे: 3-ट्रैक साउंडप्रूफ uPVC विंडो"
+                          placeholder="जैसे: 3-ट्रैक साउंडप्रूफ UPVC विंडो"
                           className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs sm:text-sm text-white"
                         />
                       </div>
@@ -1124,8 +1124,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                           <option value="CNC Cutting & Milling">
                             CNC Cutting & Milling
                           </option>
-                          <option value="uPVC Thermal Welding">
-                            uPVC Thermal Welding
+                          <option value="UPVC Thermal Welding">
+                            UPVC Thermal Welding
                           </option>
                           <option value="Active Fabrication">
                             Active Fabrication

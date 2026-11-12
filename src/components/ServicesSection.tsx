@@ -51,8 +51,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#263746]/80 leading-relaxed">
             {lang === 'hi'
-              ? 'एल्युमीनियम और uPVC विंडो से लेकर ISI टफन्ड ग्लास, स्लिम पार्टीशन और आर्च एलईडी मिरर तक — हर सिस्टम हमारी अपनी वर्कशॉप में कस्टम तैयार किया जाता है।'
-              : 'From precision Aluminium and uPVC window systems to ISI toughened glass, slim partitions, and custom LED mirrors—engineered in-house and installed across Haryana.'}
+              ? 'एल्युमीनियम और UPVC विंडो से लेकर ISI टफन्ड ग्लास, स्लिम पार्टीशन और आर्च एलईडी मिरर तक — हर सिस्टम हमारी अपनी वर्कशॉप में कस्टम तैयार किया जाता है।'
+              : 'From precision Aluminium and UPVC window systems to ISI toughened glass, slim partitions, and custom LED mirrors—engineered in-house and installed across Haryana.'}
           </p>
         </div>
 

@@ -89,7 +89,7 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
 
           <p className="mt-5 text-sm sm:text-lg text-white/80 leading-relaxed">
             {lang === 'hi'
-              ? 'हमारी 3-मंजिला मुख्य बिल्डिंग, हरियाणा ग्लास गोदाम, डबल-हेड CNC प्रोफाइल कटिंग मशीन, ट्विन-हेड uPVC थर्मल वेल्डिंग लाइन, कॉपी राउटर, ग्रीन-फेल्ट ग्लेजिंग टेबल और एलईडी मिरर शोरूम के हर फोटो के नीचे उसका पूरा विवरण पढ़ें।'
+              ? 'हमारी 3-मंजिला मुख्य बिल्डिंग, हरियाणा ग्लास गोदाम, डबल-हेड CNC प्रोफाइल कटिंग मशीन, ट्विन-हेड UPVC थर्मल वेल्डिंग लाइन, कॉपी राउटर, ग्रीन-फेल्ट ग्लेजिंग टेबल और एलईडी मिरर शोरूम के हर फोटो के नीचे उसका पूरा विवरण पढ़ें।'
               : 'Every photograph below is captured inside our Hisar headquarters, bulk float-glass godown, automated CNC cutting and thermal welding bays, and LED mirror studio — with detailed process descriptions underneath each photo.'}
           </p>
 
@@ -148,8 +148,8 @@ export const WorkshopSection: React.FC<WorkshopSectionProps> = ({
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={
                 lang === 'hi'
-                  ? 'मशीन, गोदाम, uPVC, मिरर खोजें...'
-                  : 'Search CNC, Godown, uPVC, Mirror...'
+                  ? 'मशीन, गोदाम, UPVC, मिरर खोजें...'
+                  : 'Search CNC, Godown, UPVC, Mirror...'
               }
               className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#0C2237] border border-white/20 focus:border-[#16A6A1] text-xs text-white placeholder-white/50 focus:outline-none"
             />

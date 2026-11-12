@@ -23,6 +23,8 @@ export function loadLocalCMSState(): CMSStoreState {
     ).includes('4PVM+FMV');
     const isOldBrandName =
       savedSettings.brandNameEn === 'Haryana Window Mart' ||
+      String(savedSettings.brandNameEn || '').includes('Window') ||
+      String(savedSettings.brandNameHi || '').includes('विंडो') ||
       !savedSettings.brandNameEn;
 
     return {
@@ -31,8 +33,8 @@ export function loadLocalCMSState(): CMSStoreState {
         ...savedSettings,
         ...(isOldBrandName
           ? {
-              brandNameEn: INITIAL_CMS_STATE.settings.brandNameEn,
-              brandNameHi: INITIAL_CMS_STATE.settings.brandNameHi,
+              brandNameEn: 'Haryana Glass Fabricator',
+              brandNameHi: 'हरियाणा ग्लास फैब्रिकेटर',
               subtitleEn: INITIAL_CMS_STATE.settings.subtitleEn,
               subtitleHi: INITIAL_CMS_STATE.settings.subtitleHi,
             }
@@ -194,10 +196,24 @@ export async function fetchFromFirebaseDatabase(
       };
     }
 
+    const remoteSettings = (data.settings || {}) as Partial<SiteSettings>;
+    if (
+      !remoteSettings.brandNameEn ||
+      String(remoteSettings.brandNameEn).includes('Window')
+    ) {
+      remoteSettings.brandNameEn = 'Haryana Glass Fabricator';
+    }
+    if (
+      !remoteSettings.brandNameHi ||
+      String(remoteSettings.brandNameHi).includes('विंडो')
+    ) {
+      remoteSettings.brandNameHi = 'हरियाणा ग्लास फैब्रिकेटर';
+    }
+
     const mergedState: CMSStoreState = {
       settings: {
         ...currentState.settings,
-        ...(data.settings || {}),
+        ...remoteSettings,
         firebaseDbUrl: baseUrl,
       } as SiteSettings,
       services: normalizeCollection<ServiceItem>(

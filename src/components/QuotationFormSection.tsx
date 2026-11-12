@@ -39,7 +39,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
   const [phone, setPhone] = useState('');
   const [city, setCity] = useState('Hisar');
   const [service, setService] = useState(
-    preselectedService || services[0]?.titleEn || 'uPVC Windows and Doors'
+    preselectedService || services[0]?.titleEn || 'UPVC Windows and Doors'
   );
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -120,7 +120,7 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
             <div>
               <p className="text-xs font-bold tracking-wide uppercase text-[#16A6A1]">
                 {lang === 'hi'
-                  ? 'निःशुल्क कोटेशन और साइट माप'
+                  ? 'साइट मेज़रमेंट और कोटेशन'
                   : 'Haryana Glass Fabricator Specialist Desk'}
               </p>
 
@@ -144,8 +144,8 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                   </div>
                   <p className="text-xs text-white/75 mt-1">
                     {lang === 'hi'
-                      ? 'uPVC, एल्युमीनियम, टफन्ड ग्लास, स्लिम पार्टीशन या एलईडी मिरर चुनें।'
-                      : 'Choose uPVC, Aluminium, Toughened Glass, Slim Profile, or LED Mirrors.'}
+                      ? 'UPVC, एल्युमीनियम, टफन्ड ग्लास, स्लिम पार्टीशन या एलईडी मिरर चुनें।'
+                      : 'Choose UPVC, Aluminium, Toughened Glass, Slim Profile, or LED Mirrors.'}
                   </p>
                 </div>
 
@@ -373,8 +373,8 @@ export const QuotationFormSection: React.FC<QuotationFormSectionProps> = ({
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder={
                       lang === 'hi'
-                        ? 'उदा. नई कोठी के लिए 6 खिड़कियां (uPVC 3-ट्रैक), बालकनी के लिए 12mm टफन्ड ग्लास रेलिंग और 2 आर्च एलईडी मिरर...'
-                        : 'e.g., Need 6 sets of 3-track uPVC windows with mesh, 16mm slim partition for drawing room, and 2 Arch LED mirrors...'
+                        ? 'उदा. नई कोठी के लिए 6 खिड़कियां (UPVC 3-ट्रैक), बालकनी के लिए 12mm टफन्ड ग्लास रेलिंग और 2 आर्च एलईडी मिरर...'
+                        : 'e.g., Need 6 sets of 3-track UPVC windows with mesh, 16mm slim partition for drawing room, and 2 Arch LED mirrors...'
                     }
                     className="w-full px-4 py-3.5 rounded-xl bg-white border border-[#DCE4EA] focus:border-[#16A6A1] focus:ring-1 focus:ring-[#16A6A1] text-sm text-[#263746] focus:outline-none transition-colors"
                   />

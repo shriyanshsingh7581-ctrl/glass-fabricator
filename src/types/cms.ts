@@ -2,6 +2,7 @@ export type Language = 'en' | 'hi';
 
 export type ProductCategory =
   | 'All'
+  | 'UPVC'
   | 'uPVC'
   | 'Aluminium'
   | 'Toughened Glass'
@@ -14,6 +15,7 @@ export type WorkshopCategory =
   | 'All'
   | 'Building & Godown'
   | 'CNC Cutting & Milling'
+  | 'UPVC Thermal Welding'
   | 'uPVC Thermal Welding'
   | 'Active Fabrication'
   | 'Showroom & LED Mirrors';

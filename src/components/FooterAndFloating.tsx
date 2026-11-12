@@ -28,8 +28,8 @@ export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
           {/* Footnote / Legacy Note */}
           <div className="pb-6 border-b border-white/15 leading-relaxed text-white/70">
             {lang === 'hi'
-              ? '1. हरियाणा ग्लास फैब्रिकेटर के सभी एल्युमीनियम, uPVC और टफन्ड ग्लास सिस्टम निरंकारी भवन रोड, हिसार स्थित हमारे इन-हाउस CNC प्लांट में कस्टम तैयार किए जाते हैं। पूरे हरियाणा के सभी 22 जिलों में साइट माप और डिलीवरी उपलब्ध है।'
-              : '1. All Haryana Glass Fabricator Aluminium, uPVC, Slim Profile, and Toughened Glass systems are custom-fabricated in-house at our Nirankari Bhawan Road plant in Hisar. On-site laser measurement and delivery available across all 22 districts of Haryana.'}
+              ? '1. हरियाणा ग्लास फैब्रिकेटर के सभी एल्युमीनियम, UPVC और टफन्ड ग्लास सिस्टम निरंकारी भवन रोड, हिसार स्थित हमारे इन-हाउस CNC प्लांट में कस्टम तैयार किए जाते हैं। पूरे हरियाणा के सभी 22 जिलों में साइट माप और डिलीवरी उपलब्ध है।'
+              : '1. All Haryana Glass Fabricator Aluminium, UPVC, Slim Profile, and Toughened Glass systems are custom-fabricated in-house at our Nirankari Bhawan Road plant in Hisar. On-site laser measurement and delivery available across all 22 districts of Haryana.'}
           </div>
 
           {/* Multi-Column Directory */}
@@ -37,7 +37,13 @@ export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
             {/* Col 1: Brand & Address */}
             <div>
               <div className="font-bold text-white text-sm mb-2.5">
-                {lang === 'hi' ? settings.brandNameHi : settings.brandNameEn}
+                {lang === 'hi'
+                  ? (!settings.brandNameHi || settings.brandNameHi.includes('विंडो')
+                      ? 'हरियाणा ग्लास फैब्रिकेटर'
+                      : settings.brandNameHi)
+                  : (!settings.brandNameEn || settings.brandNameEn.includes('Window')
+                      ? 'Haryana Glass Fabricator'
+                      : settings.brandNameEn)}
               </div>
               <p className="text-white/80 leading-relaxed">
                 {lang === 'hi' ? settings.subtitleHi : settings.subtitleEn}
@@ -86,7 +92,7 @@ export const FooterAndFloating: React.FC<FooterAndFloatingProps> = ({
                 </li>
                 <li>
                   <a href="#services" className="hover:text-[#16A6A1] text-white/80 transition-colors">
-                    uPVC Windows & Doors
+                    UPVC Windows & Doors
                   </a>
                 </li>
                 <li>
