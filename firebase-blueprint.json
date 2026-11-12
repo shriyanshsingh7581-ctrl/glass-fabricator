@@ -1,0 +1,128 @@
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global website configuration, contact numbers, addresses, legacy stats, brand info, and admin control PIN.",
+      "type": "object",
+      "properties": {
+        "brandNameEn": { "type": "string" },
+        "brandNameHi": { "type": "string" },
+        "subtitleEn": { "type": "string" },
+        "subtitleHi": { "type": "string" },
+        "logoUrl": { "type": "string" },
+        "legacyYearsStat": { "type": "string" },
+        "generationsStat": { "type": "string" },
+        "heroBadgeEn": { "type": "string" },
+        "heroBadgeHi": { "type": "string" },
+        "heroHeadingEn": { "type": "string" },
+        "heroHeadingHi": { "type": "string" },
+        "heroSubheadingEn": { "type": "string" },
+        "heroSubheadingHi": { "type": "string" },
+        "phoneDisplay": { "type": "string" },
+        "whatsappNumber": { "type": "string" },
+        "addressEn": { "type": "string" },
+        "addressHi": { "type": "string" },
+        "coverageEn": { "type": "string" },
+        "coverageHi": { "type": "string" },
+        "instagramUrl": { "type": "string" },
+        "instagramHandle": { "type": "string" },
+        "googleMapsEmbedUrl": { "type": "string" },
+        "adminPin": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Architectural window, door, partition or glass product in catalog.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titleEn": { "type": "string" },
+        "titleHi": { "type": "string" },
+        "descriptionEn": { "type": "string" },
+        "descriptionHi": { "type": "string" },
+        "category": { "type": "string" },
+        "badgeEn": { "type": "string" },
+        "badgeHi": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "titleEn", "category", "imageUrl", "active"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "One of the 8 core fabrication services offered by Haryana Window Mart.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "number": { "type": "string" },
+        "categoryKey": { "type": "string" },
+        "titleEn": { "type": "string" },
+        "titleHi": { "type": "string" },
+        "descriptionEn": { "type": "string" },
+        "descriptionHi": { "type": "string" },
+        "specsEn": { "type": "string" },
+        "specsHi": { "type": "string" },
+        "iconName": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["id", "number", "categoryKey", "titleEn", "titleHi"]
+    },
+    "GalleryProject": {
+      "title": "GalleryProject",
+      "description": "Completed architectural glass or fenestration project in Haryana.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titleEn": { "type": "string" },
+        "titleHi": { "type": "string" },
+        "cityEn": { "type": "string" },
+        "cityHi": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "titleEn", "cityEn", "imageUrl"]
+    },
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "Customer quote request or site measurement inquiry.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "city": { "type": "string" },
+        "service": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string", "enum": ["New", "Contacted", "Completed"] },
+        "createdAt": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["id", "fullName", "phone", "city", "service", "status", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/settings/{settingsId}": {
+      "schema": { "$ref": "#/entities/SiteSettings" },
+      "description": "Global website settings document (main document is /settings/site)"
+    },
+    "/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Collection of catalog products managed via Admin CMS"
+    },
+    "/services/{serviceId}": {
+      "schema": { "$ref": "#/entities/Service" },
+      "description": "Collection of core 8 architectural services"
+    },
+    "/gallery/{projectId}": {
+      "schema": { "$ref": "#/entities/GalleryProject" },
+      "description": "Completed work gallery items"
+    },
+    "/inquiries/{inquiryId}": {
+      "schema": { "$ref": "#/entities/Inquiry" },
+      "description": "Customer quotation and site measurement leads"
+    }
+  }
+}

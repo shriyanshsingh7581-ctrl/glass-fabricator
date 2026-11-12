@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060d1a"/>
+      <stop offset="55%" stop-color="#0f2547"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="warmGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="glassReflect" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="goldFrame" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Sky -->
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <!-- Ambient Architectural Halo -->
+  <circle cx="720" cy="360" r="420" fill="#f59e0b" opacity="0.12"/>
+  <circle cx="320" cy="240" r="300" fill="#0ea5e9" opacity="0.1"/>
+
+  <!-- Terrace / Ground Slab -->
+  <polygon points="0,630 1200,630 1200,800 0,800" fill="url(#floor)"/>
+  <line x1="0" y1="630" x2="1200" y2="630" stroke="#334155" stroke-width="3"/>
+
+  <!-- Pool / Reflective Courtyard Forefront -->
+  <polygon points="80,660 1120,660 1180,790 20,790" fill="#082f49" opacity="0.65"/>
+  <line x1="80" y1="660" x2="1120" y2="660" stroke="#38bdf8" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Upper Cantilever Roof Slab -->
+  <rect x="110" y="110" width="980" height="32" rx="4" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <rect x="130" y="142" width="940" height="8" fill="url(#goldFrame)"/>
+
+  <!-- Middle Cantilever Floor Slab -->
+  <rect x="120" y="370" width="960" height="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <line x1="120" y1="382" x2="1080" y2="382" stroke="#f59e0b" stroke-width="2" opacity="0.8"/>
+
+  <!-- Upper Floor Glass Facade & Balcony -->
+  <g transform="translate(150, 150)">
+    <rect x="0" y="0" width="900" height="220" fill="#0f172a"/>
+    <!-- Interior Warm Ceiling Lights -->
+    <rect x="15" y="12" width="275" height="196" fill="url(#warmGlow)"/>
+    <rect x="305" y="12" width="290" height="196" fill="url(#warmGlow)"/>
+    <rect x="610" y="12" width="275" height="196" fill="url(#warmGlow)"/>
+    <!-- Glass Reflections -->
+    <polygon points="15,12 180,12 90,208 15,208" fill="url(#glassReflect)"/>
+    <polygon points="305,12 490,12 390,208 305,208" fill="url(#glassReflect)"/>
+    <polygon points="610,12 790,12 690,208 610,208" fill="url(#glassReflect)"/>
+    <!-- Slim Aluminium Mullions -->
+    <rect x="0" y="0" width="900" height="220" fill="none" stroke="#334155" stroke-width="10"/>
+    <rect x="295" y="0" width="10" height="220" fill="#1e293b"/>
+    <rect x="600" y="0" width="10" height="220" fill="#1e293b"/>
+    <line x1="150" y1="0" x2="150" y2="220" stroke="#475569" stroke-width="4"/>
+    <line x1="450" y1="0" x2="450" y2="220" stroke="#475569" stroke-width="4"/>
+    <line x1="750" y1="0" x2="750" y2="220" stroke="#475569" stroke-width="4"/>
+    <!-- Frameless Toughened Glass Balcony Railing -->
+    <rect x="-10" y="145" width="920" height="75" fill="#38bdf8" fill-opacity="0.16" stroke="#7dd3fc" stroke-width="2"/>
+    <line x1="-10" y1="145" x2="910" y2="145" stroke="#e2e8f0" stroke-width="4"/>
+    <!-- SS Spigots -->
+    <rect x="80" y="205" width="8" height="18" fill="#cbd5e1"/>
+    <rect x="260" y="205" width="8" height="18" fill="#cbd5e1"/>
+    <rect x="450" y="205" width="8" height="18" fill="#cbd5e1"/>
+    <rect x="640" y="205" width="8" height="18" fill="#cbd5e1"/>
+    <rect x="820" y="205" width="8" height="18" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Ground Floor Ultra-Slim Sliding Glass Doors & Showroom -->
+  <g transform="translate(150, 394)">
+    <rect x="0" y="0" width="900" height="236" fill="#09101d"/>
+    <!-- Interior Luxury Warmth -->
+    <rect x="16" y="12" width="424" height="214" fill="url(#warmGlow)"/>
+    <rect x="460" y="12" width="424" height="214" fill="url(#warmGlow)"/>
+    <!-- Chandelier & Interior Detail -->
+    <circle cx="220" cy="55" r="24" fill="#fef08a" opacity="0.6"/>
+    <circle cx="670" cy="55" r="24" fill="#fef08a" opacity="0.6"/>
+    <line x1="40" y1="24" x2="410" y2="24" stroke="#fbbf24" stroke-width="3" opacity="0.8"/>
+    <line x1="490" y1="24" x2="860" y2="24" stroke="#fbbf24" stroke-width="3" opacity="0.8"/>
+    <!-- Diagonal Glass Sheen -->
+    <polygon points="16,12 240,12 120,226 16,226" fill="url(#glassReflect)"/>
+    <polygon points="460,12 710,12 580,226 460,226" fill="url(#glassReflect)"/>
+    <!-- Heavy Duty Aluminium & Slim Frames -->
+    <rect x="0" y="0" width="900" height="236" fill="none" stroke="#1e293b" stroke-width="14"/>
+    <rect x="442" y="0" width="16" height="236" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <line x1="225" y1="8" x2="225" y2="228" stroke="#f59e0b" stroke-width="3"/>
+    <line x1="675" y1="8" x2="675" y2="228" stroke="#f59e0b" stroke-width="3"/>
+    <!-- Door Handles -->
+    <rect x="214" y="100" width="4" height="44" rx="2" fill="#fbbf24"/>
+    <rect x="232" y="100" width="4" height="44" rx="2" fill="#fbbf24"/>
+    <rect x="664" y="100" width="4" height="44" rx="2" fill="#fbbf24"/>
+    <rect x="682" y="100" width="4" height="44" rx="2" fill="#fbbf24"/>
+  </g>
+
+  <!-- Water Reflection Lines -->
+  <line x1="200" y1="685" x2="520" y2="685" stroke="#fbbf24" stroke-width="2" opacity="0.35"/>
+  <line x1="610" y1="710" x2="960" y2="710" stroke="#38bdf8" stroke-width="2" opacity="0.35"/>
+  <line x1="310" y1="740" x2="840" y2="740" stroke="#fbbf24" stroke-width="1.5" opacity="0.25"/>
+</svg>

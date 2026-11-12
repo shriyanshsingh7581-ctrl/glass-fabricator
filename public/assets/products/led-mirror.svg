@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="ledHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.65"/>
+      <stop offset="68%" stop-color="#f59e0b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mirrorGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="45%" stop-color="#334155"/>
+      <stop offset="55%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#090d16"/>
+  <!-- Fluted Marble Wall Texture Lines -->
+  <g stroke="#1e293b" stroke-width="2">
+    <line x1="100" y1="0" x2="100" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="700" y1="0" x2="700" y2="600"/>
+  </g>
+  <!-- Warm Backlit LED Halo -->
+  <circle cx="400" cy="285" r="250" fill="url(#ledHalo)"/>
+
+  <!-- Saint-Gobain HD Copper-Free Mirror Disc -->
+  <circle cx="400" cy="285" r="185" fill="url(#mirrorGlass)" stroke="#fbbf24" stroke-width="4"/>
+  <!-- Frosted Sandblasted Inner LED Diffuser Ring -->
+  <circle cx="400" cy="285" r="164" fill="none" stroke="#fef3c7" stroke-width="6" opacity="0.85"/>
+
+  <!-- Specular Diagonal Reflection -->
+  <path d="M 275 160 L 345 115 L 525 410 L 455 455 Z" fill="#ffffff" opacity="0.12"/>
+  <path d="M 365 110 L 390 105 L 555 375 L 535 395 Z" fill="#ffffff" opacity="0.08"/>
+
+  <!-- Smart Touch Sensor & Defogger Icons on Mirror -->
+  <circle cx="375" cy="405" r="12" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.9"/>
+  <circle cx="375" cy="405" r="4" fill="#38bdf8"/>
+  <rect x="412" y="395" width="24" height="20" rx="4" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.9"/>
+</svg>

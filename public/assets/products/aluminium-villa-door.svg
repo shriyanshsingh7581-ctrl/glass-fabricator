@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#09101d"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="dguGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.32"/>
+      <stop offset="50%" stop-color="#0f172a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.28"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <!-- Outer Thermal-Break Powder Coated Aluminium Frame -->
+  <rect x="85" y="60" width="630" height="480" rx="4" fill="#1e293b" stroke="#475569" stroke-width="4"/>
+  <rect x="102" y="77" width="596" height="446" fill="#090d16"/>
+
+  <!-- 4-Leaf Bi-Fold Slide & Fold Panels -->
+  <g transform="translate(108, 83)">
+    <!-- Leaf 1 -->
+    <rect x="0" y="0" width="142" height="434" fill="url(#dguGlass)" stroke="#334155" stroke-width="8"/>
+    <polygon points="8,8 95,8 45,426 8,426" fill="#ffffff" opacity="0.12"/>
+    <!-- Leaf 2 (Angled Bi-fold effect) -->
+    <polygon points="146,0 282,18 282,416 146,434" fill="url(#dguGlass)" stroke="#475569" stroke-width="8"/>
+    <!-- Leaf 3 (Angled Bi-fold effect) -->
+    <polygon points="286,18 424,0 424,434 286,416" fill="url(#dguGlass)" stroke="#334155" stroke-width="8"/>
+    <!-- Leaf 4 -->
+    <rect x="430" y="0" width="154" height="434" fill="url(#dguGlass)" stroke="#334155" stroke-width="8"/>
+    <polygon points="438,8 530,8 480,426 438,426" fill="#ffffff" opacity="0.12"/>
+
+    <!-- Heavy-Duty Concealed Hinges & Anodized Gold Handles -->
+    <rect x="136" y="70" width="8" height="22" rx="2" fill="#f59e0b"/>
+    <rect x="136" y="340" width="8" height="22" rx="2" fill="#f59e0b"/>
+    <rect x="420" y="195" width="8" height="56" rx="3" fill="#fbbf24"/>
+  </g>
+</svg>

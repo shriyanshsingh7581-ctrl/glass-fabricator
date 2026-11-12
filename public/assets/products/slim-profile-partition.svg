@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="roomBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="warmInterior" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#78350f" stop-opacity="0.18"/>
+    </linearGradient>
+    <pattern id="flutedGlass" width="14" height="600" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="7" height="600" fill="#ffffff" fill-opacity="0.09"/>
+      <rect x="7" y="0" width="7" height="600" fill="#38bdf8" fill-opacity="0.04"/>
+      <line x1="7" y1="0" x2="7" y2="600" stroke="#e2e8f0" stroke-width="0.8" opacity="0.28"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#roomBg)"/>
+  <!-- Warm Ambient Cove Light -->
+  <rect x="90" y="45" width="620" height="8" rx="4" fill="#fbbf24" opacity="0.85"/>
+  <rect x="90" y="55" width="620" height="490" fill="url(#warmInterior)"/>
+
+  <!-- 16mm Ultra-Slim Anodized Black Partition Grid -->
+  <g transform="translate(90, 55)">
+    <!-- Left Fluted Glass Panel -->
+    <rect x="0" y="0" width="195" height="490" fill="url(#flutedGlass)" stroke="#0f172a" stroke-width="8"/>
+    <!-- Center Clear Toughened Telescopic Sliding Doors -->
+    <rect x="195" y="0" width="230" height="490" fill="#38bdf8" fill-opacity="0.08" stroke="#0f172a" stroke-width="8"/>
+    <polygon points="200,6 350,6 260,484 200,484" fill="#ffffff" opacity="0.11"/>
+    <!-- Right Fluted Glass Panel -->
+    <rect x="425" y="0" width="195" height="490" fill="url(#flutedGlass)" stroke="#0f172a" stroke-width="8"/>
+
+    <!-- Horizontal Slim Georgian Transoms -->
+    <line x1="0" y1="125" x2="620" y2="125" stroke="#0f172a" stroke-width="6"/>
+    <line x1="0" y1="365" x2="620" y2="365" stroke="#0f172a" stroke-width="6"/>
+    <!-- Fine Champagne Gold Trim Inlay -->
+    <rect x="0" y="0" width="620" height="490" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.65"/>
+    <line x1="195" y1="0" x2="195" y2="490" stroke="#f59e0b" stroke-width="1.5" opacity="0.65"/>
+    <line x1="425" y1="0" x2="425" y2="490" stroke="#f59e0b" stroke-width="1.5" opacity="0.65"/>
+
+    <!-- Knurled Champagne Gold Pull Handle -->
+    <rect x="398" y="205" width="6" height="80" rx="3" fill="#fbbf24"/>
+  </g>
+</svg>

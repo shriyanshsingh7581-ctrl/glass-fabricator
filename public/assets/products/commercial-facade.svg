@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="facadeGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#0369a1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#060d1a"/>
+  <!-- Structural Curtain Wall Grid -->
+  <g transform="translate(110, 40)">
+    <rect x="0" y="0" width="580" height="520" fill="url(#facadeGlass)" stroke="#334155" stroke-width="8"/>
+    <!-- Vertical Curtain Wall Mullions -->
+    <line x1="145" y1="0" x2="145" y2="520" stroke="#1e293b" stroke-width="8"/>
+    <line x1="290" y1="0" x2="290" y2="520" stroke="#1e293b" stroke-width="8"/>
+    <line x1="435" y1="0" x2="435" y2="520" stroke="#1e293b" stroke-width="8"/>
+    <!-- Horizontal Transoms -->
+    <line x1="0" y1="130" x2="580" y2="130" stroke="#1e293b" stroke-width="6"/>
+    <line x1="0" y1="260" x2="580" y2="260" stroke="#1e293b" stroke-width="6"/>
+    <line x1="0" y1="390" x2="580" y2="390" stroke="#1e293b" stroke-width="6"/>
+    <!-- Spider Glazing SS316 Fittings at Intersections -->
+    <circle cx="145" cy="130" r="10" fill="#e2e8f0"/>
+    <circle cx="290" cy="130" r="10" fill="#e2e8f0"/>
+    <circle cx="435" cy="130" r="10" fill="#e2e8f0"/>
+    <circle cx="145" cy="260" r="10" fill="#e2e8f0"/>
+    <circle cx="290" cy="260" r="10" fill="#e2e8f0"/>
+    <circle cx="435" cy="260" r="10" fill="#e2e8f0"/>
+    <circle cx="145" cy="390" r="10" fill="#e2e8f0"/>
+    <circle cx="290" cy="390" r="10" fill="#e2e8f0"/>
+    <circle cx="435" cy="390" r="10" fill="#e2e8f0"/>
+    <!-- Architectural Accent Fins -->
+    <line x1="0" y1="0" x2="580" y2="0" stroke="#f59e0b" stroke-width="6"/>
+    <polygon points="15,15 260,15 110,505 15,505" fill="#38bdf8" opacity="0.16"/>
+    <polygon points="300,15 540,15 390,505 300,505" fill="#ffffff" opacity="0.1"/>
+  </g>
+</svg>

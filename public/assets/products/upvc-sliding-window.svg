@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="daylight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="upvcWhite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <pattern id="meshPattern" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#94a3b8" stroke-width="0.6" opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- Wall Reveal Shadow -->
+  <rect x="100" y="65" width="600" height="470" rx="8" fill="#020617" opacity="0.7"/>
+  <!-- Outer 3-Track uPVC Frame -->
+  <rect x="115" y="75" width="570" height="445" rx="4" fill="url(#upvcWhite)" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="135" y="95" width="530" height="405" fill="#091326" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Left Sliding Sash -->
+  <rect x="142" y="102" width="256" height="391" fill="url(#upvcWhite)" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="160" y="120" width="220" height="355" fill="url(#daylight)"/>
+  <polygon points="160,120 310,120 220,475 160,475" fill="#ffffff" opacity="0.14"/>
+
+  <!-- Right Sliding Sash + Pleated Mosquito Mesh Track -->
+  <rect x="392" y="102" width="266" height="391" fill="url(#upvcWhite)" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="410" y="120" width="230" height="355" fill="url(#daylight)"/>
+  <rect x="525" y="120" width="115" height="355" fill="url(#meshPattern)"/>
+  <polygon points="410,120 550,120 470,475 410,475" fill="#ffffff" opacity="0.12"/>
+
+  <!-- Multi-point Espag Lock Handles -->
+  <rect x="147" y="270" width="8" height="52" rx="4" fill="#334155"/>
+  <rect x="645" y="270" width="8" height="52" rx="4" fill="#334155"/>
+  <circle cx="151" cy="296" r="3" fill="#f59e0b"/>
+  <circle cx="649" cy="296" r="3" fill="#f59e0b"/>
+
+  <!-- Bottom Track Drainage Slots -->
+  <rect x="180" y="508" width="28" height="4" rx="2" fill="#475569"/>
+  <rect x="386" y="508" width="28" height="4" rx="2" fill="#475569"/>
+  <rect x="590" y="508" width="28" height="4" rx="2" fill="#475569"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="temperGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.34"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.32"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+  <!-- Balcony Concrete Slab with Warm LED Strip -->
+  <rect x="60" y="455" width="680" height="75" rx="4" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <line x1="65" y1="455" x2="735" y2="455" stroke="#fbbf24" stroke-width="4"/>
+
+  <!-- 3 Frameless 12mm Toughened Glass Panels -->
+  <g transform="translate(85, 160)">
+    <!-- Panel 1 -->
+    <rect x="0" y="0" width="200" height="275" rx="2" fill="url(#temperGlass)" stroke="#bae6fd" stroke-width="2"/>
+    <polygon points="10,8 115,8 55,268 10,268" fill="#ffffff" opacity="0.15"/>
+    <!-- Panel 2 -->
+    <rect x="215" y="0" width="200" height="275" rx="2" fill="url(#temperGlass)" stroke="#bae6fd" stroke-width="2"/>
+    <polygon points="225,8 330,8 270,268 225,268" fill="#ffffff" opacity="0.15"/>
+    <!-- Panel 3 -->
+    <rect x="430" y="0" width="200" height="275" rx="2" fill="url(#temperGlass)" stroke="#bae6fd" stroke-width="2"/>
+    <polygon points="440,8 545,8 485,268 440,268" fill="#ffffff" opacity="0.15"/>
+
+    <!-- Top Slotted Handrail in Brushed Gold/Steel -->
+    <rect x="-10" y="-14" width="650" height="16" rx="6" fill="url(#steel)" stroke="#475569" stroke-width="1.5"/>
+    <line x1="-8" y1="-6" x2="638" y2="-6" stroke="#f59e0b" stroke-width="2"/>
+
+    <!-- Heavy-Duty SS304 Base Spigots -->
+    <rect x="35" y="250" width="22" height="45" rx="3" fill="url(#steel)"/>
+    <rect x="145" y="250" width="22" height="45" rx="3" fill="url(#steel)"/>
+    <rect x="250" y="250" width="22" height="45" rx="3" fill="url(#steel)"/>
+    <rect x="360" y="250" width="22" height="45" rx="3" fill="url(#steel)"/>
+    <rect x="465" y="250" width="22" height="45" rx="3" fill="url(#steel)"/>
+    <rect x="575" y="250" width="22" height="45" rx="3" fill="url(#steel)"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", "Space Grotesk", "Noto Sans Devanagari", serif;
+  --font-heading: "Space Grotesk", "Noto Sans Devanagari", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Devanagari", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #F6F3EC;
+    color: #141311;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  h3, h4, .font-architectural {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Handcrafted Architectural Grid & Surface Utilities */
+.atelier-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(20, 19, 17, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 19, 17, 0.055) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.atelier-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(246, 243, 236, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(246, 243, 236, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE8DD;
+}
+::-webkit-scrollbar-thumb {
+  background: #A8A090;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C2410C;
+}
